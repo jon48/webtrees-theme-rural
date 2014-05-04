@@ -34,7 +34,7 @@ html { overflow-y:scroll; }
 #headerdiv, #bodydiv, #footerdiv {color: #555555;font: 12px tahoma,arial,helvetica,sans-serif;}
 #header_simple{height:1em;}
 fieldset {margin: 8px 8px 4px 8px;text-align:left;}
-html[dir=rtl] fieldset {text-align:right;}
+[dir=rtl] fieldset {text-align:right;}
 legend {color: #62584D;font-size: 11px;font-weight: bold;text-align: left;}
 a {color: #416271;text-decoration: none;}
 a:hover {color: #1c3b4a;text-decoration: none;}
@@ -58,16 +58,16 @@ img.block, #calendar_img_indi, #calendar_img_fam, #biglink img, #mycart img  {bo
  * Header
  */
 #header {background: url(images/header.png) no-repeat bottom left;position: relative;width: 100%;height: 150px;margin: auto;color: white;}
-html[dir=rtl] #header { background-position: right;}
+[dir=rtl] #header { background-position: right;}
 #header a{color:white;}
 #header a:hover{color:#e9e2db;}
 #header td{text-align: right;}
 #htopright{text-align: right;position: absolute;top: 5px;right:0px;}
-html[dir=rtl] #htopright { text-align: left; left:0px;}
+[dir=rtl] #htopright { text-align: left; left:0px;}
 #hbottomright{text-align: right;position: absolute;bottom: 5px;right:0px;}
-html[dir=rtl] #hbottomright { text-align: left; left:0px;}
+[dir=rtl] #hbottomright { text-align: left; left:0px;}
 #hcenterright{text-align: right;position: absolute;top:75px;right:0px;} 
-html[dir=rtl] #hcenterright { text-align: left; left:0px;}
+[dir=rtl] #hcenterright { text-align: left; left:0px;}
 
 /**
  * White box, with top rounded
@@ -215,13 +215,13 @@ table.center {margin-left: auto;margin-right: auto;}
 .tdmid {vertical-align:middle;}
 .tdbot, .tvertline {vertical-align:bottom;}
 
-html[dir=rtl] #familybook_chart{margin-right:10px;}
+[dir=rtl] #familybook_chart{margin-right:10px;}
 
 /*-- pedigree chart specific stylesheets --*/
 #pedigree-page table.list_table {margin:0 auto;width:500px;}
 .pedigree_chart_table {border:0;border-collapse:collapse;padding:0;width:100%;}
 #pedigree_chart {position:relative;top:-200px;left:0;}
-html[dir=rtl] #pedigree_chart {left:auto;right:10px;}
+[dir=rtl] #pedigree_chart {left:auto;right:10px;}
 #pedigree_canvas {color:#D3C6B8;position:absolute;top:200px;z-index:-1000;}
 #pedigree_chart #childarrow, #pedigree_chart #uparrow, #pedigree_chart .shadow {position:absolute;}
 #pedigree_chart #childbox {border:1px solid;background-color:white;padding:5px;position:absolute;visibility:hidden;}
@@ -230,15 +230,15 @@ html[dir=rtl] #pedigree_chart {left:auto;right:10px;}
 #descendancy_chart{margin:20px;}
 #descendancy_chart ul {background-image: url(images/vline.png);background-repeat: repeat-y;background-position: left top;list-style: none;margin: 0px 0px 5px 15px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;}
 #descendancy_chart li {list-style: none;margin: 0px 0px 0px -15px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;}
-html[dir=rtl] #descendancy_chart ul {background-position: right top;margin: 0px 15px 0px 0px;left: auto;}
+[dir=rtl] #descendancy_chart ul {background-position: right top;margin: 0px 15px 0px 0px;left: auto;}
 
 /*-- ancestry chart specific stylesheets --*/
 #ancestry_chart table div p {font-size:90%; margin:0;}
 #ancestry_chart ul {background-image: url(images/vline.png);background-repeat: repeat-y;background-position: left top;list-style: none;display: block;margin: 0px 0px 0px 15px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;}
 #ancestry_chart li {list-style: none;margin: 0px 0px 2px -13px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;}
 #ancestry_chart li table {margin: 5px 0;}
-html[dir=rtl] #ancestry_chart ul {background-position: right top;margin: 0px 15px 0px 0px;left: auto;}
-html[dir=rtl] #ancestry_chart li {margin: 0px 0px 0px 0px;padding: 0px 2px 0px 0px;left: auto;}
+[dir=rtl] #ancestry_chart ul {background-position: right top;margin: 0px 15px 0px 0px;left: auto;}
+[dir=rtl] #ancestry_chart li {margin: 0px 0px 0px 0px;padding: 0px 2px 0px 0px;left: auto;}
 #ancestry_chart .fact_MARR {display: inline;}
 
 /*-- timeline chart specific styles --*/
@@ -275,10 +275,10 @@ h1, h2, .helpheader {color: #7B983C;font: 18px tahoma, arial, helvetica, sans-se
 .search_hit {background-color:#ff0;}
 .search_item{font-weight:600;}
 .title {clear: both;font-size: 20px;font-family: tahoma, arial, helvetica, sans-serif;float: left;padding-left: 10px;}
-html[dir=rtl] .title {float: right;padding-right: 10px;}
-html[dir=rtl] .header_img {float: right;}
+[dir=rtl] .title {float: right;padding-right: 10px;}
+[dir=rtl] .header_img {float: right;}
 .header_search {float: right;}
-html[dir=rtl] .header_search {float:left;}
+[dir=rtl] .header_search {float:left;}
 
 #flash-messages { clear:both; width: 98%; margin: auto;}
 
@@ -345,17 +345,6 @@ a.showit:hover > span {display: block;position: absolute;top: 22px;left: 0px;wid
 .lifespan_outer a {color: black;}
 .lifespan_timeline {position: absolute;width: 100%;left: -10px;top: -65px;z-index: 2;background-color: #F4F0ED;}
 .lifespan_people {position: absolute;width: 500px;left: -10px;top: -60px;z-index: 1;}
-.iwstyle {width: 360px;}
-.iwstyle a {}
-.iwstyle a:hover {}
-
-#map_nav {position: relative;top: -484px;left: 101%;}
-#tree_nav {position: relative;top: -584px;left: 90%;z-index: 100;}
-#map_type {margin: 0;padding: 0;font-family: Arial;font-size: 10px;list-style: none;}
-#map_type li {display: block;width: 70px;text-align: center;padding: 2px;border: 1px solid black;cursor: pointer;float: left;margin-left: 2px;}
-#map_type li.non_active {background: white;color: black;font-weight: normal;}
-#map_type li.active {background: gray;color: white;font-weight: bold;}
-#map_type li:hover {background: #ddd;}
 
 /* Tag Cloud styles*/
 .tag_cloud {width:70%;margin-left: auto;margin-right: auto;text-align: center;padding: 10px 5px 10px 15px;}
@@ -374,7 +363,6 @@ a.showit:hover > span {display: block;position: absolute;top: 22px;left: 0px;wid
 
 .nowrap {white-space: nowrap;}
 .wrap {white-space: normal;}
-ul.clist {list-style-image: none;text-decoration: none;color: #000000;margin: 0px;}
 .statistics-page {text-align: center;}
 .center2 {text-align: center;}
 .gchart {border: solid #DDDDDD 1px;}
@@ -392,7 +380,7 @@ html[dir="rtl"] dt {float: right;margin-right: auto;margin-left: 10px;}
 /* styles for FindFacts pop-up */
 #layDefinedTags,#tabDefinedTagsShow {width:450px;}
 #tabDefinedTags {width:430px;}
-#layDefinedTags {margin-left:auto;margin-right:auto; height:285px;overflow:auto; border:inset 2px buttonface;}
+#layDefinedTags {margin-left:auto;margin-right:auto; height:285px;overflow:auto;}
 #tabDefinedTags {border-collapse:collapse;}
 #tabDefinedTags th,#tabDefinedTags td {border:solid 1px #000;margin:0; padding:3px;}
 #tabDefinedTags tbody th {text-align:left;font-weight:bold;}
@@ -429,16 +417,16 @@ html[dir="rtl"] dt {float: right;margin-right: auto;margin-left: 10px;}
 #searchAccordion-indi, #searchAccordion-fam, #searchAccordion-source, #searchAccordion-note {margin:auto; width:99%;}
 #place-hierarchy h2, #place-hierarchy h4 {text-align:center;}
 
-html[dir=rtl] .source-list th:last-child, html[dir=rtl] .note-list th:last-child, html[dir=rtl] .repo-list th:last-child {margin:0 1px 1px -2px;}
+[dir=rtl] .source-list th:last-child, [dir=rtl] .note-list th:last-child, [dir=rtl] .repo-list th:last-child {margin:0 1px 1px -2px;}
 
 /* ======= Block styles ========== */
 #index_main_blocks {clear:none; width:66%; float:left;}
 #index_small_blocks {clear:none; width:33%; float:right;}
-html[dir=rtl] #index_main_blocks { float: right;}
-html[dir=rtl] #index_small_blocks { float: left;}
+[dir=rtl] #index_main_blocks { float: right;}
+[dir=rtl] #index_small_blocks { float: left;}
 #index_full_blocks {clear:none; width:100%;}
-html[dir=rtl] #index_main_blocks {float:right;}
-html[dir=rtl] #index_small_blocks {float:left;}
+[dir=rtl] #index_main_blocks {float:right;}
+[dir=rtl] #index_small_blocks {float:left;}
 .small_inner_block {max-height: 200px;overflow: auto;font: normal 10px tahoma, arial, helvetica, sans-serif;}
 .normal_inner_block {overflow:auto;}
 .block a{color:#62584D;}
@@ -481,7 +469,7 @@ html[dir=rtl] #index_small_blocks {float:left;}
 .theme_form ul {margin:-10px auto;-webkit-padding-start:0;width:90%;overflow:hidden;}
 .theme_form li {list-style:none;visibility:hidden;}
 .theme_form li ul li {float:left;padding:10px;visibility:visible;}
-html[dir=rtl] .theme_form li ul li {float:right;}
+[dir=rtl] .theme_form li ul li {float:right;}
 
 /* ======= FAQ table styles ========== */
 table.faq {	background-color: #F3EFEF; 	margin: 5px 0 50px 5px; width: 98%;}
@@ -499,8 +487,8 @@ div.faq_title a:hover, div.faq_body a:hover, .faq_italic a:hover { color: #9F8C7
 
 .faq_top {float:right;}
 .faq_edit {float:right;}
-html[dir=rtl] .faq_top {float:left;}
-html[dir=rtl] .faq_edit {float:left;}
+[dir=rtl] .faq_top {float:left;}
+[dir=rtl] .faq_edit {float:left;}
 	
 /* ======= Main menu items ========== */
 	
@@ -537,13 +525,13 @@ html[dir=rtl] .faq_edit {float:left;}
 .main-menu-item .separator_top { border-top: 2px solid #D3C6B8; }
 
 /* Reverse left and right on RTL pages */
-html[dir=rtl] #main-menu td { background-position: left;}
-html[dir=rtl] .main-menu-item {}
-html[dir=rtl] .main-menu-item li {}
-html[dir=rtl] .main-menu-item   li:hover > ul {right:100%; left:auto;}
-html[dir=rtl] .main-menu-item > li:hover > ul {left:auto; right:10px;}
-html[dir=rtl] .main-menu-item   li  li {text-align:right;}
-html[dir=rtl] .main-menu-item  li li a {float:right;padding:1px 5px 1px 10px;}
+[dir=rtl] #main-menu td { background-position: left;}
+[dir=rtl] .main-menu-item {}
+[dir=rtl] .main-menu-item li {}
+[dir=rtl] .main-menu-item   li:hover > ul {right:100%; left:auto;}
+[dir=rtl] .main-menu-item > li:hover > ul {left:auto; right:10px;}
+[dir=rtl] .main-menu-item   li  li {text-align:right;}
+[dir=rtl] .main-menu-item  li li a {float:right;padding:1px 5px 1px 10px;}
 
 
 /* Main menu icons */
@@ -565,84 +553,84 @@ html[dir=rtl] .main-menu-item  li li a {float:right;padding:1px 5px 1px 10px;}
 #menu-story     {background-position:center -600px;}
 
 /* Sub-menu icons */
-#menu-admin                 {background-position:left     0;}   html[dir=rtl] #menu-admin                 {background-position:right     0;}
-#menu-branches              {background-position:left  -450px;} html[dir=rtl] #menu-branches              {background-position:right  -450px;}
-#menu-calendar-day          {background-position:left   -60px;} html[dir=rtl] #menu-calendar-day          {background-position:right   -60px;}
-#menu-calendar-month        {background-position:left   -60px;} html[dir=rtl] #menu-calendar-month        {background-position:right   -60px;}
-#menu-calendar-year         {background-position:left   -60px;} html[dir=rtl] #menu-calendar-year         {background-position:right   -60px;}
-#menu-chart-ancestry        {background-position:left   -30px;} html[dir=rtl] #menu-chart-ancestry        {background-position:right   -30px;}
-#menu-chart-compact         {background-position:left   -30px;} html[dir=rtl] #menu-chart-compact         {background-position:right   -30px;}
-#menu-chart-descendancy     {background-position:left  -150px;} html[dir=rtl] #menu-chart-descendancy     {background-position:right  -150px;}
-#menu-chart-familybook      {background-position:left  -180px;} html[dir=rtl] #menu-chart-familybook      {background-position:right  -180px;}
-#menu-chart-fanchart        {background-position:left  -210px;} html[dir=rtl] #menu-chart-fanchart        {background-position:right  -210px;}
-#menu-chart-hourglass       {background-position:left  -270px;} html[dir=rtl] #menu-chart-hourglass       {background-position:right  -270px;}
-#menu-chart-lifespan        {background-position:left  -660px;} html[dir=rtl] #menu-chart-lifespan        {background-position:right  -660px;}
-#menu-chart-pedigree        {background-position:left  -480px;} html[dir=rtl] #menu-chart-pedigree        {background-position:right  -480px;}
-#menu-chart-pedigree_map    {background-position:left  -720px;} html[dir=rtl] #menu-chart-pedigree_map    {background-position:right  -720px;}
-#menu-chart-relationship    {background-position:left  -540px;} html[dir=rtl] #menu-chart-relationship    {background-position:right  -540px;}
-#menu-chart-relationship li {background-position:left  -540px;} html[dir=rtl] #menu-chart-relationship li {background-position:right  -540px;}
-#menu-chart-statistics      {background-position:left  -630px;} html[dir=rtl] #menu-chart-statistics      {background-position:right  -630px;}
-#menu-chart-timeline        {background-position:left  -660px;} html[dir=rtl] #menu-chart-timeline        {background-position:right  -660px;}
-#menu-chart-timeline li     {background-position:left  -660px;} html[dir=rtl] #menu-chart-timeline li     {background-position:right  -660px;}
-#menu-chart-tree            {background-position:left  -240px;} html[dir=rtl] #menu-chart-tree            {background-position:right  -240px;}
-#menu-clippingsadd          {background-position:left  -930px;} html[dir=rtl] #menu-clippingsadd          {background-position:right  -930px;}
-#menu-clippingscart         {background-position:left  -900px;} html[dir=rtl] #menu-clippingscart         {background-position:right  -900px;}
-#menu-fam-addchil           {background-position:left -1050px;} html[dir=rtl] #menu-fam-addchil           {background-position:right -1050px;}
-#menu-fam-addfav            {background-position:left  -870px;} html[dir=rtl] #menu-fam-addfav            {background-position:right  -870px;}
-#menu-fam-change            {background-position:left   -90px;} html[dir=rtl] #menu-fam-change            {background-position:right   -90px;}
-#menu-fam-del               {background-position:left  -840px;} html[dir=rtl] #menu-fam-del               {background-position:right  -840px;}
-#menu-fam-editraw           {background-position:left -1240px;} html[dir=rtl] #menu-fam-editraw           {background-position:right -1240px;}
-#menu-fam-orderchil         {background-position:left -1080px;} html[dir=rtl] #menu-fam-orderchil         {background-position:right -1080px;}
-#menu-help-contents         {background-position:left  -300px;} html[dir=rtl] #menu-help-contents         {background-position:right  -300px;}
-#menu-help-faq              {background-position:left  -300px;} html[dir=rtl] #menu-help-faq              {background-position:right  -300px;}
-#menu-help-genealogy        {background-position:left  -120px;} html[dir=rtl] #menu-help-genealogy        {background-position:right  -120px;}
-#menu-help-hide             {background-position:left  -300px;} html[dir=rtl] #menu-help-hide             {background-position:right  -300px;}
-#menu-help-show             {background-position:left  -300px;} html[dir=rtl] #menu-help-show             {background-position:right  -300px;}
-#menu-help-technical        {background-position:left  -120px;} html[dir=rtl] #menu-help-technical        {background-position:right  -120px;}
-#menu-help-wiki             {background-position:left  -690px;} html[dir=rtl] #menu-help-wiki             {background-position:right  -690px;}
-#menu-indi-addfav           {background-position:left  -870px;} html[dir=rtl] #menu-indi-addfav           {background-position:right  -870px;}
-#menu-indi-addname          {background-position:left  -780px;} html[dir=rtl] #menu-indi-addname          {background-position:right  -780px;}
-#menu-indi-del              {background-position:left  -840px;} html[dir=rtl] #menu-indi-del              {background-position:right  -840px;}
-#menu-indi-editraw          {background-position:left -1240px;} html[dir=rtl] #menu-indi-editraw          {background-position:right -1240px;}
-#menu-indi-editsex          {background-position:left  -810px;} html[dir=rtl] #menu-indi-editsex          {background-position:right  -810px;}
-#menu-list-fam              {background-position:left   -90px;} html[dir=rtl] #menu-list-fam              {background-position:right   -90px;}
-#menu-list-indi             {background-position:left  -120px;} html[dir=rtl] #menu-list-indi             {background-position:right  -120px;}
-#menu-list-note             {background-position:left  -420px;} html[dir=rtl] #menu-list-note             {background-position:right  -420px;}
-#menu-list-obje             {background-position:left  -330px;} html[dir=rtl] #menu-list-obje             {background-position:right  -330px;}
-#menu-list-plac             {background-position:left  -510px;} html[dir=rtl] #menu-list-plac             {background-position:right  -510px;}
-#menu-list-repo             {background-position:left  -360px;} html[dir=rtl] #menu-list-repo             {background-position:right  -360px;}
-#menu-list-sour             {background-position:left  -180px;} html[dir=rtl] #menu-list-sour             {background-position:right  -180px;}
-#menu-myaccount             {background-position:left  -390px;} html[dir=rtl] #menu-myaccount             {background-position:right  -390px;}
-#menu-mypage                {background-position:left  -390px;} html[dir=rtl] #menu-mypage                {background-position:right  -390px;}
-#menu-mypedigree            {background-position:left  -480px;} html[dir=rtl] #menu-mypedigree            {background-position:right  -480px;}
-#menu-myrecord              {background-position:left  -120px;} html[dir=rtl] #menu-myrecord              {background-position:right  -120px;}
-#menu-note-addfav           {background-position:left  -870px;} html[dir=rtl] #menu-note-addfav           {background-position:right  -870px;}
-#menu-note-del              {background-position:left  -840px;} html[dir=rtl] #menu-note-del              {background-position:right  -840px;}
-#menu-note-edit             {background-position:left -1020px;} html[dir=rtl] #menu-note-edit             {background-position:right -1020px;}
-#menu-note-editraw          {background-position:left -1240px;} html[dir=rtl] #menu-note-editraw          {background-position:right -1240px;}
-#menu-obje-addfav           {background-position:left  -870px;} html[dir=rtl] #menu-obje-addfav           {background-position:right  -870px;}
-#menu-obje-del              {background-position:left  -840px;} html[dir=rtl] #menu-obje-del              {background-position:right  -840px;}
-#menu-obje-edit             {background-position:left -1110px;} html[dir=rtl] #menu-obje-edit             {background-position:right -1110px;}
-#menu-obje-editraw          {background-position:left -1240px;} html[dir=rtl] #menu-obje-editraw          {background-position:right -1240px;}
-#menu-obje-link             {background-position:left -1140px;} html[dir=rtl] #menu-obje-link             {background-position:right -1140px;}
-#menu-obje-link-fam         {background-position:left   -90px;} html[dir=rtl] #menu-obje-link-fam         {background-position:right   -90px;}
-#menu-obje-link-indi        {background-position:left  -300px;} html[dir=rtl] #menu-obje-link-indi        {background-position:right  -300px;}
-#menu-obje-link-sour        {background-position:left  -180px;} html[dir=rtl] #menu-obje-link-sour        {background-position:right  -180px;}
-#menu-repo-addfav           {background-position:left  -870px;} html[dir=rtl] #menu-repo-addfav           {background-position:right  -870px;}
-#menu-repo-del              {background-position:left  -840px;} html[dir=rtl] #menu-repo-del              {background-position:right  -840px;}
-#menu-repo-edit             {background-position:left  -990px;} html[dir=rtl] #menu-repo-edit             {background-position:right  -990px;}
-#menu-repo-editraw          {background-position:left -1240px;} html[dir=rtl] #menu-repo-editraw          {background-position:right -1240px;}
-#menu-report li             {background-position:left  -570px;} html[dir=rtl] #menu-report li             {background-position:right  -570px;}
-#menu-search-advanced       {background-position:left  -600px;} html[dir=rtl] #menu-search-advanced       {background-position:right  -600px;}
-#menu-search-general        {background-position:left  -600px;} html[dir=rtl] #menu-search-general        {background-position:right  -600px;}
-#menu-search-replace        {background-position:left  -600px;} html[dir=rtl] #menu-search-replace        {background-position:right  -600px;}
-#menu-search-soundex        {background-position:left  -600px;} html[dir=rtl] #menu-search-soundex        {background-position:right  -600px;}
-#menu-sour-addfav           {background-position:left  -870px;} html[dir=rtl] #menu-sour-addfav           {background-position:right  -870px;}
-#menu-sour-del              {background-position:left  -840px;} html[dir=rtl] #menu-sour-del              {background-position:right  -840px;}
-#menu-sour-edit             {background-position:left  -960px;} html[dir=rtl] #menu-sour-edit             {background-position:right  -960px;}
-#menu-sour-editraw          {background-position:left -1240px;} html[dir=rtl] #menu-sour-editraw          {background-position:right -1240px;}
-#menu-story-sub          	{background-position:left -1208px;} html[dir=rtl] #menu-story-sub             {background-position:right -1208px;}
-#menu-tree li               {background-position:left  -240px;} html[dir=rtl] #menu-tree li               {background-position:right  -240px;}
+#menu-admin                 {background-position:left     0;}   [dir=rtl] #menu-admin                 {background-position:right     0;}
+#menu-branches              {background-position:left  -450px;} [dir=rtl] #menu-branches              {background-position:right  -450px;}
+#menu-calendar-day          {background-position:left   -60px;} [dir=rtl] #menu-calendar-day          {background-position:right   -60px;}
+#menu-calendar-month        {background-position:left   -60px;} [dir=rtl] #menu-calendar-month        {background-position:right   -60px;}
+#menu-calendar-year         {background-position:left   -60px;} [dir=rtl] #menu-calendar-year         {background-position:right   -60px;}
+#menu-chart-ancestry        {background-position:left   -30px;} [dir=rtl] #menu-chart-ancestry        {background-position:right   -30px;}
+#menu-chart-compact         {background-position:left   -30px;} [dir=rtl] #menu-chart-compact         {background-position:right   -30px;}
+#menu-chart-descendancy     {background-position:left  -150px;} [dir=rtl] #menu-chart-descendancy     {background-position:right  -150px;}
+#menu-chart-familybook      {background-position:left  -180px;} [dir=rtl] #menu-chart-familybook      {background-position:right  -180px;}
+#menu-chart-fanchart        {background-position:left  -210px;} [dir=rtl] #menu-chart-fanchart        {background-position:right  -210px;}
+#menu-chart-hourglass       {background-position:left  -270px;} [dir=rtl] #menu-chart-hourglass       {background-position:right  -270px;}
+#menu-chart-lifespan        {background-position:left  -660px;} [dir=rtl] #menu-chart-lifespan        {background-position:right  -660px;}
+#menu-chart-pedigree        {background-position:left  -480px;} [dir=rtl] #menu-chart-pedigree        {background-position:right  -480px;}
+#menu-chart-pedigree_map    {background-position:left  -720px;} [dir=rtl] #menu-chart-pedigree_map    {background-position:right  -720px;}
+#menu-chart-relationship    {background-position:left  -540px;} [dir=rtl] #menu-chart-relationship    {background-position:right  -540px;}
+#menu-chart-relationship li {background-position:left  -540px;} [dir=rtl] #menu-chart-relationship li {background-position:right  -540px;}
+#menu-chart-statistics      {background-position:left  -630px;} [dir=rtl] #menu-chart-statistics      {background-position:right  -630px;}
+#menu-chart-timeline        {background-position:left  -660px;} [dir=rtl] #menu-chart-timeline        {background-position:right  -660px;}
+#menu-chart-timeline li     {background-position:left  -660px;} [dir=rtl] #menu-chart-timeline li     {background-position:right  -660px;}
+#menu-chart-tree            {background-position:left  -240px;} [dir=rtl] #menu-chart-tree            {background-position:right  -240px;}
+#menu-clippingsadd          {background-position:left  -930px;} [dir=rtl] #menu-clippingsadd          {background-position:right  -930px;}
+#menu-clippingscart         {background-position:left  -900px;} [dir=rtl] #menu-clippingscart         {background-position:right  -900px;}
+#menu-fam-addchil           {background-position:left -1050px;} [dir=rtl] #menu-fam-addchil           {background-position:right -1050px;}
+#menu-fam-addfav            {background-position:left  -870px;} [dir=rtl] #menu-fam-addfav            {background-position:right  -870px;}
+#menu-fam-change            {background-position:left   -90px;} [dir=rtl] #menu-fam-change            {background-position:right   -90px;}
+#menu-fam-del               {background-position:left  -840px;} [dir=rtl] #menu-fam-del               {background-position:right  -840px;}
+#menu-fam-editraw           {background-position:left -1240px;} [dir=rtl] #menu-fam-editraw           {background-position:right -1240px;}
+#menu-fam-orderchil         {background-position:left -1080px;} [dir=rtl] #menu-fam-orderchil         {background-position:right -1080px;}
+#menu-help-contents         {background-position:left  -300px;} [dir=rtl] #menu-help-contents         {background-position:right  -300px;}
+#menu-help-faq              {background-position:left  -300px;} [dir=rtl] #menu-help-faq              {background-position:right  -300px;}
+#menu-help-genealogy        {background-position:left  -120px;} [dir=rtl] #menu-help-genealogy        {background-position:right  -120px;}
+#menu-help-hide             {background-position:left  -300px;} [dir=rtl] #menu-help-hide             {background-position:right  -300px;}
+#menu-help-show             {background-position:left  -300px;} [dir=rtl] #menu-help-show             {background-position:right  -300px;}
+#menu-help-technical        {background-position:left  -120px;} [dir=rtl] #menu-help-technical        {background-position:right  -120px;}
+#menu-help-wiki             {background-position:left  -690px;} [dir=rtl] #menu-help-wiki             {background-position:right  -690px;}
+#menu-indi-addfav           {background-position:left  -870px;} [dir=rtl] #menu-indi-addfav           {background-position:right  -870px;}
+#menu-indi-addname          {background-position:left  -780px;} [dir=rtl] #menu-indi-addname          {background-position:right  -780px;}
+#menu-indi-del              {background-position:left  -840px;} [dir=rtl] #menu-indi-del              {background-position:right  -840px;}
+#menu-indi-editraw          {background-position:left -1240px;} [dir=rtl] #menu-indi-editraw          {background-position:right -1240px;}
+#menu-indi-editsex          {background-position:left  -810px;} [dir=rtl] #menu-indi-editsex          {background-position:right  -810px;}
+#menu-list-fam              {background-position:left   -90px;} [dir=rtl] #menu-list-fam              {background-position:right   -90px;}
+#menu-list-indi             {background-position:left  -120px;} [dir=rtl] #menu-list-indi             {background-position:right  -120px;}
+#menu-list-note             {background-position:left  -420px;} [dir=rtl] #menu-list-note             {background-position:right  -420px;}
+#menu-list-obje             {background-position:left  -330px;} [dir=rtl] #menu-list-obje             {background-position:right  -330px;}
+#menu-list-plac             {background-position:left  -510px;} [dir=rtl] #menu-list-plac             {background-position:right  -510px;}
+#menu-list-repo             {background-position:left  -360px;} [dir=rtl] #menu-list-repo             {background-position:right  -360px;}
+#menu-list-sour             {background-position:left  -180px;} [dir=rtl] #menu-list-sour             {background-position:right  -180px;}
+#menu-myaccount             {background-position:left  -390px;} [dir=rtl] #menu-myaccount             {background-position:right  -390px;}
+#menu-mypage                {background-position:left  -390px;} [dir=rtl] #menu-mypage                {background-position:right  -390px;}
+#menu-mypedigree            {background-position:left  -480px;} [dir=rtl] #menu-mypedigree            {background-position:right  -480px;}
+#menu-myrecord              {background-position:left  -120px;} [dir=rtl] #menu-myrecord              {background-position:right  -120px;}
+#menu-note-addfav           {background-position:left  -870px;} [dir=rtl] #menu-note-addfav           {background-position:right  -870px;}
+#menu-note-del              {background-position:left  -840px;} [dir=rtl] #menu-note-del              {background-position:right  -840px;}
+#menu-note-edit             {background-position:left -1020px;} [dir=rtl] #menu-note-edit             {background-position:right -1020px;}
+#menu-note-editraw          {background-position:left -1240px;} [dir=rtl] #menu-note-editraw          {background-position:right -1240px;}
+#menu-obje-addfav           {background-position:left  -870px;} [dir=rtl] #menu-obje-addfav           {background-position:right  -870px;}
+#menu-obje-del              {background-position:left  -840px;} [dir=rtl] #menu-obje-del              {background-position:right  -840px;}
+#menu-obje-edit             {background-position:left -1110px;} [dir=rtl] #menu-obje-edit             {background-position:right -1110px;}
+#menu-obje-editraw          {background-position:left -1240px;} [dir=rtl] #menu-obje-editraw          {background-position:right -1240px;}
+#menu-obje-link             {background-position:left -1140px;} [dir=rtl] #menu-obje-link             {background-position:right -1140px;}
+#menu-obje-link-fam         {background-position:left   -90px;} [dir=rtl] #menu-obje-link-fam         {background-position:right   -90px;}
+#menu-obje-link-indi        {background-position:left  -300px;} [dir=rtl] #menu-obje-link-indi        {background-position:right  -300px;}
+#menu-obje-link-sour        {background-position:left  -180px;} [dir=rtl] #menu-obje-link-sour        {background-position:right  -180px;}
+#menu-repo-addfav           {background-position:left  -870px;} [dir=rtl] #menu-repo-addfav           {background-position:right  -870px;}
+#menu-repo-del              {background-position:left  -840px;} [dir=rtl] #menu-repo-del              {background-position:right  -840px;}
+#menu-repo-edit             {background-position:left  -990px;} [dir=rtl] #menu-repo-edit             {background-position:right  -990px;}
+#menu-repo-editraw          {background-position:left -1240px;} [dir=rtl] #menu-repo-editraw          {background-position:right -1240px;}
+#menu-report li             {background-position:left  -570px;} [dir=rtl] #menu-report li             {background-position:right  -570px;}
+#menu-search-advanced       {background-position:left  -600px;} [dir=rtl] #menu-search-advanced       {background-position:right  -600px;}
+#menu-search-general        {background-position:left  -600px;} [dir=rtl] #menu-search-general        {background-position:right  -600px;}
+#menu-search-replace        {background-position:left  -600px;} [dir=rtl] #menu-search-replace        {background-position:right  -600px;}
+#menu-search-soundex        {background-position:left  -600px;} [dir=rtl] #menu-search-soundex        {background-position:right  -600px;}
+#menu-sour-addfav           {background-position:left  -870px;} [dir=rtl] #menu-sour-addfav           {background-position:right  -870px;}
+#menu-sour-del              {background-position:left  -840px;} [dir=rtl] #menu-sour-del              {background-position:right  -840px;}
+#menu-sour-edit             {background-position:left  -960px;} [dir=rtl] #menu-sour-edit             {background-position:right  -960px;}
+#menu-sour-editraw          {background-position:left -1240px;} [dir=rtl] #menu-sour-editraw          {background-position:right -1240px;}
+#menu-story-sub          	{background-position:left -1208px;} [dir=rtl] #menu-story-sub             {background-position:right -1208px;}
+#menu-tree li               {background-position:left  -240px;} [dir=rtl] #menu-tree li               {background-position:right  -240px;}
 
 #menu-language li {text-align:left;} /* The language menu is always LTR, even on RTL pages */
 #menu-theme    li {text-align:left;} /* The theme menu is always LTR, even on RTL pages */
@@ -651,8 +639,8 @@ html[dir=rtl] .main-menu-item  li li a {float:right;padding:1px 5px 1px 10px;}
 
 .menuitem {text-decoration:none;padding:1px;}
 .menuitem_hover {text-decoration:none;padding:1px;}
-.submenu {text-decoration:none;background-color:#e9e2db;border:solid #d3c6b8 1px;white-space:nowrap;visibility:hidden;position:absolute;padding:4px;}
-.submenuitem {vertical-align:middle;height:18px;text-decoration:none;background-color:#e9e2db;white-space:nowrap;padding:1px;}
+.submenu {text-decoration:none;background-color:#e9e2db;border:solid #d3c6b8 1px;visibility:hidden;position:absolute;padding:4px;}
+.submenuitem {vertical-align:middle;height:18px;text-decoration:none;background-color:#e9e2db;padding:1px;white-space: nowrap;}
 .submenuitem a, .submenuitem_hover a {display:inline-block;vertical-align:middle;}
 
 
@@ -666,10 +654,10 @@ html[dir=rtl] .main-menu-item  li li a {float:right;padding:1px 5px 1px 10px;}
 #header .makeMenu li ul li:hover{background-color: #f4f0ed;white-space: nowrap;}
 .lang-active, .theme-active{font-weight:900;}
 
-html[dir=rtl] .makeMenu li ul {left:0px; right:auto;}
-html[dir=rtl] .makeMenu li ul li {text-align:right;}
-html[dir=rtl] .makeMenu li {border-left:none; border-right: 2px solid;}
-html[dir=rtl] .makeMenu li:first-child, html[dir=rtl] .makeMenu li ul li  {border:none;}
+[dir=rtl] .makeMenu li ul {left:0px; right:auto;}
+[dir=rtl] .makeMenu li ul li {text-align:right;}
+[dir=rtl] .makeMenu li {border-left:none; border-right: 2px solid;}
+[dir=rtl] .makeMenu li:first-child, [dir=rtl] .makeMenu li ul li  {border:none;}
 
 
 /* ========= Positioning edit, copy, delete links ============= */
@@ -677,11 +665,11 @@ html[dir=rtl] .makeMenu li:first-child, html[dir=rtl] .makeMenu li ul li  {borde
 .editfacts {clear:left;	padding-top:5px;margin: 0 auto; width:72px;} /* a container for the following three links */
 #sidebar .editfacts {padding-top: 15px;}
 .editlink, .copylink, .deletelink {float:left;}
-html[dir=rtl] .editlink, html[dir=rtl] .copylink, html[dir=rtl] .deletelink {float:right;}
+[dir=rtl] .editlink, [dir=rtl] .copylink, [dir=rtl] .deletelink {float:right;}
 span.link_text  {display:none;}
 /* Indi header */
 .field  .editlink, .field  .deletelink, .field .copylink {float:right;}
-html[dir=rtl].field  .editlink, html[dir=rtl].field  .deletelink  {float:left;}
+[dir=rtl].field  .editlink, [dir=rtl].field  .deletelink  {float:left;}
 /* =========== end edit, copy, delete links ==================== */
 
 /* =========== Indi header ================== */ 
@@ -734,18 +722,18 @@ dd .editlink, dd .deletelink  {float:right;}
 	padding: 3px;
 }
 
-html[dir=rtl] #indi_header {float:right;}
-html[dir=rtl] #indi_header h3 {padding: 0 30px 0 10px; text-align:right;}
-html[dir=rtl]  #indi_header h3 .header_age {padding:5px 5px 5px 0; float:left;}
-html[dir=rtl] #main_name {float:right;}
-html[dir=rtl] #indi_mainimage {float:right;}
-html[dir=rtl] #indi_mainimage a img {float:right;}
-html[dir=rtl] #indi_note .fact_NOTE {float:right; margin:0 0 0 10px;}
-html[dir=rtl] #header_accordion1 {float:left;}
-html[dir=rtl] .indi_table {clear:right;}
-html[dir=rtl]  #sex {float:left;}	
-html[dir=rtl]  #dates {	float:left;}
-html[dir=rtl]  dd .editlink, html[dir=rtl]  dd .deletelink  {float:left;}
+[dir=rtl] #indi_header {float:right;}
+[dir=rtl] #indi_header h3 {padding: 0 30px 0 10px; text-align:right;}
+[dir=rtl]  #indi_header h3 .header_age {padding:5px 5px 5px 0; float:left;}
+[dir=rtl] #main_name {float:right;}
+[dir=rtl] #indi_mainimage {float:right;}
+[dir=rtl] #indi_mainimage a img {float:right;}
+[dir=rtl] #indi_note .fact_NOTE {float:right; margin:0 0 0 10px;}
+[dir=rtl] #header_accordion1 {float:left;}
+[dir=rtl] .indi_table {clear:right;}
+[dir=rtl]  #sex {float:left;}	
+[dir=rtl]  #dates {	float:left;}
+[dir=rtl]  dd .editlink, [dir=rtl]  dd .deletelink  {float:left;}
 
 
 /* General sprite */
@@ -759,26 +747,26 @@ html[dir=rtl]  dd .editlink, html[dir=rtl]  dd .deletelink  {float:left;}
 .deleteicon {background-position: -100px -32px; width: 24px; height:16px;}
 
 .icon_arrow {display:block; background:url(images/small_menu_sprite.png) no-repeat left 0;}
-.icon_arrow {background-position:90% -1166px;} html[dir=rtl] .icon_arrow {background-position:10% -1184px;}
+.icon_arrow {background-position:90% -1166px;} [dir=rtl] .icon_arrow {background-position:10% -1184px;}
 
 /* =========== Indi tabs ================== */
 /* Facts & Events tab */
 #personal_facts_content .fact_NOTE, #personal_facts_content .fact_SOUR, #family-table .fact_NOTE, #family-table .fact_SOUR {margin: 5px 3px 5px 0; clear: both;}
 .media-display-image {float:left;}
 .media-display-title {float:left; font-style:italic; margin:10px;}
-html[dir=rtl] .media-display-image {float:right;}
-html[dir=rtl] .media-display-title {float:right;}
+[dir=rtl] .media-display-image {float:right;}
+[dir=rtl] .media-display-title {float:right;}
 
 
-html[dir=rtl] li up li {text-align: left;}
+[dir=rtl] li up li {text-align: left;}
 .makeMenu,.makeMenu li ul {list-style: none;margin: 0;padding: 1px;}
 .makeMenu li:hover>ul {display: block;}
 
 /* The language/theme/favorites menu in the header is right-justified, so submenus must also be right justified */
 #extra-menu {float: right;white-space: nowrap;margin: 0 10px 0 0;}
-html[dir=rtl] #extra-menu {float: left;margin: 0 0 0 10px;}
+[dir=rtl] #extra-menu {float: left;margin: 0 0 0 10px;}
 #extra-menu.makeMenu li ul {left: auto;right: 0px;}
-html[dir=rtl] #extra-menu.makeMenu li ul {left: 0px;right: auto;}
+[dir=rtl] #extra-menu.makeMenu li ul {left: 0px;right: auto;}
 
 .place {padding-top: 5px;}
 .logo {	text-align: center;}
@@ -823,7 +811,7 @@ html[dir="rtl"] .person_box_template i[class^="icon-silhouette"]{float:right;}
 .lb-menu li a {padding-top:24px;}
 .lb-menu li li a {padding:1px 10px 1px 5px;}
 .makeMenu.lb-menu li{border:none;}
-html[dir=rtl] .lb-menu > li {float:right;}
+[dir=rtl] .lb-menu > li {float:right;}
 
 .lb-image_edit {background:url(images/image_edit.png) no-repeat 50% 20%;}
 .lb-image_link {background:url(images/image_link.png) no-repeat 50% 20%;}
@@ -852,8 +840,8 @@ html[dir=rtl] .lb-menu > li {float:right;}
 #register-form textarea {vertical-align: top;}
 #register-form div#registration-submit {text-align:center;}
 .login_block_block #login-form, .login_block_block #new_passwd_form{border:0; background:none;}
-html[dir=rtl] #login-form label, html[dir=rtl] #new_passwd_form label, html[dir=rtl] #register-form label, html[dir=rtl] #verify-form  label {text-align:left;}
-html[dir=rtl] #register-form div, html[dir=rtl] #verify-form div {text-align:left;}
+[dir=rtl] #login-form label, [dir=rtl] #new_passwd_form label, [dir=rtl] #register-form label, [dir=rtl] #verify-form  label {text-align:left;}
+[dir=rtl] #register-form div, [dir=rtl] #verify-form div {text-align:left;}
 
 /* ============== reportengine.php ======================= */
 #reportengine-page table {margin:20px auto;}
@@ -870,7 +858,18 @@ html[dir=rtl] #register-form div, html[dir=rtl] #verify-form div {text-align:lef
 .popup  li span {padding:0 5px;}
 .popup  li ul, .popup  li ul li, .popup  li span span {padding:0;}
 .itr:hover .popup {display:block; position:absolute; width:12em;right:0; z-index: 9999;}
-html[dir=rtl] .itr:hover .popup {left:0; right:auto;}
+[dir=rtl] .itr:hover .popup {left:0; right:auto;}
+
+/* Album tab */
+#lightbox_content table {width: 100%; padding: 0; border: 0;}
+#lightbox_content span {padding:10px;}
+#lightbox_content span img {vertical-align:top;}
+.album-list {list-style-type: none;}
+.album-list-item {display: inline-block;text-align: center;padding: 0 12px;height: 112px;width: 120px;}
+.album-list-item a img {max-height: 78px;max-width: 100px;height: auto;width: auto;}
+.album-list-item a img:hover {outline: thin solid #A28765;}
+.album-image {margin: auto;}
+.album-title {padding-top: 4px;width: 100%;}
 
 /* ========= jquery-ui.custom.css changes ============ */
 .ui-tabs .ui-tabs-panel {padding:1em 0;}
@@ -881,11 +880,11 @@ html[dir=rtl] .itr:hover .popup {left:0; right:auto;}
 
 .ui-helper-reset {line-height: 1.5;}
 
-html[dir=rtl] .ui-tabs {direction:rtl;}
-html[dir=rtl] .ui-tabs .ui-tabs-nav li.ui-tabs-selected, html[dir=rtl] .ui-tabs .ui-tabs-nav li.ui-state-default {float:right;}
-html[dir=rtl] .ui-accordion .ui-accordion-header .ui-icon {right: 0.5em;}
-html[dir=rtl] .ui-dialog-title{float:right;}
-html[dir=rtl] .ui-dialog-titlebar-close{left:.3em; right:auto;}
+[dir=rtl] .ui-tabs {direction:rtl;}
+[dir=rtl] .ui-tabs .ui-tabs-nav li.ui-tabs-selected, [dir=rtl] .ui-tabs .ui-tabs-nav li.ui-state-default {float:right;}
+[dir=rtl] .ui-accordion .ui-accordion-header .ui-icon {right: 0.5em;}
+[dir=rtl] .ui-dialog-title{float:right;}
+[dir=rtl] .ui-dialog-titlebar-close{left:.3em; right:auto;}
 
 .ui-widget {font-family: Verdana, Arial, Helvetica, sans-serif;}
 .ui-widget-header { background: #e9e2db; border-color: #ddd;padding:3px;}
@@ -932,14 +931,14 @@ html[dir=rtl] .ui-dialog-titlebar-close{left:.3em; right:auto;}
 /*.dataTables_wrapper .ui-state-default {background: none #D3C6B8}*/
 .ui-accordeon-header .ui-state-default, .ui-accordeon-header .ui-state-active  { border:1px solid #A28765;background: #D3C6B8; } 
 
-html[dir=rtl] .css_right {float:right;}
-html[dir=rtl] .dataTables_paginate {float:right;}
-html[dir=rtl] .dataTables_processing {float:right;}
-html[dir=rtl] .dataTables_filter {float:left;}
-html[dir=rtl] .dataTables_info {float:right}
-html[dir=rtl] .dataTables_length {float:left;}
-html[dir=rtl] .DataTables_sort_wrapper {margin-right:20px;}
-html[dir=rtl] .DataTables_sort_wrapper span {left:auto; right:0; margin-right:-20px;}
+[dir=rtl] .css_right {float:right;}
+[dir=rtl] .dataTables_paginate {float:right;}
+[dir=rtl] .dataTables_processing {float:right;}
+[dir=rtl] .dataTables_filter {float:left;}
+[dir=rtl] .dataTables_info {float:right}
+[dir=rtl] .dataTables_length {float:left;}
+[dir=rtl] .DataTables_sort_wrapper {margin-right:20px;}
+[dir=rtl] .DataTables_sort_wrapper span {left:auto; right:0; margin-right:-20px;}
 
 /* =======Search results======== */
 #search-result-tabs h3 { border:1px solid #A28765;background: #D3C6B8; }
@@ -953,8 +952,8 @@ html[dir=rtl] .DataTables_sort_wrapper span {left:auto; right:0; margin-right:-2
 #indi_left {float:left; width:98%;}
 #tabs {background-color:#f4f0ed; border-color:#DDD; float:left; width:100%; overflow:visible;font-family: Verdana, Arial, Helvetica, sans-serif; font-size:10px}
 
-html[dir=rtl] #indi_left {float:right;}
-html[dir=rtl] #tabs {float:right;}
+[dir=rtl] #indi_left {float:right;}
+[dir=rtl] #tabs {float:right;}
 
 /* ========= Sidebar ============== */
 #sidebar {border-color:#DDD; display:none; margin:5px 2px 0 0; height:auto;}
@@ -971,25 +970,25 @@ html[dir=rtl] #tabs {float:right;}
 .use-sidebar #separator {background:#D3C6B8 url(images/general_sprite.png) no-repeat -1px 2px;}
 #sidebar .ui-accordion-header { border:1px solid #A28765;background: #D3C6B8; } 
 
-html[dir=rtl] #sidebar  {margin:5px 0 0 2px;}
-html[dir=rtl] .use-sidebar.sidebar-at-right #sidebar, html[dir=rtl] .sidebar-at-right #separator  {float:left;}
-html[dir=rtl] #separator {float:left; background:#D3C6B8 url(images/general_sprite.png) no-repeat -1px 2px;}
-html[dir=rtl] .use-sidebar #separator {background:#D3C6B8 url(images/general_sprite.png) no-repeat -26px 2px;}
+[dir=rtl] #sidebar  {margin:5px 0 0 2px;}
+[dir=rtl] .use-sidebar.sidebar-at-right #sidebar, [dir=rtl] .sidebar-at-right #separator  {float:left;}
+[dir=rtl] #separator {float:left; background:#D3C6B8 url(images/general_sprite.png) no-repeat -1px 2px;}
+[dir=rtl] .use-sidebar #separator {background:#D3C6B8 url(images/general_sprite.png) no-repeat -26px 2px;}
 
 /* ============== Sidebar content items ============== */
 /* Family navigator */
 #sb_content_family_nav {padding:0;}
 #sb_family_nav_content {}
 .nav_content {width:100%; padding:0;}
-.flyout {color:#000000; text-align:left; margin-top:-20px; right:210px; padding:3px;}
-.flyout2 {color:#000000;text-align:left;margin-top:-2px; left:40px; padding:3px;}
-.flyout4 {color:#000000;text-align:left; margin-top:0px;margin-left:0px; padding:3px;}
-.flyout3, .flyout3 a {background:none; border:none; text-decoration:none; text-align:left; margin-top:0px; left:0px; padding:0px;}
-.flyout, .flyout2{  background-color: #E9E2DB; border: 1px solid #D3C6B8; }
-
-html[dir=rtl] .flyout {text-align:right; left:210px;}
-html[dir=rtl] .flyout2 {text-align:right; right:40px;}
-html[dir=rtl] .flyout3 {text-align:right;}
+.nav_content .facts_label{width: 75px;}
+#sb_family_nav_content .clist {margin: 0;}
+.famnav_title{font-weight: bold;display: block;padding: 5px 0;}
+.flyout {left: 40px;background-color: #E9E2DB; border: 1px solid #D3C6B8;}
+[dir=rtl] .flyout {left: auto;right: 40px;}
+.flyout a, .flyout a:hover {color: #000000;cursor: default;text-decoration: none;}
+.flyout2 {font-weight: 700;}
+.flyout3 {color: #62584D; font-weight: normal;}
+.flyout3:hover {cursor: pointer;color: #9F8C77; }
 
 /* Descendancy */
 #sb_content_descendancy {}
@@ -999,8 +998,8 @@ html[dir=rtl] .flyout3 {text-align:right;}
 .desc_tree_div {	display:none;}
 .desc_tree_div ul {padding:0px;	margin-left:10px;margin-top:0px;margin-right:0px;}
 
-html[dir=rtl] #sb_desc_content {margin-right:3px;}
-html[dir=rtl] .desc_tree_div ul {margin-right:10px;margin-left:0px;}
+[dir=rtl] #sb_desc_content {margin-right:3px;}
+[dir=rtl] .desc_tree_div ul {margin-right:10px;margin-left:0px;}
 
 /* Individuals, Families */
 #sb_content_individuals, #sb_content_families {}
@@ -1022,7 +1021,7 @@ html[dir=rtl] .desc_tree_div ul {margin-right:10px;margin-left:0px;}
 #sb_content_extra_info span a {display:inline;} /* --- Table does not fit otherwise */
 #sb_content_extra_info #hitcounter {border-top: 1px solid #A28765; font-weight: bold; padding-top: 5px;}
 
-html[dir=rtl] #sb_content_extra_info .editfacts {float:left;}
+[dir=rtl] #sb_content_extra_info .editfacts {float:left;}
 
 /* ============== find.php ======================= */
 #find-page h3, #find-page h4{margin: 0 10px 10px 10px; text-align:center;}
@@ -1051,8 +1050,8 @@ html[dir=rtl] #sb_content_extra_info .editfacts {float:left;}
 #search-page-table .value a {color:#62584D;}
 #search-page-table .value a:hover {color:#9f8c77;}
 #search-page-table p {margin:0;}
-html[dir=rtl] #search-page-table .label{float:right;}
-html[dir=rtl] #search-page-table .value {margin:0 170px 0 0;}
+[dir=rtl] #search-page-table .label{float:right;}
+[dir=rtl] #search-page-table .value {margin:0 170px 0 0;}
 
 /* ============== edituser.php ======================= */
 #edituser-page h2, #edituser_submit {margin:20px;text-align:center;}
@@ -1063,16 +1062,16 @@ html[dir=rtl] #search-page-table .value {margin:0 170px 0 0;}
 #edituser-table .value a:hover {color:#9f8c77;}
 #edituser-table .label span{margin:0 10px;}
 #edituser-table select{margin:0;}
-html[dir=rtl] #edituser-table .label{float:right;}
-html[dir=rtl] #edituser-table .value {margin:0 260px 0 0;}
+[dir=rtl] #edituser-table .label{float:right;}
+[dir=rtl] #edituser-table .value {margin:0 260px 0 0;}
 
 
 @media print {
 	#backprint, #separator  {display:none;}
 	#header, #footer, .noprint {display:none !important;}
-	#pedigree_chart {left:right;left:-80px;}
+	#pedigree_chart {left:-80px;}
 	#header_accordion1 {width: 510px!important}
-	html[dir=rtl] #pedigree_chart {left:auto;right:-80px;}
+	[dir=rtl] #pedigree_chart {left:auto;right:-80px;}
 	form, button, input {display:none;}
 	#familybook_chart h3 {margin-bottom: 10px;}
 	.lifespan_outer {position:relative;width:auto;height:auto;overflow:visible;border:none;}
@@ -1253,8 +1252,8 @@ a.icon-udarrow:hover{width:20px;height:20px;background-image:url(images/udarrow2
 #save-cancel input{padding:2px 8px;}
 #save-cancel .save {float:left;margin:5px;}
 #save-cancel .cancel {float:right;margin:5px;}
-html[dir=rtl] #save-cancel .save {float:right;}
-html[dir=rtl] #save-cancel .cancel {float:left;}
+[dir=rtl] #save-cancel .save {float:right;}
+[dir=rtl] #save-cancel .cancel {float:left;}
 #save-cancel .save:hover, #save-cancel .cancel:hover {background:buttonhighlight;}
 #edit_interface-page, #addmedia-page {margin-bottom:50px;}
 #edit_interface-page #raw-gedcom-list {padding:5px;}
@@ -1297,11 +1296,11 @@ html[dir=rtl] #save-cancel .cancel {float:left;}
 #cboxSlideshowStop {background:url(images/controls.png) no-repeat -100px 0; width:25px; height:25px;}
 #cboxSlideshowStop:hover{background-position:-100px -25px;}
 
-html[dir=rtl] #cboxClose {position:absolute;right:auto;left:0px}
-html[dir=rtl] #cboxPrevious {position:absolute;right:56px;left:auto}
-html[dir=rtl] #cboxNext {position:absolute;right:0px;left:auto}
-html[dir=rtl] #cboxSlideshow {position:absolute;right:28px;left:auto}
-html[dir=rtl] #cboxCurrent {position:absolute;right:94px;left:auto}
+[dir=rtl] #cboxClose {position:absolute;right:auto;left:0px}
+[dir=rtl] #cboxPrevious {position:absolute;right:56px;left:auto}
+[dir=rtl] #cboxNext {position:absolute;right:0px;left:auto}
+[dir=rtl] #cboxSlideshow {position:absolute;right:28px;left:auto}
+[dir=rtl] #cboxCurrent {position:absolute;right:94px;left:auto}
 
 /* Census assistant module */
 table.table-census-assistant th {
