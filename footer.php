@@ -47,7 +47,7 @@ if (!defined('WT_WEBTREES')) {
 				</p>
 				
 				<?php 
-				if (WT_DEBUG || get_gedcom_setting(WT_GED_ID, 'SHOW_STATS')) {
+				if ($WT_TREE && $WT_TREE->getPreference('SHOW_STATS')) {
 					echo execution_stats();
 				}
 				if (exists_pending_change()) { ?>

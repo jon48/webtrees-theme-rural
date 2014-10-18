@@ -34,7 +34,7 @@ if (!defined('WT_WEBTREES')) {
 $theme_name = "Rural";
 
 // A version number in the path prevents browser-cache problems during upgrade
-define('WT_CSS_URL', WT_THEME_URL . 'css-1.5.3/');
+define('WT_CSS_URL', WT_THEME_URL . 'css-1.6.0/');
 
 $headerfile       = WT_THEME_DIR.'header.php';
 $footerfile       = WT_THEME_DIR.'footer.php';
@@ -65,7 +65,7 @@ $WT_IMAGES=array(
 //-- variables for the fan chart
 $fanChart = array(
 	'font'    =>WT_ROOT.'includes/fonts/DejaVuSans.ttf',
-	'size'    =>'7px',
+	'size'    => 7,
 	'color'   =>'#000000',
 	'bgColor' =>'#eeeeee',
 	'bgMColor'=>'#b1cff0',
