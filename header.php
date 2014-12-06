@@ -5,7 +5,7 @@
 // Copyright (C) 2014 webtrees development team.
 //
 // Derived from PhpGedView
-// Copyright (C) 2002 to 2009  PGV Development Team.  All rights reserved.
+// Copyright (C) 2002 to 2009  PGV Development Team.
 //
 // This program is free software; you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -112,7 +112,7 @@ $this
 				<ul class="makeMenu">
 					<li>
 					<?php 
-					if (WT_USER_ID) {
+					if (Auth::check()) {
 						echo '<a href="edituser.php">', WT_I18N::translate('Logged in as '), ' ', WT_Filter::escapeHtml(Auth::user()->getRealName()), '</a></li> <li>', logout_link();
 					} else {
 						echo login_link();
