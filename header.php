@@ -74,18 +74,20 @@ $this
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- No mobile support yet  -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1">  -->
 	<?php echo header_links($META_DESCRIPTION, $META_ROBOTS, $META_GENERATOR, $LINK_CANONICAL); ?>
 	<title><?php echo WT_Filter::escapeHtml($title); ?></title>
 	<link rel="icon" href="<?php echo WT_CSS_URL; ?>favicon.png" type="image/png">
-	<link rel="stylesheet" type="text/css" href="<?php echo WT_THEME_URL; ?>jquery-ui-1.10.3/jquery-ui-1.10.3.custom.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo WT_THEME_URL; ?>jquery-ui-1.11.2/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo WT_CSS_URL; ?>style.css">
-	<!--[if IE]>
-	<link rel="stylesheet" type="text/css" href="<?php echo WT_CSS_URL; ?>msie.css">
+	<!--[if IE 8]>
+	<script src="<?php echo WT_THEME_URL; ?>/modernizr-2.8.3/modernizr.min.js"></script>
 	<![endif]-->
 
 </head>
 <body id="body">
-<?php if ($view=='simple') { ?>
+<?php if ($view === 'simple') { ?>
 	<div id="header_simple" > </div>
 	<div id="main_content">
 		<div class="top_center_box">
@@ -96,10 +98,10 @@ $this
 		<div class="content_box simpleview">
 <?php } else { ?>
 	<div id="main_content">
-		<div id="header">
+		<header>
 			<div id="htopright">
 				<div class="header_search">
-					<form action="search.php" method="post">
+					<form action="search.php" method="post" role="search">
 						<input type="hidden" name="action" value="general">
 						<input type="hidden" name="ged" value="<?php echo WT_GEDCOM; ?>">
 						<input type="hidden" name="topsearch" value="yes">
@@ -120,16 +122,16 @@ $this
 					?>
 					</li>
 				</ul>
-				<div class="gedtitle">
-					<?php echo  WT_TREE_TITLE; ?>
-				</div>
+				<h1><?php echo  WT_TREE_TITLE; ?></h1>
 			</div>
 			<div id="hbottomright">
-				<ul id="extra-menu" class="makeMenu">
-					<?php echo WT_MenuBar::getFavoritesMenu(); ?>
-					<?php echo WT_MenuBar::getThemeMenu(); ?>
-					<?php echo WT_MenuBar::getLanguageMenu(); ?>
-				</ul>
+				<div id="header-user-links">
+					<ul class="makeMenu" role="menubar">
+						<?php echo WT_MenuBar::getFavoritesMenu(); ?>
+						<?php echo WT_MenuBar::getThemeMenu(); ?>
+						<?php echo WT_MenuBar::getLanguageMenu(); ?>
+					</ul>
+				</div>
 			</div>
 			<?php 
 			//Prepare menu bar
@@ -146,18 +148,18 @@ $this
 				$menu_items[]=$menu;
 			}
 			?>
-		</div>
+		</header>
 		<div class="top_center_box">
 			<div class="top_center_box_left" ></div>
 			<div class="top_center_box_right" ></div>
 			<div class="top_center_box_center"></div>
 		</div>
 		<div class="content_box">
-			<div id="topMenu">
+			<nav id="topMenu">
 				<div class="topMenu_left"></div>
 				<div class="topMenu_right"></div>
 				<div class="topMenu_center">
-					<table align="center" id="main-menu">
+					<table id="main-menu"  role="menubar"  align="center" >
 						<tr>
 						<?php  
 							$nbMenus = count($menu_items);
@@ -176,9 +178,8 @@ $this
 						</tr>
 					</table>
 				</div>
-			</div>
+			</nav>
 			
 	<?php } ?>
-	<?php echo $javascript; ?>
 	<?php echo WT_FlashMessages::getHtmlMessages(); ?>
-	<div id="content">
+	<main id="content">

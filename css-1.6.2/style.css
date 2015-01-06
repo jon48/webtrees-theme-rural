@@ -56,11 +56,11 @@ img.block, #mycart img  {border: 0;height: 25px;vertical-align: middle;}
 /**
  * Header
  */
-#header {background: url(images/header.png) no-repeat bottom left;position: relative;width: 100%;height: 150px;margin: auto;color: white;}
-[dir=rtl] #header { background-position: right;}
-#header a{color:white;}
-#header a:hover{color:#e9e2db;}
-#header td{text-align: right;}
+header {background: url(images/header.png) no-repeat bottom left;position: relative;width: 100%;height: 150px;margin: auto;color: white;}
+[dir=rtl] header { background-position: right;}
+header a{color:white;}
+header a:hover{color:#e9e2db;}
+header td{text-align: right;}
 #htopright{text-align: right;position: absolute;top: 5px;right:0px;}
 [dir=rtl] #htopright { text-align: left; left:0px;}
 #hbottomright{text-align: right;position: absolute;bottom: 5px;right:0px;}
@@ -81,9 +81,9 @@ img.block, #mycart img  {border: 0;height: 25px;vertical-align: middle;}
  * Person Box
  */
 .alpha_index{color:#999;}
-.person_box {font-family: tahoma, arial, helvetica, sans-serif;background-color: #D2E2EC;border: solid #85B0CB 1px;padding:3px;}
-.person_boxF {font-family: tahoma, arial, helvetica, sans-serif;background-color: #EDE1E8;border: 1px solid #E2789F;padding:3px;}
-.person_boxNN {font-family: tahoma, arial, helvetica, sans-serif;background-color: white;border: dashed #9ca3d4 1px;padding:3px;}
+.person_box {font-family: tahoma, arial, helvetica, sans-serif;background: #D2E2EC;border: solid #85B0CB 1px;padding:3px;}
+.person_boxF {font-family: tahoma, arial, helvetica, sans-serif;background: #EDE1E8;border: 1px solid #E2789F;padding:3px;}
+.person_boxNN {font-family: tahoma, arial, helvetica, sans-serif;background: white;border: dashed #9ca3d4 1px;padding:3px;}
 .person_box:target,.news_box:target,#gedcom_stats:target {background-color: #ffffcc;}
 .person_box_lifespan {display: inline;}
 /* families tab person box */
@@ -187,7 +187,8 @@ div.fact_SHARED_NOTE {clear: both;}
 
 .helpcontent {margin-left: 10px;margin-right: 10px;}
 .helpcontent dt {clear:both;}
-#content {width: 98%;margin: auto;}
+main {display:block; width: 98%;margin: auto; margin-top: 7px;}
+.simpleview main {margin-top: 0;}
 
 /**
  * Footer 
@@ -195,7 +196,7 @@ div.fact_SHARED_NOTE {clear: both;}
 .footer_center {width: 80%;margin: auto;padding-top: 20px;padding-bottom: 20px;}
 .footer_left {background: url(images/footer_bg_left.png) no-repeat bottom left;width: 100%;}
 .footer_right {background: url(images/footer_bg_right.png) no-repeat bottom right;width: 100%;}
-#footer {clear: both;width: 99%;margin: auto;text-align: center;}
+footer {clear: both;width: 99%;margin: auto;text-align: center;}
 
 #familybook_chart {margin-left:10px; }
 #familybook_chart table {border-collapse: collapse; empty-cells: show;}
@@ -232,7 +233,7 @@ div.fact_SHARED_NOTE {clear: both;}
 
 /*-- descendancy chart specific stylesheets --*/
 #descendancy_chart{margin:20px;}
-#descendancy_chart ul {background: url(images/vline.png) repeat-y left top;list-style: none;margin: 0px 0px 5px 15px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;}
+#descendancy_chart ul {background-image: url(images/vline.png);background-position:left top;background-repeat:repeat-y;list-style: none;margin: 0px 0px 5px 15px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;}
 #descendancy_chart li {list-style: none;margin: 5px 0 0 -15px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;}
 #descendancy_chart span.details1 div[class^="fact_"] {display: inline-block;}
 #descendancy_chart td.details1 {padding-top: 5px;}
@@ -240,7 +241,7 @@ div.fact_SHARED_NOTE {clear: both;}
 
 /*-- ancestry chart specific stylesheets --*/
 #ancestry_chart table div p {font-size:90%; margin:0;}
-#ancestry_chart ul {background: url(images/vline.png) repeat-y left top;list-style: none;display: block;margin: 0px 0px 0px 15px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;}
+#ancestry_chart ul {background-image: url(images/vline.png);background-position:left top;background-repeat:repeat-y;list-style: none;display: block;margin: 0px 0px 0px 15px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;}
 #ancestry_chart li {list-style: none;margin: 0px 0px 2px -13px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;}
 #ancestry_chart li table {margin: 5px 0;}
 [dir=rtl] #ancestry_chart ul {background-position: right top;margin: 0px 15px 0px 0px;left: auto;}
@@ -282,9 +283,7 @@ h1, h2, .helpheader {color: #7B983C;font: 18px tahoma, arial, helvetica, sans-se
 .starredname {text-decoration: underline;}
 .search_hit {background-color:#ff0;}
 .search_item{font-weight:600;}
-.title {clear: both;font-size: 20px;font-family: tahoma, arial, helvetica, sans-serif;float: left;padding-left: 10px;margin-bottom: 5px;}
-[dir=rtl] .title {float: right;padding-right: 10px;}
-[dir=rtl] .header_img {float: right;}
+header h1 {font: inherit;color: inherit;margin: 0;}
 .header_search {float: right;}
 [dir=rtl] .header_search {float:left;}
 
@@ -620,7 +619,7 @@ div.faq_title a:hover, div.faq_body a:hover, .faq_italic a:hover { color: #9F8C7
 #menu-obje-editraw          {background-position:left -1240px;} [dir=rtl] #menu-obje-editraw          {background-position:right -1240px;}
 #menu-obje-link             {background-position:left -1140px;} [dir=rtl] #menu-obje-link             {background-position:right -1140px;}
 #menu-obje-link-fam         {background-position:left   -90px;} [dir=rtl] #menu-obje-link-fam         {background-position:right   -90px;}
-#menu-obje-link-indi        {background-position:left  -300px;} [dir=rtl] #menu-obje-link-indi        {background-position:right  -300px;}
+#menu-obje-link-indi        {background-position:left  -120px;} [dir=rtl] #menu-obje-link-indi        {background-position:right  -120px;}
 #menu-obje-link-sour        {background-position:left  -180px;} [dir=rtl] #menu-obje-link-sour        {background-position:right  -180px;}
 #menu-repo-addfav           {background-position:left  -870px;} [dir=rtl] #menu-repo-addfav           {background-position:right  -870px;}
 #menu-repo-del              {background-position:left  -840px;} [dir=rtl] #menu-repo-del              {background-position:right  -840px;}
@@ -656,8 +655,8 @@ div.faq_title a:hover, div.faq_body a:hover, .faq_italic a:hover { color: #9F8C7
 .makeMenu li:first-child, .makeMenu li ul li  {border: 0;}
 .makeMenu li ul {display: none;	font-weight: normal;position: absolute;background-color: #e9e2db;border: thin solid #d3c6b8;z-index: 999;}
 .makeMenu li ul li {padding: 2px;display: block;text-align: left;}
-#header .makeMenu li ul li a{color: #62584D;}
-#header .makeMenu li ul li:hover{background-color: #f4f0ed;white-space: nowrap;}
+header .makeMenu li ul li a{color: #62584D;}
+header .makeMenu li ul li:hover{background-color: #f4f0ed;white-space: nowrap;}
 .lang-active, .theme-active{font-weight:900;}
 
 [dir=rtl] .makeMenu li ul {left:0px; right:auto;}
@@ -687,7 +686,7 @@ span.link_text  {display:none;}
 #indi_header h3.person_box, #indi_header h3.person_boxF , #indi_header h3.person_boxNN  {border:1px solid #A28765;background: #D3C6B8;}
 #indi_header h3.ui-state-active, #indi_header h3.ui-state-active, #indi_header h3.ui-state-active {border-bottom: none;}
 #indi_header h3 .header_age {padding:5px 0 5px 5px; float:right; font-weight:normal; font-size:65%;}
-#indi_header h3 .ui-icon { background-image: url("../jquery-ui-1.10.3/images/ui-icons_ffffff_256x240.png") }
+#indi_header h3 .ui-icon { background-image: url("../jquery-ui-1.11.2/images/ui-icons_ffffff_256x240.png") }
 #indi_header h3 .ui-state-active .ui-icon-triangle-1-s  {background-position: 0 -16px;}
 #indi_header h3 a {display:inline;}
 #indi_header a {color:#62584D; font-weight:normal;}
@@ -757,10 +756,10 @@ dd .editlink, dd .deletelink  {float:right;}
 .makeMenu li:hover>ul {display: block;}
 
 /* The language/theme/favorites menu in the header is right-justified, so submenus must also be right justified */
-#extra-menu {float: right;white-space: nowrap;margin: 0 10px 0 0;}
-[dir=rtl] #extra-menu {float: left;margin: 0 0 0 10px;}
-#extra-menu.makeMenu li ul {left: auto;right: 0px;}
-[dir=rtl] #extra-menu.makeMenu li ul {left: 0px;right: auto;}
+#header-user-links {float: right;white-space: nowrap;margin: 0 10px 0 0;}
+[dir=rtl] #header-user-links {float: left;margin: 0 0 0 10px;}
+#header-user-links .makeMenu li ul {left: auto;right: 0px;}
+[dir=rtl] #header-user-links .makeMenu li ul {left: 0px;right: auto;}
 
 .place {padding-top: 5px;}
 .logo {	text-align: center;}
@@ -867,17 +866,13 @@ html[dir="rtl"] .person_box_template i[class^="icon-silhouette"]{float:right;}
 .album-image {margin: auto;}
 .album-title {padding-top: 4px;width: 100%;}
 
-/* ========= jquery-ui.custom.css changes ============ */
-.ui-tabs .ui-tabs-panel {padding:1em 0;}
-.ui-accordion .ui-accordion-content {overflow:visible;padding: 0 5px;position:relative;}
-.ui-accordion .ui-accordion-header {text-align:center; margin-top:0;}
-.ui-accordion .ui-accordion-header a {padding: 2px;}
+/* ========= jquery-ui.css changes ============ */
+.ui-accordion .ui-accordion-content {position:relative; padding: 0 5px;}
+#sidebarAccordion .ui-accordion-header {text-align:center; margin-top: 0;}
 .ui-widget-overlay {background:#62584D; opacity: 0.9;}
 
 .ui-helper-reset {line-height: 1.5;}
 
-[dir=rtl] .ui-tabs {direction:rtl;}
-[dir=rtl] .ui-tabs .ui-tabs-nav li.ui-tabs-selected, [dir=rtl] .ui-tabs .ui-tabs-nav li.ui-state-default {float:right;}
 [dir=rtl] .ui-accordion .ui-accordion-header .ui-icon {right: 0.5em;}
 [dir=rtl] .ui-dialog-title{float:right;}
 [dir=rtl] .ui-dialog-titlebar-close{left:.3em; right:auto;}
@@ -939,7 +934,7 @@ html[dir="rtl"] .person_box_template i[class^="icon-silhouette"]{float:right;}
 
 /* =======Search results======== */
 #search-result-tabs h3 { border:1px solid #A28765;background: #D3C6B8; }
-#search-result-tabs h3 .ui-icon { background-image: url("../jquery-ui-1.10.3/images/ui-icons_ffffff_256x240.png") }
+#search-result-tabs h3 .ui-icon { background-image: url("../jquery-ui-1.11.2/images/ui-icons_ffffff_256x240.png") }
 
 /* ========= Tabs ============== */
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
@@ -954,7 +949,7 @@ html[dir="rtl"] .person_box_template i[class^="icon-silhouette"]{float:right;}
 
 /* ========= Sidebar ============== */
 #sidebar {width:20%;display:table-cell;vertical-align: top;}
-#sidebar .ui-icon { background-image: url("../jquery-ui-1.10.3/images/ui-icons_ffffff_256x240.png")}
+#sidebar .ui-icon { background-image: url("../jquery-ui-1.11.2/images/ui-icons_ffffff_256x240.png")}
 #sidebar h3.ui-state-active {border-bottom: none;}
 #sidebar .ui-state-active a, #sidebar .ui-state-default a { font-family: Lucida Grande,Lucida Sans,Arial,sans-serif; color: #62584D;  font-weight: bold; }
 #sidebar .ui-state-active .ui-icon-triangle-1-s  {background-position: 0 -16px;}
@@ -982,7 +977,7 @@ html[dir="rtl"] .person_box_template i[class^="icon-silhouette"]{float:right;}
 .flyout3:hover {cursor: pointer;color: #9F8C77; }
 
 /* Descendancy */
-#sb_content_descendancy {}
+#sb_content_descendancy { padding-top: 5px; padding-bottom: 5px;}
 #sb_desc_content {margin-left:3px; font-size:0.8em;}
 #sb_desc_content ul {padding:0px; margin:0px;}
 .sb_desc_indi_li {list-style-type:none;}
@@ -993,7 +988,7 @@ html[dir="rtl"] .person_box_template i[class^="icon-silhouette"]{float:right;}
 [dir=rtl] .desc_tree_div ul {margin-right:10px;margin-left:0px;}
 
 /* Individuals, Families */
-#sb_content_individuals, #sb_content_families {}
+#sb_content_individuals, #sb_content_families { padding-top: 5px; }
 .sb_indi_surname_li, .sb_fam_surname_li {list-style-image:url(images/plus.png);}
 .name_tree_div {	display:none;}
 .name_tree_div ul, .name_tree_div_visible ul {padding:0px;margin:0px;}
@@ -1058,16 +1053,13 @@ html[dir="rtl"] .person_box_template i[class^="icon-silhouette"]{float:right;}
 
 
 @media print {
-	#backprint, #separator  {display:none;}
-	#header, #footer, .noprint {display:none !important;}
+	#backprint, #separator, header, footer, form, #CB_All, .noprint {display:none !important;}
 	#pedigree_chart {left:-80px;}
 	#header_accordion1 {width: 510px!important}
 	[dir=rtl] #pedigree_chart {left:auto;right:-80px;}
-	form, button, input {display:none;}
 	#familybook_chart h3 {margin-bottom: 10px;}
 	.lifespan_outer {position:relative;width:auto;height:auto;overflow:visible;border: 0;}
 	.lifespan_people {position:absolute;width:auto;	left:-10px;	top:-60px;z-index:1;}
-	#CB_All {display:none;}
 }
 
 
@@ -1167,6 +1159,7 @@ a.icon-udarrow:hover{width:20px;height:20px;background-image:url(images/udarrow2
 .icon-warning{width:17px;height:17px;background-image:url(images/warning.png);}
 .icon-webtrees{width:100px;height:21px;background-image:url(images/webtrees_s.png);}
 .icon-wiki{width:16px;height:16px;background-image:url(images/w_button.png);}
+.iconz {cursor: pointer;}  /* ios on click workaround */
 .icon-zoomin{width:25px;height:25px;background-image:url(images/zoomin.png);}
 .icon-zoomout{width:25px;height:25px;background-image:url(images/zoomout.png);}
 

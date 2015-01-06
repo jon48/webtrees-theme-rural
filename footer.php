@@ -30,11 +30,11 @@ if (!defined('WT_WEBTREES')) {
 
 ?>
 
-</div>
+</main>
 
-<?php if ($view!='simple') { ?>
+<?php if ($view !== 'simple') { ?>
 
-	<div id="footer">
+	<footer>
 		<div class="footer_left">
 			<div class="footer_right">
 				<div class="footer_center">
@@ -58,7 +58,7 @@ if (!defined('WT_WEBTREES')) {
 				</div>
 			</div>
 		</div>
-	</div>
+	</footer>
 <?php } ?>
 
 </div>
