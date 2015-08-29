@@ -1,0 +1,49 @@
+//webtrees-MyArtJaub
+// Copyright (C) 2015 Jonathan Jaubart
+// 
+// Based on webtrees: online genealogy
+// Copyright (C) 2015 webtrees development team
+//  
+// This file is part of webtrees-MyArtJaub
+//  
+// webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// webtrees-MyArtJaub is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+// You should have received a copy of the GNU General Public License
+// along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+
+footer {
+	
+	.clearfix();
+	width: 99%;
+	margin: auto;
+	text-align: center;
+	
+	.footer_center {
+		width: 80%;
+		margin: auto;
+		padding: 20px 0;
+        
+        @media (max-width: @screen-xs-max) {
+            padding-bottom: 40px;
+        }    
+	}
+	
+	.footer_left {
+        @media (min-width: @screen-sm-min) {
+            background: url(images/footer_bg_left.png) no-repeat bottom left;
+        }        
+		width: 100%;
+	}
+	
+	.footer_right {
+		background: url(images/footer_bg_right.png) no-repeat bottom right;
+		width: 100%;
+	}
+	
+}

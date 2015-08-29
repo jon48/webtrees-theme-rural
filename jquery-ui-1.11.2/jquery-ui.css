@@ -776,7 +776,7 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-tabs {
 	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-	padding: .2em;
+	padding: 2px 0;
 }
 .ui-tabs .ui-tabs-nav {
 	margin: 0;
@@ -988,10 +988,10 @@ body .ui-tooltip {
 }
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon {
-	background-image: url("images/ui-icons_2694e8_256x240.png");
+	background-image: url("images/ui-icons_222222_256x240.png");
 }
 .ui-state-active .ui-icon {
-	background-image: url("images/ui-icons_ffffff_256x240.png");
+	background-image: url("images/ui-icons_222222_256x240.png");
 }
 .ui-state-highlight .ui-icon {
 	background-image: url("images/ui-icons_2e83ff_256x240.png");

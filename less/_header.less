@@ -1,0 +1,244 @@
+//webtrees-MyArtJaub
+// Copyright (C) 2015 Jonathan Jaubart
+// 
+// Based on webtrees: online genealogy
+// Copyright (C) 2015 webtrees development team
+//  
+// This file is part of webtrees-MyArtJaub
+//  
+// webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// webtrees-MyArtJaub is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+// You should have received a copy of the GNU General Public License
+// along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+
+header {
+	.row;	
+	
+	#header-content-lrg {
+        .hidden-xs;
+		.content-col-layout;
+		
+		height: 150px;
+		background: url(images/header.png) no-repeat bottom left;
+        [dir=rtl] & { background-position: right; }
+				
+		a { 
+			font-weight: bold;
+		}
+					
+		a,
+		.nav>li>a,
+		.nav .open>a {						
+			background-color: transparent;
+			color: white;
+				
+			&:hover, &:active, a:focus, a:visited {
+				color: @brown-light;
+				text-decoration:none;
+			}			
+		}
+        
+        h1 {
+            font: inherit;
+            color: white;
+            margin: 0;
+        }
+				
+		.header-row {
+			.row;
+			height: 50px;
+			
+		}
+		
+		.header-column {
+			.make-xs-column(8);	
+			.make-xs-column-offset(4);	
+			text-align: right;
+		}				
+				
+		#header-top {
+            .header-column;
+		}
+		
+		#header-middle {
+            .header-column;
+			top: 0px;
+			//top: 50%;
+			//margin-top: -24px;
+			ul, h1, div { display: inline; }
+			ul li {
+				list-style: none;				
+				a { padding: inherit; }
+			}	
+		}
+		
+		#header-bottom {
+            .header-column;
+			top: 100%;
+			margin-top: -22px;
+		}
+
+		/* Navigation */
+			
+		.secondary-menu {
+			.pull-right;
+			[dir=rtl] & { .pull-left; }
+				
+			.dropdown-menu {
+				background-color: @brown-light;
+				border:solid @brown thin;
+				
+				li { 
+					&:hover {
+						background-color: @brown-lighter;
+					}
+					
+					a {
+						.font-submenu-secondary;
+						font-weight: normal;
+						
+						&, &:hover, &:focus {
+							background-color: transparent;
+						}
+					}
+				}
+			}
+            
+            .menu-pending {
+                a {
+                    //color: @red;
+                    border-style: solid;
+                    border-width: 2px;
+                }
+            }
+			
+		}
+	}   
+
+    #header-content-xs {
+        .visible-xs-block;
+        .content-col-layout;
+        
+        text-align: center;        
+        
+        .secondary-menu-nav-xs-holder {
+            margin-bottom: 7px;
+
+            .secondary-menu-nav-xs-header {
+                .visible-xs-block;   
+                .navbar;
+                .navbar-default;  
+
+                margin: 0px;
+                background-color: transparent;     
+                border-color: transparent;
+                
+                .navbar-toggle {
+		        	.button-navbar;
+		        }
+                
+                .secondary-menu-nav-xs-brand {
+                    
+                    h1 {
+                        display: inline;
+                        color: white;
+                        font-size:  @font-size-titlelarge;
+                    }
+                }
+     
+            }
+        }
+        
+        #secondary-menu-nav-xs {
+            .navbar-collapse;
+            .collapse; 
+            
+            box-shadow: none;
+            
+            &.in { 
+            	overflow: visible;
+            }
+            
+            a,
+			.nav>li>a,
+			.nav .open>a {						
+				background-color: transparent;
+			}
+            
+            .secondary-menu {             	
+                background-color: @brown-light;
+                border:solid @brown thin;
+
+				padding: 0px;
+                margin: 10px;
+                list-style: none;                
+                font-size: @font-size-base * 1.2;
+                
+                border-radius: 20px;
+                
+                &, a {
+                    color: @brown-dark;
+                }
+                
+                > li {
+                	padding: 5px;
+                }                  
+
+                .dropdown-menu {
+                    background-color: @brown-light;
+                    border:solid @brown thin;
+
+                    li { 
+                        &:hover {
+                            background-color: @brown-lighter;
+                        }
+
+                        a {
+                            .font-submenu-secondary;
+                            font-weight: normal;
+
+                            &, &:hover, &:focus {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                    
+                    
+                }
+            }
+        }       
+
+    }
+    
+    button {
+        .form-component;
+    }
+    
+    textarea {
+        .form-component-padding;
+        padding:0 3px;
+    }
+    
+    input {  
+        .form-component-padding; 
+        padding:2px 3px;        
+        vertical-align: middle; 
+        color: black;
+        line-height: inherit;
+        
+        &.image, &[type=image] {
+            background-color: transparent;
+            width: 17px;
+            height: 17px;
+            border: 0;
+            padding: 0;
+            vertical-align: top;
+        }
+    }
+}

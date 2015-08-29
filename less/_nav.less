@@ -1,0 +1,241 @@
+//webtrees-MyArtJaub
+// Copyright (C) 2015 Jonathan Jaubart
+// 
+// Based on webtrees: online genealogy
+// Copyright (C) 2015 webtrees development team
+//  
+// This file is part of webtrees-MyArtJaub
+//  
+// webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// webtrees-MyArtJaub is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+// You should have received a copy of the GNU General Public License
+// along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+
+.primary-menu-nav-holder {    
+        
+    .primary-menu-nav-header {
+        .visible-xs-block;   
+        .navbar;
+        .navbar-default;  
+        
+        margin: 0px;
+        
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background: url(images/menu_bg_center.png) repeat-x;
+        
+        .navbar-toggle {
+        	.button-navbar;
+        }
+        
+        .primary-menu-brand {             
+            color: @brown-dark;
+            font-weight: normal;
+            text-align: center;
+        }        
+    }
+    
+    #primary-menu-nav {
+        .navbar-collapse;
+        
+        @media (max-width: @screen-xs-max) {
+            .collapse;            
+            
+            background-color: @brown-light;
+            border:solid @brown thin;
+            
+			 &.in { 
+            	overflow: visible;
+            }
+        }
+        
+        .primary-menu {
+            .nav;
+            .nav-justified;
+            .font-submenu-main;   
+            
+            @media (min-width: @screen-sm-min) {
+                border-radius: 20px;
+                height: 74px;
+                background: url(images/menu_bg_center.png) repeat-x;
+            }
+            
+           	@media (max-width: @screen-xs-max) {	
+           		.nav;
+           		.nav-pills;
+	        }
+
+            >li, >li.open {   
+                background-image:url(images/large_menu_sprite.png);
+                background-repeat:no-repeat;
+                padding: 0;
+                //margin-top: 5px; 
+                text-align:center;
+                
+                >a {			
+                    .font-submenu-main;
+
+                    @media (min-width: @screen-sm-min) {                        
+                        background-image: url(images/divider.png);
+                        background-repeat: no-repeat;
+                        background-position: right;		
+                        
+                        [dir=rtl] & { background-position: left;}
+                    }
+                    	
+                    padding-top: 50px;
+                    height: 74px; 
+
+                    &, &:hover, &:focus {
+                        background-color: transparent;
+                    }
+                }
+
+                ul {
+                    background-color: @brown-light;
+                    border:solid @brown thin;
+
+                    li {
+                        background-image:url(images/small_menu_sprite.png);
+                        background-repeat:no-repeat; 
+                        height:24px; 
+                        left:auto; 
+                        line-height:24px; 
+                        text-align:left; 
+                        text-indent:26px;
+                        width:100%;
+                        
+                        &:hover {
+                            background-color: @brown-lighter;
+                        }
+
+                        a {
+                            .font-submenu-main;
+
+                            padding: 3px 5px;
+
+                            &, &:hover, &:focus {
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+
+                &:last-child {
+                    >a { background-image: none; }
+                }
+            }
+
+
+            /* Main menu icons */
+            .menu-calendar  {background-position:center -400px;}
+            .menu-chart     {background-position:center -160px;}
+            .menu-clippings {background-position:center -640px;}
+            .menu-fam       {background-position:center -880px;}
+            .menu-help      {background-position:center -460px;}
+            .menu-indi      {background-position:center -720px;}
+            .menu-list      {background-position:center -240px;}
+            .menu-mymenu    {background-position:center  -80px;}
+            .menu-note      {background-position:center -1040px;}
+            .menu-obje      {background-position:center -960px;}
+            .menu-repo      {background-position:center -1120px;}
+            .menu-report    {background-position:center -320px;}
+            .menu-search    {background-position:center -480px;}
+            .menu-sour      {background-position:center -800px;}
+            .menu-tree      {background-position:center    0px;}
+            .menu-story     {background-position:center -1200px;}
+
+
+			/* Sub-menu icons */		
+			.menu-admin                 {background-position:left     0;   [dir=rtl] & {background-position:right     0;}}
+			.menu-branches              {background-position:left  -450px; [dir=rtl] & {background-position:right  -450px;}}
+			.menu-calendar-day          {background-position:left   -60px; [dir=rtl] & {background-position:right   -60px;}}
+			.menu-calendar-month        {background-position:left   -60px; [dir=rtl] & {background-position:right   -60px;}}
+			.menu-calendar-year         {background-position:left   -60px; [dir=rtl] & {background-position:right   -60px;}}
+			.menu-chart-ancestry        {background-position:left   -30px; [dir=rtl] & {background-position:right   -30px;}}
+			.menu-chart-compact         {background-position:left   -30px; [dir=rtl] & {background-position:right   -30px;}}
+			.menu-chart-descendants     {background-position:left  -150px; [dir=rtl] & {background-position:right  -150px;}}
+			.menu-chart-familybook      {background-position:left  -180px; [dir=rtl] & {background-position:right  -180px;}}
+			.menu-chart-fanchart        {background-position:left  -210px; [dir=rtl] & {background-position:right  -210px;}}
+			.menu-chart-hourglass       {background-position:left  -270px; [dir=rtl] & {background-position:right  -270px;}}
+			.menu-chart-lifespan        {background-position:left  -660px; [dir=rtl] & {background-position:right  -660px;}}
+			.menu-chart-pedigree        {background-position:left  -480px; [dir=rtl] &  {background-position:right  -480px;}}
+			.menu-chart-pedigree_map    {background-position:left  -720px; [dir=rtl] & {background-position:right  -720px;}}
+			.menu-chart-relationship    {background-position:left  -540px; [dir=rtl] & {background-position:right  -540px;}}
+			.menu-chart-statistics      {background-position:left  -630px; [dir=rtl] & {background-position:right  -630px;}}
+			.menu-chart-timeline        {background-position:left  -660px; [dir=rtl] & {background-position:right  -660px;}}
+			.menu-chart-tree            {background-position:left  -240px; [dir=rtl] & {background-position:right  -240px;}}
+			.menu-clippingsadd          {background-position:left  -930px; [dir=rtl] & {background-position:right  -930px;}}
+			.menu-clippingscart         {background-position:left  -900px; [dir=rtl] & {background-position:right  -900px;}}
+			.menu-fam-addchil           {background-position:left -1050px; [dir=rtl] & {background-position:right -1050px;}}
+			.menu-fam-addfav            {background-position:left  -870px; [dir=rtl] & {background-position:right  -870px;}}
+			.menu-fam-change            {background-position:left   -90px; [dir=rtl] & {background-position:right   -90px;}}
+			.menu-fam-del               {background-position:left  -840px; [dir=rtl] & {background-position:right  -840px;}}
+			.menu-fam-editraw           {background-position:left -1240px; [dir=rtl] & {background-position:right -1240px;}}
+			.menu-fam-orderchil         {background-position:left -1080px; [dir=rtl] & {background-position:right -1080px;}}
+			.menu-help-contents         {background-position:left  -300px; [dir=rtl] & {background-position:right  -300px;}}
+			.menu-help-faq              {background-position:left  -300px; [dir=rtl] & {background-position:right  -300px;}}
+			.menu-help-genealogy        {background-position:left  -120px; [dir=rtl] & {background-position:right  -120px;}}
+			.menu-help-hide             {background-position:left  -300px; [dir=rtl] & {background-position:right  -300px;}}
+			.menu-help-show             {background-position:left  -300px; [dir=rtl] & {background-position:right  -300px;}}
+			.menu-help-technical        {background-position:left  -120px; [dir=rtl] & {background-position:right  -120px;}}
+			.menu-help-wiki             {background-position:left  -690px; [dir=rtl] & {background-position:right  -690px;}}
+			.menu-indi-addfav           {background-position:left  -870px; [dir=rtl] & {background-position:right  -870px;}}
+			.menu-indi-addname          {background-position:left  -780px; [dir=rtl] & {background-position:right  -780px;}}
+			.menu-indi-del              {background-position:left  -840px; [dir=rtl] & {background-position:right  -840px;}}
+			.menu-indi-editraw          {background-position:left -1240px; [dir=rtl] & {background-position:right -1240px;}}
+			.menu-indi-editsex          {background-position:left  -810px; [dir=rtl] & {background-position:right  -810px;}}
+			.menu-list-fam              {background-position:left   -90px; [dir=rtl] & {background-position:right   -90px;} }
+			.menu-list-indi             {background-position:left  -120px; [dir=rtl] & {background-position:right  -120px;}}
+			.menu-list-note             {background-position:left  -420px; [dir=rtl] & {background-position:right  -420px;}}
+			.menu-list-obje             {background-position:left  -330px; [dir=rtl] & {background-position:right  -330px;}}
+			.menu-list-plac             {background-position:left  -510px; [dir=rtl] & {background-position:right  -510px;}}
+			.menu-list-repo             {background-position:left  -360px; [dir=rtl] & {background-position:right  -360px;}}
+			.menu-list-sour             {background-position:left  -180px; [dir=rtl] & {background-position:right  -180px;}}
+			.menu-myaccount             {background-position:left  -390px; [dir=rtl] & {background-position:right  -390px;}}
+			.menu-mypage                {background-position:left  -390px; [dir=rtl] & {background-position:right  -390px;}}
+			.menu-mypedigree            {background-position:left  -480px; [dir=rtl] & {background-position:right  -480px;}}
+			.menu-myrecord              {background-position:left  -120px; [dir=rtl] & {background-position:right  -120px;}}
+			.menu-note-addfav           {background-position:left  -870px; [dir=rtl] & {background-position:right  -870px;}}
+			.menu-note-del              {background-position:left  -840px; [dir=rtl] & {background-position:right  -840px;}}
+			.menu-note-edit             {background-position:left -1020px; [dir=rtl] & {background-position:right -1020px;}}
+			.menu-note-editraw          {background-position:left -1240px; [dir=rtl] & {background-position:right -1240px;}}
+			.menu-obje-addfav           {background-position:left  -870px; [dir=rtl] & {background-position:right  -870px;}}
+			.menu-obje-del              {background-position:left  -840px; [dir=rtl] & {background-position:right  -840px;}}
+			.menu-obje-edit             {background-position:left -1110px; [dir=rtl] & {background-position:right -1110px;}}
+			.menu-obje-editraw          {background-position:left -1240px; [dir=rtl] & {background-position:right -1240px;}}
+			.menu-obje-link             {background-position:left -1140px; [dir=rtl] & {background-position:right -1140px;}}
+			.menu-obje-link-fam         {background-position:left   -90px; [dir=rtl] & {background-position:right   -90px;}}
+			.menu-obje-link-indi        {background-position:left  -120px; [dir=rtl] & {background-position:right  -120px;}}
+			.menu-obje-link-sour        {background-position:left  -180px; [dir=rtl] & {background-position:right  -180px;}}
+			.menu-repo-addfav           {background-position:left  -870px; [dir=rtl] & {background-position:right  -870px;}}
+			.menu-repo-del              {background-position:left  -840px; [dir=rtl] & {background-position:right  -840px;}}
+			.menu-repo-edit             {background-position:left  -990px; [dir=rtl] & {background-position:right  -990px;}}
+			.menu-repo-editraw          {background-position:left -1240px; [dir=rtl] & {background-position:right -1240px;}}
+			.menu-report li             {background-position:left  -570px; [dir=rtl] & {background-position:right  -570px;}}
+			.menu-search-advanced       {background-position:left  -600px; [dir=rtl] & {background-position:right  -600px;}}
+			.menu-search-general        {background-position:left  -600px; [dir=rtl] & {background-position:right  -600px;}}
+			.menu-search-replace        {background-position:left  -600px; [dir=rtl] & {background-position:right  -600px;}}
+			.menu-search-soundex        {background-position:left  -600px; [dir=rtl] & {background-position:right  -600px;}}
+			.menu-sour-addfav           {background-position:left  -870px; [dir=rtl] & {background-position:right  -870px;}}
+			.menu-sour-del              {background-position:left  -840px; [dir=rtl] & {background-position:right  -840px;}}
+			.menu-sour-edit             {background-position:left  -960px; [dir=rtl] & {background-position:right  -960px;}}
+			.menu-sour-editraw          {background-position:left -1240px; [dir=rtl] & {background-position:right -1240px;}}
+			.menu-story-sub          	{background-position:left -1208px; [dir=rtl] & {background-position:right -1208px;}}
+			.menu-tree li               {background-position:left  -240px; [dir=rtl] & {background-position:right  -240px;}}
+
+            .menu-language li {text-align:left;} /* The language menu is always LTR, even on RTL pages */
+            .menu-theme    li {text-align:left;} /* The theme menu is always LTR, even on RTL pages */
+
+        }
+        
+    }
+    
+}
+

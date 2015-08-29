@@ -1,0 +1,131 @@
+//webtrees-MyArtJaub
+// Copyright (C) 2015 Jonathan Jaubart
+// 
+// Based on webtrees: online genealogy
+// Copyright (C) 2015 webtrees development team
+//  
+// This file is part of webtrees-MyArtJaub
+//  
+// webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// webtrees-MyArtJaub is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+// GNU General Public License for more details.
+// You should have received a copy of the GNU General Public License
+// along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ 
+/* ios on click workaround */
+.iconz {
+	cursor: pointer;
+}
+
+input:required {
+	
+	&:valid {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAONJREFUeNpi/P//PwMlgImBQjDwBrCgCzDOF2Zg+Adk/AOGDRvQfHZGoDWMxgyMDMb/Q1/NIt0F/xk8gIbNZPj7P41YL4AUGsM1//rfkuyeYMzw8z9xXgBqgNm0nuHnv0D/IH/juavmngV6oYY4F3z7y2DqY2oMpANB9MYl684yfP9Xw3Dzzw7sXgQmJGTM0MbjwdDKc0b2vt5/EM2QwunBoMyCVS1YPYYAMOwZ7FmiGLLYzjBYsSQD+QpALAjErNgMYERPyoyMjMxAih+IOYD4LxD/hOJfQLV/MaJ9NC8wAAQYAPbPfH2KJKx/AAAAAElFTkSuQmCC) no-repeat right top;
+	}
+	
+	&:invalid {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAMpJREFUeNpi/P//PwMlgImBQjAMDGBBF1jFyOgBpFqAuOYPA8MOoAI4P+z//x0YJoBiARkvYWA486+k5D+IBuJqZD66WnAMogvMA9o4F6j4R3Lyf2R6IQODMVEGTAW6CoirgfjMB2/v/yB6CgNDYQ8W14IwRiB+A7rgOwNDYLChofGcrVvPgugfDAzR/yFhwUAwDJqBNj6Ulf0PooEhV4jMx+YCRvSknAeMBWDotwgwMKRzMTCcfQW0GcQHxkbNJCyxwDiaFxgAAgwAYy67YIOQ//cAAAAASUVORK5CYII=) no-repeat right top;
+	}
+
+}
+
+a {
+	color: @bluegray;
+	text-decoration: none;
+	
+	&:hover {
+		color: @bluegray-dark;
+		text-decoration: none;
+	}
+	
+	&:focus {
+		outline-style: none;
+	}
+}
+
+table {
+    border-spacing: 2px;
+    border-collapse: separate;
+}
+
+dl {
+	margin: 0;
+}
+
+dt {
+	float: left;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+h1, h2 {
+    color: @greenolive;
+    font-size:  @font-size-titlelarge;
+    font-family: @font-tahoma-family;
+}
+
+h4 {
+	color: @brown-dark;
+	font-size: @font-size-large;
+	font-weight: bold;
+}
+
+th {
+	font-weight: 100;
+}
+
+ul {
+	/* padding-left: 15px;
+	padding-right: 15px; */
+	/* margin: 8px; */
+}
+
+img {
+	border: 0;
+}
+
+
+button {
+    .form-component;
+}
+
+input,
+textarea {
+	.form-component-padding;
+}
+
+select {
+    .form-component;
+	border-color: @brown;
+	margin:0 7px;
+	padding:1px;
+}
+
+textarea {
+	border-style: inset;
+}
+
+
+fieldset {
+	margin: 8px 8px 4px;
+	text-align: left;
+}
+
+legend {
+    color: @brown-dark;
+    font-size:  @font-size-large;
+    font-weight: bold;
+    text-align: left;
+    
+    img {
+	   height: 20px;
+	   vertical-align: middle;
+	   width: 20px;
+    }
+}
+ 
