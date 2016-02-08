@@ -138,7 +138,7 @@ label {
         list-style: none;
         margin: 0;
         padding: 0 10px;
-        font-size: smaller;
+        font-size: x-small;
     }
     
     li .NAME {
@@ -492,6 +492,28 @@ label {
 	text-align: center;
 }
 
+#childbox {
+	padding: 5px;
+	position: absolute;
+	display: none;
+	text-align: start;
+	white-space: nowrap;
+	top: 20px;
+	left: 0;
+	right: auto;
+}
+
+.layout3 #childbox {
+	top: auto;
+	bottom: 20px;
+}
+
+#childbox a.name1 {
+	/*	font-weight: normal;*/
+	display: block;
+	margin-left: 5px;
+}
+
 #pedigree-page {
     
     table.list_table {
@@ -591,6 +613,42 @@ label {
             color: inherit;
         }
     }
+}
+
+/* -- Census editor -- */
+
+.census-assistant-search {
+	
+	.table > tbody > tr > td {
+		padding: 3px;
+	}
+}
+
+.census-assistant-input {
+	
+	.table > tbody > tr {
+		
+		& > td, & > th {
+			padding: 3px;
+			border: 0;
+		}
+		
+		& > th {
+			text-align: right;
+		}
+	}
+	
+	.table-census-inputs {
+		
+		& > tbody > tr > td, & > thead > tr > th {
+			border:thin solid @brown;	
+				
+			input {
+				background-color: white;
+			}
+		}
+			
+	}
 }
 
 /* -- Footer -- */

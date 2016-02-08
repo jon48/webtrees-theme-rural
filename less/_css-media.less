@@ -55,17 +55,19 @@
 	/* Search */
 	#search-page-table {
 		width: auto;
-	}
-	#search-page-table .value {
-		margin: 0 0 0 30%;
-		white-space: normal;
-	}
-    
-	#search-page-table div #query {
-		width: 150px;
-	}
-	#search-page-table > input {
-		width: 20px;
+		
+		.value {			
+			margin: 0 0 0 30%;
+			white-space: normal;			
+		}
+		
+		div #query {
+			width: 150px;
+		}
+		
+		& > input {
+			width: 20px;
+		}
 	}
     
 	/* Front Page */
@@ -107,5 +109,9 @@
 	/* Reports */
 	#reportengine-page table {
 		width: 100%;
+	}	
+	/* Advanced Search */
+	#field_table {
+		min-width: 100%;
 	}
 }
