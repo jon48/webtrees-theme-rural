@@ -1,10 +1,10 @@
 <?php
 /**
  * webtrees-MyArtJaub
- * Copyright (C) 2015 Jonathan Jaubart
+ * Copyright (C) 2009-2016 Jonathan Jaubart
  * 
  * Based on webtrees: online genealogy
- * Copyright (C) 2015 webtrees development team
+ * Copyright (C) 2016 webtrees development team
  *  
  * This file is part of webtrees-MyArtJaub
  *  
@@ -49,7 +49,7 @@ class RuralTheme extends \Fisharebest\Webtrees\Theme\AbstractTheme implements
 	
 	/** {@inheritdoc} */
 	public function assetUrl() {
-		return 'themes/rural/css-1.7.3/';
+		return 'themes/rural/css-1.7.4/';
 	}
 	
 	/** {@inheritdoc} */
@@ -134,7 +134,7 @@ class RuralTheme extends \Fisharebest\Webtrees\Theme\AbstractTheme implements
 					'</header>' .
 					'<div class="content_box">' .
 						$this->primaryMenuContainer($this->primaryMenu()) .
-						'<main id="content" role="main">' .
+						'<main id="content">' .
 						$this->flashMessagesContainer(FlashMessages::getMessages());
 	}
 	
@@ -145,7 +145,7 @@ class RuralTheme extends \Fisharebest\Webtrees\Theme\AbstractTheme implements
 			'<div class="row">'.
 				'<div class="main-col-layout">'.
 					'<div class="content_box">' .
-                        '<main id="content" role="main">' .
+                        '<main id="content">' .
                         $this->flashMessagesContainer(FlashMessages::getMessages());
 	}
 	
@@ -193,7 +193,6 @@ class RuralTheme extends \Fisharebest\Webtrees\Theme\AbstractTheme implements
 				'</div></div>'.
 				'<div class="header-row"><div id="header-middle">'.
 					'<ul>' . implode(' | ', array_map(function (Menu $menu) { return $menu->getMenuAsList(); }, $login_menu)) . '</ul>'.
-					//$this->secondaryMenuContainer($login_menu).
 					$this->formatTreeTitle() .
 				'</div></div>'.
 				'<div class="header-row"><div id="header-bottom">'.

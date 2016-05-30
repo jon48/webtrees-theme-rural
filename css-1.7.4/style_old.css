@@ -405,11 +405,6 @@ dd .editlink, dd .deletelink  {float:right;}
 #indi_note .fact_NOTE,
 #indi_note .fact_SOUR {clear: both;}
 
-.markdown p {margin: 0 0 0.5em;	white-space: pre-wrap;}
-.markdown table {border-collapse: collapse;margin-bottom:5px;}
-.markdown th {font-weight: bold;}
-.markdown td,.markdown th {border:  solid thin #000;padding: 3px;}
-
 [dir=rtl] #indi_header h3 {padding: 0 30px 0 10px; text-align:right;}
 [dir=rtl]  #indi_header h3 .header_age {padding:5px 5px 5px 0; float:left;}
 [dir=rtl] #main_name {float:right;}
@@ -434,6 +429,7 @@ dd .editlink, dd .deletelink  {float:right;}
 /* =========== Indi tabs ================== */
 /* Facts & Events tab */
 #personal_facts_content .fact_NOTE, #personal_facts_content .fact_SOUR, #family-table .fact_NOTE, #family-table .fact_SOUR {margin: 5px 3px 5px 0; clear: both;}
+#notes_content .facts_table, #personal_facts_content .facts_table {table-layout: fixed;}
 .facts_table .field em {margin-top: 0;padding-left: 5px;}
 .facts_table .field img {vertical-align: middle;}
 .facts_table .optionbox {white-space:normal}
@@ -939,9 +935,6 @@ a.icon-udarrow:hover{width:20px;height:20px;background-image:url(images/udarrow2
 [dir=rtl] #cboxNext {position:absolute;right:0px;left:auto}
 [dir=rtl] #cboxSlideshow {position:absolute;right:28px;left:auto}
 [dir=rtl] #cboxCurrent {position:absolute;right:94px;left:auto}
-
-/* Census assistant module */
-table.table-census-assistant th {font-weight: bold;	text-align:  left;}
 
 /* Stories module */
 .story_title {padding-top: 12px;height:32px;font-size:13px;font-weight:700;}

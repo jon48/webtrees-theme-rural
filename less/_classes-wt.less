@@ -105,6 +105,51 @@ label {
 }
 
 
+/* Markdown */
+
+.markdown {
+	overflow-x: auto;
+	
+	p {
+		margin: 0 0 0.5em;	
+		white-space: pre-wrap;
+	}
+	
+	table {
+		border-collapse: collapse;
+		margin-bottom:5px;
+		
+		th {
+			font-weight: bold;
+		}
+		
+		td, th {
+			border:  solid thin #000;padding: 3px;
+		}
+	}
+}
+
+/* Cookies */
+
+.cookie-warning {
+	
+	border-style: solid;
+	border-width: 2px;
+	height: 3em;
+	line-height: 2.5em;
+	transition: height 0.5s;
+	width: 60%;
+	margin-top: 5px;
+	text-align: center;
+	margin-left: auto;
+    margin-right: auto;
+		
+	&.hidden {
+		height: 0;
+		overflow: hidden;
+	}
+}
+
 /* styles for popup menus */
 
 .itr {
@@ -501,17 +546,16 @@ label {
 	top: 20px;
 	left: 0;
 	right: auto;
+	
+	a.name1 {
+		display: block;
+		margin-left: 5px;
+	}
 }
 
 .layout3 #childbox {
 	top: auto;
 	bottom: 20px;
-}
-
-#childbox a.name1 {
-	/*	font-weight: normal;*/
-	display: block;
-	margin-left: 5px;
 }
 
 #pedigree-page {
