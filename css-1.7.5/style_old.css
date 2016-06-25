@@ -184,7 +184,6 @@ div.fact_SHARED_NOTE {clear: both;}
 
 .fan_chart_menu {position: absolute;display:none;z-index:100;}
 #fan_chart ul {list-style-type: none;margin: 0;}
-#fan_chart ul.children li:before {content: "< ";font-weight: bold;}
 #fan_chart_img {text-align: center;}
 
 .listlog {line-height: 20pt;color: #555555;font-family: tahoma, arial, helvetica, sans-serif;}
@@ -360,7 +359,6 @@ table.faq {	background-color: #F3EFEF; 	margin: 5px 0 50px 5px; width: 98%;}
 table.faq  tr.odd td{ background-color: #E9E2DB;}
 div.faq_title{background-color: #E9E2DB;padding: .25em;font-weight: bold;}
 div.faq_body{background-color: #F3EFEF;clear: both;padding:0 1em;}
-.faq_italic{font-style: italic;font-weight: bold;font-size: 95%;padding: 0 10px;}
 
 table.faq, table.faq a, table.faq  tr.odd td, table.faq  tr.odd td a,
 div.faq_title, div.faq_title a, div.faq_body, div.faq_body a,
@@ -370,9 +368,7 @@ table.faq a:hover, table.faq  tr.odd td a:hover,
 div.faq_title a:hover, div.faq_body a:hover, .faq_italic a:hover { color: #9F8C77;}
 
 .faq_top {float:right;}
-.faq_edit {float:right;}
 [dir=rtl] .faq_top {float:left;}
-[dir=rtl] .faq_edit {float:left;}
 
 /* Old Submenus (used in Album) */
 
@@ -429,7 +425,8 @@ dd .editlink, dd .deletelink  {float:right;}
 /* =========== Indi tabs ================== */
 /* Facts & Events tab */
 #personal_facts_content .fact_NOTE, #personal_facts_content .fact_SOUR, #family-table .fact_NOTE, #family-table .fact_SOUR {margin: 5px 3px 5px 0; clear: both;}
-#notes_content .facts_table, #personal_facts_content .facts_table {table-layout: fixed;}
+#family-table .subheaders:first-child {width: 285px;}
+#note-edit .facts_table,, #notes_content .facts_table, #personal_facts_content .facts_table {table-layout: fixed;}
 .facts_table .field em {margin-top: 0;padding-left: 5px;}
 .facts_table .field img {vertical-align: middle;}
 .facts_table .optionbox {white-space:normal}
@@ -507,6 +504,7 @@ html[dir="rtl"] .person_box_template i[class^="icon-silhouette"]{float:right;}
 #login-form div, #login-form div a, #new_passwd_form div, #register-form div, #verify-form div {margin:auto; padding:5px; text-align: center;}
 #login-form label, #new_passwd_form label, #verify-form  label {display:block;}
 #login-form label input, #new_passwd_form label input, #verify-form  input {width:140px; margin: 0 10px;}
+#login-form div label {text-align: right;}
 #new_passwd_form h4, #register-form h4 {font-weight:normal; text-align:center;}
 #register-form,#verify-form {width:440px}
 #register-form p,#verify-form p {text-align:left}
@@ -516,7 +514,7 @@ html[dir="rtl"] .person_box_template i[class^="icon-silhouette"]{float:right;}
 #register-form textarea {vertical-align: top;}
 #register-form div#registration-submit {text-align:center;}
 .login_block_block #login-form, .login_block_block #new_passwd_form{border:0; background:none;}
-[dir=rtl] #login-form label, [dir=rtl] #new_passwd_form label, [dir=rtl] #register-form label, [dir=rtl] #verify-form  label {text-align:left;}
+[dir=rtl] #login-form label, [dir=rtl] #new_passwd_form label, [dir=rtl] #register-form label, [dir=rtl] #verify-form  label, [dir=rtl] #login-form div label {text-align:left;}
 [dir=rtl] #register-form div, [dir=rtl] #verify-form div {text-align:left;}
 
 /* ============== reportengine.php ======================= */
@@ -561,6 +559,7 @@ html[dir="rtl"] .person_box_template i[class^="icon-silhouette"]{float:right;}
 .ui-widget-header button { font-size: 1em; font-family: arial,helvetica,sans-serif;}
 
 .ui-state-highlight { padding: 3px; text-align: center;}
+.ui-state-highlight a {	font-weight: bold; }
 
 /* jQuery.datatable styling general over-rides */
 .odd {background-color:#E9E2DB;}

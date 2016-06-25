@@ -49,7 +49,7 @@ class RuralTheme extends \Fisharebest\Webtrees\Theme\AbstractTheme implements
 	
 	/** {@inheritdoc} */
 	public function assetUrl() {
-		return 'themes/rural/css-1.7.4/';
+		return 'themes/rural/css-1.7.5/';
 	}
 	
 	/** {@inheritdoc} */

@@ -96,11 +96,15 @@
                         background-color: transparent;
                     }
                 }
+                
+                >.dropdown-menu {
+                	margin-top:-2px;
+                }
 
                 ul {
                     background-color: @brown-light;
                     border:solid @brown thin;
-
+				
                     li {
                         background-image:url(images/small_menu_sprite.png);
                         background-repeat:no-repeat; 
@@ -189,6 +193,7 @@
 			.menu-help-wiki             {background-position:left  -690px; [dir=rtl] & {background-position:right  -690px;}}
 			.menu-indi-addfav,
 			.menu-record-addfav 		{background-position:left  -870px; [dir=rtl] & {background-position:right  -870px;}}
+			.menu-indi-editname 		{background-position: left -120px; [dir=rtl] & {background-position:right  -120px;}}
 			.menu-indi-addname          {background-position:left  -780px; [dir=rtl] & {background-position:right  -780px;}}
 			.menu-indi-del,
 			.menu-record-del 			{background-position:left  -840px; [dir=rtl] & {background-position:right  -840px;}}
