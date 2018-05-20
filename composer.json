@@ -1,0 +1,28 @@
+{
+	"name" : "jon48/webtrees-theme-rural",
+	"description" : "Rural theme for webtrees",
+	"type" : "webtrees-theme",
+	"homepage" : "https://github.com/jon48/webtrees-theme-rural",
+	"license" : "GPL-3.0+",
+	"minimum-stability" : "stable",
+	"authors" : [{
+			"name" : "Jonathan Jaubart",
+			"email" : "dev@jaubart.com",
+			"homepage" : "http://www.jaubart.com",
+			"role" : "Developer"
+		}
+	],
+	"support" : {
+		"issues" : "http://bugs.jaubart.com"
+	},
+	"keywords" : [
+		"webtrees",
+		"genealogy"
+	],
+	"require-dev" : {
+		"fisharebest/webtrees" : "~1.7.8"
+	},
+	"extra" : {
+		"installer-name" : "rural"
+	}
+}
