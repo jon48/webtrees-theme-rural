@@ -1,0 +1,239 @@
+/**
+ * Extra Style for Rural Theme
+ *
+ * webtrees-MyArtJaub
+ * Copyright (C) 2009-2016 Jonathan Jaubart
+ * 
+ * Based on webtrees: online genealogy
+ * Copyright (C) 2015 webtrees development team
+ *  
+ * This file is part of webtrees-MyArtJaub
+ *  
+ * webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * webtrees-MyArtJaub is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ */
+ 
+ /* Large menu icons */
+.primary-menu-nav-holder #primary-menu-nav .primary-menu > li[class^='menu-maj-'],
+.primary-menu-nav-holder #primary-menu-nav .primary-menu > li[class^='menu-maj-'].open {background-image:url(images/myartjaub/large_menu_sprite.png);}
+#primary-menu-nav .primary-menu .menu-maj-sosa	{background-position:center  0px;}
+
+ /* Small menu icon */
+.primary-menu-nav-holder #primary-menu-nav .primary-menu>li ul li[class^='menu-maj-'],
+.primary-menu-nav-holder #primary-menu-nav .primary-menu>li.open ul li[class^='menu-maj-'] {background-image:url(images/myartjaub/small_menu_sprite.png);}
+#primary-menu-nav .primary-menu .menu-maj-list-certificate   		{background-position:left    	0px;} html[dir=rtl] #menu-maj-list-certificate		{background-position:right    	 0px;} 
+#primary-menu-nav .primary-menu .menu-maj-list-lineage   			{background-position:left     -30px;} html[dir=rtl] #menu-maj-list-lineage 			{background-position:right     -30px;}
+#primary-menu-nav .primary-menu .menu-maj-sosa-list			   		{background-position:left     -60px;} html[dir=rtl] #menu-maj-sosa-list			 	{background-position:right     -60px;}
+#primary-menu-nav .primary-menu .menu-maj-sosa-missing		   		{background-position:left     -90px;} html[dir=rtl] #menu-maj-sosa-missing		 	{background-position:right     -90px;}
+#primary-menu-nav .primary-menu .menu-maj-sosa-stats		   		{background-position:left    -120px;} html[dir=rtl] #menu-maj-sosa-stats		 	{background-position:right    -120px;}
+#primary-menu-nav .primary-menu .menu-maj-sosa-recompute	   		{background-position:left    -150px;} html[dir=rtl] #menu-maj-sosa-recompute	 	{background-position:right    -150px;}
+#primary-menu-nav .primary-menu .menu-maj-sosa-configuration   		{background-position:left    -150px;} html[dir=rtl] #menu-maj-sosa-configuration 	{background-position:right    -150px;}
+#primary-menu-nav .primary-menu .menu-maj-sosa-geodispersion	   	{background-position:left    -180px;} html[dir=rtl] #menu-maj-sosa-geodispersion 	{background-position:right    -180px;}
+#primary-menu-nav .primary-menu .menu-maj-sosa-geodispersion li		{background-position:left    -180px;} html[dir=rtl] #menu-maj-sosa-geodispersion li	{background-position:right    -180px;}
+
+
+/* Icons */
+[class^="icon-maj-"],[class*=" icon-maj-"]{background-image:url(images/myartjaub/icon-general-sprite.png);;}
+.icon-maj-map	{background-position:left    	0px;width:24px;height:24px;}
+.icon-maj-table	{background-position:left    	-24px;width:24px;height:24px;}
+
+.maj-table {display:table; background-color:#D3C6B8; border:1px outset #D3C6B8; border-top:0; margin:20px auto 0;}
+.maj-row {display: table-row;}
+.maj-row .label {display: table-cell; border-top:1px solid #D3C6B8;color:#62584D;padding:5px 5px 0;vertical-align: middle}
+.maj-row .value {display: table-cell; background-color:#E9E2DB; color:#000; border-top:1px solid #D3C6B8; margin:0; padding:5px; vertical-align: middle}
+.maj-row .value a {color:#62584D;}
+.maj-row .value a:hover {color:#9f8c77;}
+.maj-table p {margin:0;}
+
+/* Lists */
+.certificate-list, .sosa-list, .smissing-list  {margin:5px auto; width:98%; visibility:hidden;}
+.certificate-list table, .sosa-list table, .smissing-list table  {width:100%;}
+.certificate-list td, .sosa-list td, .smissing-list td {padding:2px 5px;}
+.sosa-list td, .smissing-list td {}
+.sosa-list .stats {margin:0 auto; width:auto;}
+.smissing-list .btn-toolbar .btn-group { float:none;}
+.certificate-list th, .sosa-list th, .smissing-list th {cursor:pointer; font-weight: 600; padding: 2px 4px;}
+.sosa-list tfoot td, .smissing-list tfoot td {font-weight: 600; padding: 2px 4px;}
+.certificate-list th:last-child, .sosa-list th:last-child, .smissing-list th:last-child {margin:0 -2px 1px 1px; padding:3px 0 4px; width:24px;}
+#certificate-tabs {margin:auto; visibility:hidden; width:95%;}
+#certificate-edit {overflow-x:auto;}
+#certificate-details h3 {font-family: arial,helvetica,sans-serif; font-size: 13px;}
+
+html[dir='rtl'] .certificate-list th:last-child, html[dir='rtl'] .sosa-indi-list th:last-child, html[dir='rtl'] .sosa-fam-list th:last-child, html[dir='rtl'] .smissing-list th:last-child {margin:0 1px 1px -2px;}
+
+/* Perso header */
+#perso-header {margin: 0 10px 0 0;}
+html[dir='rtl'] #perso-header {margin: 0 0 0 10px;}
+
+#maj-header-extender {margin-top: -40px;color: #fff;}
+
+/* Individual header extender hooks */
+#indi_perso_header{color: #62584D;font-size: 1.1em;margin-top: 5px;}
+#indi_perso_header_left{float: left;text-align: left;}
+html[dir='rtl'] #indi_perso_header_left {float: right;text-align: right;}
+#indi_perso_header_right{float: right;padding-left: 0; padding-right: 10px;text-align: right;}
+html[dir='rtl'] #indi_perso_header_right { float: left; padding-left: 10px; padding-right: 0;text-align: left;}
+.indi_perso_header_left_div, .indi_perso_header_right_div {display: block;}
+#indi_perso_icons{float: right;}
+html[dir='rtl'] #indi_perso_icons { float: left;}
+
+/* Individual TITL */
+#indi-header-titles {}
+#indi-header-titles dt:after {content:":";}
+#indi-header-titles dd {display: block; /* to force new line */ margin-left: 6em; /* whatever the width of dt */}
+
+/* Flags size */
+.flag_gm_30 {max-width: 30px;max-height: 30px;}
+.flag_gm_50 {max-width: 50px;max-height: 50px;}
+.flag_gm_w25 {width: 25px;}
+.flag_gm_h50 {max-height: 50px;}
+.flag_gm_h25 {max-height: 25px;}
+
+.fact_flag{float: right;}
+html[dir='rtl'] .fact_flag {float: left;}
+
+/* Certificates */
+.icon-maj-certificate {width:15px;height:15px;background-image:url(images/myartjaub/certificate_15x15.png);}
+.margin-h-2 {margin: 0px 2px 0px 2px;}
+.certif_image {max-width: 85%; height: auto; padding: 5px;border: solid black 1px;margin: 10px;}
+._CITY {margin:0px;}
+
+/* Patronymic lineage */
+#patronymiclineages .list_label { padding:5px 0; }
+#patronymiclineages .list_value_wrap { padding:10px 0; }
+.patrolin_tree li {list-style-type: circle;}
+.patrolin_tree li li {list-style-type: square;}
+.patrolin_places {width: 60%;margin-left: auto;margin-right: auto;text-align: center;border: solid #d3c6b8 1px;background-color: #f4f0ed;}
+
+/* Sosa */
+#computesosadlg {text-align: center;}
+#sosaloadingarea {margin: 10px 0px;}
+
+#maj-sosa-config-page h2,
+#maj-sosa-stats-page h2, 
+#maj-sosa-stats-page h3 {margin:20px; text-align:center;}
+#maj-sosa-config-page-table {background-color:#D3C6B8; border:1px outset #D3C6B8; border-top:0; margin:20px auto 0; width:580px;}
+#maj-sosa-config-page-table .label {border-top:1px solid #D3C6B8;color:#62584D; float:left;padding:5px 10px 0; width:150px;}
+#maj-sosa-config-page-table .value {background-color:#E9E2DB; color:#000; border-top:1px solid #D3C6B8; margin:0 0 0 170px; padding:5px;}
+#maj-sosa-config-page-table .value a {color:#62584D;}
+#maj-sosa-config-page-table .value a:hover {color:#9f8c77;}
+#maj-sosa-config-page-table p {margin:0;}
+[dir=rtl] #maj-sosa-config-page-table .label {float:right;}
+[dir=rtl] #maj-sosa-config-page-table .value {margin:0 170px 0 0;}
+
+#maj-sosa-stats-page .value, #maj-sosa-stats-page .label {text-align: center;}
+
+.icon-maj-sosa_large{width:18px;height:18px;background-image:url(images/myartjaub/sosa_18x18.png);}
+.icon-maj-sosa_normal {width:12px;height:12px;background-image:url(images/myartjaub/sosa_12x12.png);}
+.icon-maj-sosa_smaller {width:9px;height:9px;background-image:url(images/myartjaub/sosa_9x9.png);}
+.icon-maj-sosa_small {width:10px;height:10px;background-image:url(images/myartjaub/sosa_10x10.png);}
+.icon-maj-success{width:16px;height:16px;background-image:url(images/myartjaub/success.png);}
+.icon-maj-error{width:16px;height:16px;background-image:url(images/myartjaub/error.png);}
+
+.left{text-align: left;}
+html[dir='rtl'] .left {float: right;}
+.right{text-align: right;}
+html[dir='rtl'] .right { float: left;}
+
+.percent_container{padding: 1px;}
+.percent_frame{width:100%;}
+.percent_cell{background-color: #d3c6b8;}
+
+.transparent{opacity: 0.67;}
+
+.sosastats .icon{padding-right: 0px;}
+
+.rn_append {vertical-align: middle;}
+
+/* IsSourced */
+
+[class^="icon-maj-sourced-large"], [class*=" icon-maj-sourced-large"] {display:inline-block; background-image:url(images/myartjaub/sourced-sprite-large.png);background-color:transparent;background-repeat:no-repeat;width:18px;height:18px;}
+.icon-maj-sourced-large_event_unknown{background-position: 0px 0px;}
+.icon-maj-sourced-large_event_notprecise{background-position: 0px -18px;}
+.icon-maj-sourced-large_event_notsourced{background-position: 0px -36px;}
+.icon-maj-sourced-large_event_sourced{background-position: 0px -54px;}
+.icon-maj-sourced-large_event_sourcedcertif{background-position: 0px -72px;}
+.icon-maj-sourced-large_event_sourcedcertifdate{background-position: 0px -90px;}
+.icon-maj-sourced-large_record_notsourced{background-position: 0px -108px;}
+.icon-maj-sourced-large_record_sourced{background-position: 0px -126px;}
+.icon-maj-sourced-large_record_sourcedcertif{background-position: 0px -144px;}
+
+[class^="icon-maj-sourced-normal"], [class*=" icon-maj-sourced-normal"] {display:inline-block; background-image:url(images/myartjaub/sourced-sprite-normal.png);background-color:transparent;background-repeat:no-repeat;width:15px;height:15px;}
+.icon-maj-sourced-normal_event_unknown{background-position: 0px 0px;}
+.icon-maj-sourced-normal_event_notprecise{background-position: 0px -15px;}
+.icon-maj-sourced-normal_event_notsourced{background-position: 0px -30px;}
+.icon-maj-sourced-normal_event_sourced{background-position: 0px -45px;}
+.icon-maj-sourced-normal_event_sourcedcertif{background-position: 0px -60px;}
+.icon-maj-sourced-normal_event_sourcedcertifdate{background-position: 0px -75px;}
+.icon-maj-sourced-normal_record_notsourced{background-position: 0px -90px;}
+.icon-maj-sourced-normal_record_sourced{background-position: 0px -105px;}
+.icon-maj-sourced-normal_record_sourcedcertif{background-position: 0px -120px;}
+
+[class^="icon-maj-sourced-medium"], [class*=" icon-maj-sourced-medium"] {display:inline-block; background-image:url(images/myartjaub/sourced-sprite-medium.png);background-color:transparent;background-repeat:no-repeat;width:12px;height:12px;}
+.icon-maj-sourced-medium_event_unknown{background-position: 0px 0px;}
+.icon-maj-sourced-medium_event_notprecise{background-position: 0px -12px;}
+.icon-maj-sourced-medium_event_notsourced{background-position: 0px -24px;}
+.icon-maj-sourced-medium_event_sourced{background-position: 0px -36px;}
+.icon-maj-sourced-medium_event_sourcedcertif{background-position: 0px -48px;}
+.icon-maj-sourced-medium_event_sourcedcertifdate{background-position: 0px -60px;}
+.icon-maj-sourced-medium_record_notsourced{background-position: 0px -72px;}
+.icon-maj-sourced-medium_record_sourced{background-position: 0px -84px;}
+.icon-maj-sourced-medium_record_sourcedcertif{background-position: 0px -96px;}
+
+[class^="icon-maj-sourced-small"], [class*=" icon-maj-sourced-small"] {display:inline-block; background-image:url(images/myartjaub/sourced-sprite-small.png);background-color:transparent;background-repeat:no-repeat;width:10px;height:10px;}
+.icon-maj-sourced-small_event_unknown{background-position: 0px 0px;}
+.icon-maj-sourced-small_event_notprecise{background-position: 0px -10px;}
+.icon-maj-sourced-small_event_notsourced{background-position: 0px -20px;}
+.icon-maj-sourced-small_event_sourced{background-position: 0px -30px;}
+.icon-maj-sourced-small_event_sourcedcertif{background-position: 0px -40px;}
+.icon-maj-sourced-small_event_sourcedcertifdate{background-position: 0px -50px;}
+.icon-maj-sourced-small_record_notsourced{background-position: 0px -60px;}
+.icon-maj-sourced-small_record_sourced{background-position: 0px -70px;}
+.icon-maj-sourced-small_record_sourcedcertif{background-position: 0px -80px;}
+
+.issourcedtable{width: 100%;margin: auto;}
+.issourcedtable .slabel, html[dir='rtl'] .svalue { text-align: right; padding-right: 5px;}
+.issourcedtable .svalue, html[dir='rtl'] .slabel { text-align: left; padding-left: 5px;}
+.issourcedtable .svalue { width:40%; }
+
+/* GeoDispersion */
+
+#geodispersion_tip{ position : absolute; border : 1px solid gray; background-color : #efefef; padding : 3px; z-index: 1000; /* set this to create word wrap */ max-width: 200px;}
+#geodispersion_flag{ padding: 4px;}
+#geodispersion_gen .optionbox { font-size: 10px;}
+#geodispersion_gen div { padding: 10px;}
+#geodispersion_gentable {width: 90%;}
+#geodispersion_gentable td {vertical-align: middle;}
+#geodispersion_gentable .descriptionbox {width: 15%;}
+#geodispersion_gentable .geodispersion_bigrow {width: 100%;}
+#geodispersion_gentable .geodispersion_bigrow .small {font-size: 8px;}
+#geodispersion_gentable .geodispersion_rowitem{ border: 1px solid #d3c6b8;}
+#geodispersion_gentable .geodispersion_rowitem table{ width: 100%; }
+#geodispersion_gentable .geodispersion_rowitem table td{ padding: 0px;}
+#geodispersion_gentable .geodispersion_rowitem .geodispersion_flag{ width: 1%; }
+#geodispersion_gentable .geodispersion_unknownitem { background-color: #D3C6B8; color: #62584D;}
+
+/* Perso Welcome block */
+.myartjaub_welcome_block_block  table{margin:auto;}
+.myartjaub_welcome_block_block  td{width:33%;text-align:center;vertical-align: top;}
+.myartjaub_welcome_block_block hr {margin: 5px 10px 0 10px; border-bottom: 1px solid #62584D;}
+
+.myartjaub_welcome_block_block #maj-login-form, .myartjaub_welcome_block_block #maj-new_passwd_form{border:0; background:none;}
+#maj-login-box{ text-align:center; color: black;}
+#maj-login-box a {color : #62584D;}
+#maj-login-box a:hover {color : #9F8C77;}
+#maj-login-form, #maj-new_passwd_form {background-color:#E9E2DB; border:1px outset #D3C6B8; display: inline-block; margin:10px auto 0 auto; padding:5px;}
+#maj-login-form div, #maj-login-form div a, #maj-new_passwd_form div {margin:auto; padding:5px; text-align: center;}
+#maj-login-form label, #maj-new_passwd_form label {display:block;}
+#maj-login-form label {text-align:right;}
+#maj-login-form label input, #maj-new_passwd_form label input {width:140px; margin: 0 10px;}
+#maj-new_passwd_form h4 {font-weight:normal; text-align:center;}
+html[dir='rtl'] #maj-login-form label {text-align:left;}

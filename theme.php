@@ -25,7 +25,9 @@ namespace MyArtJaub\Webtrees\Theme;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\FlashMessages;
 use Fisharebest\Webtrees\Menu;
-
+use MyArtJaub;
+use Fisharebest\Webtrees\Module;
+use MyArtJaub\Webtrees\Hook\HookProvider;
 /**
  * Class RuralTheme - Main class for Rural Theme.
  */
@@ -104,7 +106,14 @@ class RuralTheme extends \Fisharebest\Webtrees\Theme\AbstractTheme implements
 				return img_title;
 			}
 		});
-		</script>';
+		</script>'.
+		//PERSO Add Java script for Certificate Module
+		(\Fisharebest\Webtrees\Module::getModuleByName(MyArtJaub\Webtrees\Constants::MODULE_MAJ_CERTIF_NAME) ?
+		    '<script src="' . WT_STATIC_URL . WT_MODULES_DIR . MyArtJaub\Webtrees\Constants::MODULE_MAJ_CERTIF_NAME . '/js/activatecolorbox.js"></script>' :
+		    ''
+		)
+		// END PERSO
+		;
 	}
 	
 	/** {@inheritdoc} */
@@ -197,6 +206,7 @@ class RuralTheme extends \Fisharebest\Webtrees\Theme\AbstractTheme implements
 				'</div></div>'.
 				'<div class="header-row"><div id="header-bottom">'.
 					$this->formQuickSearch().
+					'<div id="maj-header-extender">' . implode('', HookProvider::getInstance()->get('hPrintHeader')->execute()) . '</div>' .
 				'</div></div>'.
 			'</div>'.     // --  #header-content-lrg
             '<div id="header-content-xs">'.
@@ -254,6 +264,13 @@ class RuralTheme extends \Fisharebest\Webtrees\Theme\AbstractTheme implements
 		return implode('', array_map(function (Menu $menu) { return $menu->bootstrap(); }, $menus));
 	}
 	
+	//PERSO Remove Perso custom from this container
+	/** {@inheritDoc} */
+	protected function secondaryMenuContainer(array $menus) {
+	    return '<ul class="nav nav-pills secondary-menu">' .  $this->secondaryMenuContent($menus) . '</ul>';
+	}
+	//END PERSO
+		
     /** {@inheritdoc} */
 	protected function secondaryMenuContent(array $menus) {
 		return implode('', array_map(function (Menu $menu) { return $menu->bootstrap(); }, $menus));
