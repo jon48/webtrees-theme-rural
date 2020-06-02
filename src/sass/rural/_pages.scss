@@ -1,0 +1,263 @@
+/**
+ * Rural Theme - Specific pages
+ *
+ * webtrees-MyArtJaub
+ * Copyright (C) 2015-2020 Jonathan Jaubart
+ * 
+ * Based on webtrees: online genealogy
+ * Copyright (C) 2020 webtrees development team
+ *  
+ * This file is part of webtrees-MyArtJaub
+ *  
+ * webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * webtrees-MyArtJaub is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+@import 'pages-blocks';
+@import 'pages-charts';
+@import 'pages-colorbox';
+@import 'pages-datatables';
+
+/*
+ * The individual page.
+ *
+ */
+
+.wt-individual-silhouette {
+	content: url('{{ webtrees }}/images/individual-silhouette-unknown.png');
+	
+	&-f {
+		content: url('{{ webtrees }}/images/individual-silhouette-female.png');
+	}
+
+	&-m {
+		content: url('{{ webtrees }}/images/individual-silhouette-male.png');
+	}
+}
+
+.wt-tabs-individual {
+	@extend .maj-content-tabs;
+
+	.row.osm-wrapper {
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+	.field {
+		color: black;
+	}
+}
+
+.label {
+	font-weight: bold;
+}
+
+form.wt-page-content {
+	.small {
+		font-size: 90%;
+	}
+}
+
+/*
+ * Branches
+ */
+
+.wt-branches {
+	.small.person_box {
+		margin-left: 0.3rem;
+	}
+}
+
+
+/*
+ * Individual and family list
+ *
+ * wt-route-individual-list, wt-route-family-list
+ * +---wt-page-options
+ *     +---wt-initials-list, wt-initials-list-surnames
+ *         +---wt-initial-list-item
+ *             +---wt-initial
+ *             +---wt-initial, active
+ *     +---wt-initials-list, wt-initials-list-given-names
+ *         +---wt-initial-list-item
+ *             +---wt-initial
+ *             +---wt-initial, active
+ * +---wt-page-content
+ *     +---wt-list, wt-{family,individual}-list
+ */
+ 
+ .wt-initials-list-item {
+	
+	& + &::before {
+		content: '·';
+	}
+ }
+
+ .wt-initial { 
+	&.active {
+		color: $maj-c-theme-primary;
+		font-weight: bold;
+		text-decoration: dotted;
+	}
+ }
+
+ /*
+  * Places list
+  */
+
+#place-hierarchy {
+	h4 {
+		@extend .wt-page-title;
+	}
+}
+
+/*
+ * My page edit
+ */
+
+#edit-blocks {
+	
+	#current-blocks {
+		.wt-block:last-child .wt-block-header {
+			border-bottom: none;
+		}
+	}
+	
+	#available-blocks {
+		
+		.wt-block {
+			margin: 0.5rem;
+			
+			.wt-block-header {
+				border-bottom: none;
+			}
+		}
+		
+	}	
+}
+
+
+/*
+ * The search page.
+ */
+
+.wt-search-results {
+	@extend .maj-content-tabs;
+}
+
+.search_hit {
+	border: dotted 1px $maj-c-theme-primary;
+    background-color: $maj-c-theme-light;
+}
+
+/*
+ * FAQ
+ */
+
+ table.faq {    
+    margin: 5px 0 50px 5px;
+	width: 98%;
+
+	& tr {
+		td {
+			border: solid 1px $maj-c-theme-medium;
+		}
+
+		background-color: $maj-c-theme-lighter;	
+	}
+	
+	& tr:nth-child(odd) {
+		background-color: $maj-c-theme-light;
+	}
+}
+
+div {
+	&.faq_title {
+		background-color: $maj-c-theme-light;
+		margin: 1em 0;
+		padding: .25em;
+		font-weight: bold;
+		width: 98%;
+	}
+
+	&.faq_body {
+		clear: both;
+		padding: 0 1em;
+	}
+}
+
+.faq_top {
+    float: right;
+}
+
+
+/*
+ * Stories 
+ */
+
+.wt-tab-stories {
+	color: $maj-c-theme-primary;
+
+	.story_title {
+		font-weight: bold;
+	}
+	
+	.story_body {
+		padding: 1rem;
+		white-space: normal;
+	}
+	
+	.story_edit {
+		padding: 1rem;
+	}
+
+}
+
+/* Calendar */
+
+.topbottombar {
+    background-color: $maj-c-theme-medium;
+	font-weight: bold;
+}
+
+/* Clippings */
+#sb_clippings_content {
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+
+	li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		white-space: nowrap;
+	}
+}
+
+ /* Census assistant */
+ .wt-census-assistant-form-control:focus {
+    min-width: 12rem;
+}
+
+/*
+ * Miscellaneous
+ */
+
+ .text-muted {
+	color: $maj-c-bluegray !important;
+ }
+
+
+ .odometer {
+	 @extend .badge;
+	 @extend .badge-secondary;
+ }

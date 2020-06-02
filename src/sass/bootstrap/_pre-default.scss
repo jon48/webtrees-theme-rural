@@ -1,0 +1,97 @@
+/**
+ * Rural Theme - Bootstrap variables
+ *
+ * webtrees-MyArtJaub
+ * Copyright (C) 2015-2020 Jonathan Jaubart
+ * 
+ * Based on webtrees: online genealogy
+ * Copyright (C) 2020 webtrees development team
+ *  
+ * This file is part of webtrees-MyArtJaub
+ *  
+ * webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * webtrees-MyArtJaub is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+//$primary: #62584D;
+$primary: $maj-c-theme-primary;
+$secondary: $maj-c-theme-secondary;
+$success: $maj-c-theme-dark;
+$info: $maj-c-theme-dark;
+//$warning: $yellow !default;
+//$danger: $red !default;
+//$light: $gray-100 !default;
+//$dark: $gray-800 !default;
+
+//$enable-caret: true !default;
+//$enable-rounded: true !default;
+//$enable-shadows: false !default;
+$enable-gradients: true !default;
+//$enable-transitions: true !default;
+//$enable-prefers-reduced-motion-media-query: true !default;
+//$enable-grid-classes: true !default;
+//$enable-print-styles: true !default;
+//$enable-validation-icons: true !default;
+
+/* 
+ * Boostrap variables
+ */
+$badge-font-size:                   80% !default;
+//$badge-font-weight:                 $font-weight-bold !default;
+$badge-padding-y:                   .3em !default;
+//$badge-padding-x:                   .4em !default;
+
+$card-border-color: $maj-c-theme-medium;
+$card-color: $primary;
+$card-bg: $maj-c-theme-lighter;
+$card-cap-color: $primary;
+$card-cap-bg: $maj-c-theme-light;
+
+//$dropdown-color: theme-color();
+$dropdown-link-color: $primary;
+$dropdown-bg: $maj-c-theme-light;
+$dropdown-link-hover-color: $primary;
+//$dropdown-link-hover-bg: $maj-c-theme-lighter;
+$dropdown-link-active-color:  $primary;
+$dropdown-link-active-bg: $maj-c-theme-medium;
+$dropdown-border-color: $maj-c-theme-medium; 
+$dropdown-border-radius: 0.4rem;
+
+$input-border-color: $maj-c-theme-medium; 
+$input-bg: $maj-c-theme-lighter;
+$input-disabled-bg: color.scale($maj-c-theme-lighter, $lightness: -8%);
+$input-focus-bg: $maj-c-theme-lighter;
+
+$input-group-addon-bg: $primary;
+$input-group-addon-color: white;
+$input-group-addon-border-color: $primary; 
+
+$nav-tabs-border-color: $maj-c-theme-medium;
+//$nav-tabs-border-radius:
+$nav-tabs-link-hover-border-color: $maj-c-theme-medium;
+
+$nav-tabs-border-color:             $maj-c-theme-medium;
+$nav-tabs-link-hover-border-color:  $maj-c-theme-medium;
+$nav-tabs-link-active-color:        $primary;
+$nav-tabs-link-active-bg:           $maj-c-theme-lighter;
+$nav-tabs-link-active-border-color: $maj-c-theme-medium $maj-c-theme-medium $nav-tabs-link-active-bg;
+
+$pagination-bg: transparent;
+$pagination-border-color: $maj-c-theme-medium;
+$pagination-hover-bg: transparent;
+$pagination-hover-color: $maj-c-theme-dark;
+$pagination-hover-border-color: $pagination-border-color;
+$pagination-disabled-color: $maj-c-theme-dark; 
+$pagination-disabled-bg: transparent;
+
+$table-color: $primary;
+$table-border-color: transparent;
+$table-accent-bg: $maj-c-theme-light;

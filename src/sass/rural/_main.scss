@@ -1,0 +1,261 @@
+/**
+ * Rural Theme - Page main content
+ *
+ * webtrees-MyArtJaub
+ * Copyright (C) 2015-2020 Jonathan Jaubart
+ * 
+ * Based on webtrees: online genealogy
+ * Copyright (C) 2020 webtrees development team
+ *  
+ * This file is part of webtrees-MyArtJaub
+ *  
+ * webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * webtrees-MyArtJaub is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Pages main have the following high-level structure:
+ *
+ * wt-main-wrapper
+ * +---wt-main-container
+ *     +---wt-main-content
+ *         +---wt-messages
+ *         +---wt-page-title
+ *         +---wt-page-options wt-page-options-xxxxx
+ *         +---wt-page-content
+ */
+
+#content {
+	
+	.wt-main-container {
+		@include maj-base-layout-col;
+		
+		/* Space between the header/footer and the main content. */
+		padding-top: 1rem;
+		 padding-bottom: 1rem;
+		
+		background-color: $white;
+
+		& > .row {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+	
+	.wt-page-title, .wt-main-container > h2 {
+		color: theme-color(secondary);
+		font-size: 2em;
+		font-weight: normal;
+		text-align: center;
+	}
+	
+	/* Page options tables */
+	
+	.wt-page-options {
+		@extend .container;
+		
+		@include media-breakpoint-up(md) {
+			max-width: map-get($container-max-widths, 'md');
+		}
+		
+		&.w-100 {
+			max-width: 100%;
+		}
+		
+		&.wt-page-options-media-list {
+			max-width: 100%;
+		}
+		
+		.form-group {
+			margin-bottom: 0;
+		}
+				
+		//border-style: outset;
+		//border-color: $maj-c-theme-dark;
+		//border-width: 0 1px 1px 0;
+		
+		p {
+			text-align: center;
+		}
+		
+		.btn-secondary {
+			@extend .maj-secondary-button-theme-lighter;
+		}
+		
+		&-label {
+			color: $maj-c-theme-darker;
+			background-color: $maj-c-theme-medium;
+			font-weight: bold;
+			border-style: none;
+		}
+
+		&-value {
+			background-color: $maj-c-theme-light;
+			border-top: 1px solid $maj-c-theme-medium;
+			padding: 0.5rem 0.75rem;
+		}
+		
+	}
+	
+	/**
+	 * Page content
+	 */
+	
+	.wt-page-content {
+		margin-top: 1rem;
+	}
+}
+
+/* Forms */
+.col-form-label {
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Tabs */
+
+.nav-tabs {
+	
+	.nav-link {
+		background-color: $maj-c-theme-medium;
+		margin-right: 0.3em;
+		
+		&.active { 
+			font-weight: bold;
+			
+			background-color: $maj-c-theme-lighter;
+		}
+
+		&.text-muted {
+			display: none;
+		}
+	}
+	
+}
+
+.tab-content {
+	border: solid 1px $maj-c-theme-medium;
+	border-top-style: none;
+	background-color: $maj-c-theme-lighter;	
+	padding: 1em;
+
+	.dataTables_wrapper {
+		border-style: none;
+	}
+
+	&.mt-4 {
+		margin-top: unset !important;
+	}
+
+	.wt-tabs-individual & {
+		padding: 0;
+	}
+}
+
+/**
+ * Lists
+ */
+.list_table {
+	margin-left: auto;
+	margin-right: auto;
+
+	@include maj-font-color(theme-color(), $maj-c-theme-dark)
+}
+
+.list_label, .list_label_wrap {
+	text-align: center;
+	font-weight: bold;
+	background-color: $maj-c-theme-medium;
+
+	@include maj-font-color(theme-color(), $maj-c-theme-dark)
+}
+
+.list_value, .list_value_wrap {
+	background-color: $maj-c-theme-light;
+
+	@include maj-font-color(theme-color(), $maj-c-theme-dark)
+}
+
+ .list_label,.list_value {
+	 white-space: nowrap;
+}
+
+ .list_label_wrap,.list_value_wrap {
+	 white-space: normal;
+}
+
+/**
+ * Facts table
+ */
+ .wt-facts-table {
+	caption {
+		caption-side: top;
+	}
+	
+	th {
+		background-color: $maj-c-theme-medium;
+		border: none;
+		text-align: center;
+		font-weight: bold;
+		width: 20%;
+
+		#sidebar & {
+			min-width: 7rem;
+		}
+	}
+	
+	td {
+		background-color: $maj-c-theme-light;
+		border: none;
+	}
+	
+	.wt-gender-M td {
+		background-color: var(--sex-m-bg);
+		border-color: var(--sex-m-fg);
+	}
+
+	.wt-gender-F td {
+		background-color: var(--sex-f-bg);
+		border-color: var(--sex-f-fg);
+	}
+
+	.btn-light {
+		@extend .btn-primary;
+	}
+}
+
+/*
+ * Markdown
+ */
+
+.markdown {
+	overflow-x: auto;
+	
+	p {
+		margin: 0 0 0.5em;
+		white-space: pre-wrap;
+	}
+
+	table {
+		border-collapse: collapse;
+		font-size: 10px;
+		margin-bottom: 5px;
+	}
+
+	th {
+		font-weight: bold;
+	}
+
+	td, th {
+		border: solid thin $maj-c-theme-medium;
+		padding: 3px;
+	}
+}

@@ -1,0 +1,253 @@
+/**
+ * Rural Theme - Global styles and overrides
+ *
+ * webtrees-MyArtJaub
+ * Copyright (C) 2015-2020 Jonathan Jaubart
+ * 
+ * Based on webtrees: online genealogy
+ * Copyright (C) 2020 webtrees development team
+ *  
+ * This file is part of webtrees-MyArtJaub
+ *  
+ * webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * webtrees-MyArtJaub is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ */
+ 
+html {
+	font-size: $maj-base-font-size;
+}
+
+.wt-global {
+	background: white linear-gradient(0,  white, $maj-c-background) repeat-x;
+
+}
+
+/* Colors for chart boxes, etc. */
+:root {
+	--sex-f-fg: #ce5380;
+    --sex-m-fg: #468bb6;
+    --sex-u-fg: gray;
+    --sex-f-bg: #ede1e8;
+    --sex-m-bg: #d2e2ec;
+    --sex-u-bg: #ffffff;
+    --chart-line: solid gray thin;
+	--chart-line-radius: 0.5rem;
+}
+
+
+.maj-c-theme {
+	&-darker { background-color: $maj-c-theme-darker; }
+	&-dark { background-color: $maj-c-theme-dark; }
+	&-medium { background-color: $maj-c-theme-medium; }
+	&-light { background-color: $maj-c-theme-light; }
+	&-lighter { background-color: $maj-c-theme-lighter; }
+}
+
+
+/*
+ * Any element that is loaded dynamically has the class wt-ajax-load.
+ * We can provide a "loading" placeholder for empty elements with this class.
+ */
+.wt-ajax-load:empty {
+    height: 32px;
+    background: url('{{ webtrees }}/images/loading-32x32.gif') no-repeat 50% 50%;
+}
+
+
+/*
+ * Html elements
+ */
+
+a {
+    color: $maj-c-theme-darker;
+    text-decoration: none;
+}
+
+a:hover {
+    color: $maj-c-theme-dark;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: separate;
+}
+
+
+/* 
+ * Bootstrap overrides 
+ */
+
+.alert {
+	margin-right: 0;	
+	margin-left: 0;
+}
+
+.btn-secondary, .btn-outline-secondary {
+	@extend .maj-secondary-button-theme-lighter;
+}
+
+.dropdown {
+	
+	&-menu {		
+		max-height: 100vh;
+		overflow-x: hidden;
+		
+		.dropdown-item {
+			&.active {				
+				@include hover-focus() {
+					color: theme-color();
+				}
+			}
+
+			&.disabled {		
+				display: none;
+			}
+		}
+	}
+
+	&-divider {
+		border-top-color: $maj-c-theme-medium;
+
+		& + .disabled + & {
+			display: none;
+		}
+	}
+}
+
+.input-group {
+	&-text {
+		*[class^='wt-icon-'] { color: white; }
+	}
+}
+
+
+input, select, .custom-select{
+	background-color: $maj-c-theme-lighter;
+	border: solid 1px $maj-c-theme-medium;
+}
+
+.pagination {
+	.page-link {
+		background-image: $maj-bg-theme-medium-background-image;
+	}
+	
+	.page-item {
+		&.active .page-link {
+			background-image: none;
+		}
+		
+		&.disabled {
+			.page-link {
+				background-image: none;
+			}
+			
+			&.previous, &.next {
+				opacity: 0.5;
+				
+				.page-link {
+					background-image: $maj-bg-theme-medium-background-image;
+				}
+			}
+		}
+	}
+}
+
+.btn-link {
+    padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	
+	&:hover {
+		text-decoration: unset;
+		color: $maj-c-theme-dark;
+	}
+}
+
+.container-fluid {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/**
+ * Select2 overrides
+ */
+
+.select2 {
+	.select2-selection, .select2-dropdown {
+		background-color: $maj-c-theme-lighter;
+	}
+ 
+	.select2-selection.select2-selection--single {
+		min-height: 28px;
+		height: auto;
+	}
+	
+	.select2-container .select2-selection--single .select2-selection__rendered {
+		padding-left: 2px;
+	}
+	
+	.select2-selection--single .NAME {
+		padding-left: 4px;
+	}
+}
+
+/*
+ * Common classes
+ */
+
+ .maj-font-color-brown {
+	@include maj-font-color($maj-c-theme-dark, $maj-c-theme-medium);
+ }
+
+ .maj-font-color-blue {
+	@include maj-font-color($maj-c-bluegray, $maj-c-bluegray-dark);
+ }
+
+
+.maj-content-tabs {
+	
+	background-color: $maj-c-theme-lighter;
+	padding-top: 0.3rem;
+	border: solid $maj-c-theme-medium $nav-tabs-border-width;
+	@include border-radius($border-radius);	
+
+	.nav-tabs {		
+		background-color: $maj-c-theme-light;
+		border: solid $maj-c-theme-medium $nav-tabs-border-width;
+		@include border-radius($border-radius);
+		padding: 0.3rem 0.3rem 0 0.3rem;
+		margin-left: 0.3rem;		
+		margin-right: 0.3rem;
+	}
+	
+	.tab-content {
+		border-style: none;
+	}
+}
+
+.maj-secondary-button-theme-lighter {
+	@include button-variant($maj-c-theme-lighter, $maj-c-theme-medium, $active-background: $primary);
+		
+	color: $primary;
+	&.btn {
+		background-color:transparent;
+		background: $maj-c-theme-lighter $maj-bg-theme-medium-background-image repeat-x;
+	}
+	
+	&:hover {
+		color: $primary;
+	}
+	
+	.active {
+		background-image: none;
+	}
+}
+
+

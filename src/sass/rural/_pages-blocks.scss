@@ -1,0 +1,111 @@
+/**
+ * Rural Theme - Specific pages - Home page blocks
+ *
+ * webtrees-MyArtJaub
+ * Copyright (C) 2015-2020 Jonathan Jaubart
+ * 
+ * Based on webtrees: online genealogy
+ * Copyright (C) 2020 webtrees development team
+ *  
+ * This file is part of webtrees-MyArtJaub
+ *  
+ * webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * webtrees-MyArtJaub is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.wt-block {
+	border-style: none;
+	
+	&:first-child {
+			margin-top: 1rem;
+	}
+	
+	padding-top: 9px;
+	background-image: url(block_small_bg.png);
+	background-repeat: repeat-x;
+
+	
+	.wt-side-blocks &.wt-side-block-optional {
+		display: none !important;
+	}
+	
+	@include media-breakpoint-up(md) {
+		.wt-main-blocks & {
+			&:first-child {
+				margin-top: 1rem;
+			}
+
+			padding-top: 0;
+			padding-left: 46px;
+			background-image: url(block_bg.png);
+			background-repeat: repeat-y;
+		}
+	}
+		
+	.wt-block-header {
+		border-bottom-style: dashed;
+		background-color: $maj-c-theme-lighter;
+		
+		font-weight: bolder;
+		color: color.scale($maj-c-theme-primary, $lightness: 20%);
+	}
+	
+	.wt-block-content {
+		background-color: $maj-c-theme-lighter;
+		
+		.dataTables_wrapper {
+			border: none;
+		}
+	}
+	
+	
+	
+	.wt-block-content-user_messages {
+		
+		
+		button {
+			@extend .btn;
+			@extend .btn-primary;
+			
+			margin-left: 1rem;
+		}
+		
+		h2 {
+			font-size: 1rem;
+			
+			&:first-child {
+				font-weight: bold;
+			}
+		}
+		
+		table {
+			@extend .table-striped;
+		}
+	}
+	
+	.wt-block-content-gedcom_stats {
+		.col {
+			&:first-child { padding-right: 0};
+			&:last-child { padding-left: 0};
+		}
+		
+		.wt-facts-table {
+			th {
+				background-color: $maj-c-theme-medium;
+			}
+			
+			td {
+				border: solid 1px $maj-c-theme-medium;
+			}
+		}
+	}
+	
+}

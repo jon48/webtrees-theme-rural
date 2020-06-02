@@ -1,0 +1,222 @@
+
+/**
+ * Rural Theme - Page header
+ *
+ * webtrees-MyArtJaub
+ * Copyright (C) 2015-2020 Jonathan Jaubart
+ * 
+ * Based on webtrees: online genealogy
+ * Copyright (C) 2020 webtrees development team
+ *  
+ * This file is part of webtrees-MyArtJaub
+ *  
+ * webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * webtrees-MyArtJaub is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Pages header has the following high-level structure:
+ *
+ * wt-header-wrapper
+ * +---wt-header-container
+ *     +---wt-header-content
+ *         +---wt-accessibility-links
+ *         +---wt-site-logo
+ *         +---wt-site-title
+ *         +---wt-header-search
+ *         |   +---wt-header-search-form
+ *         |       +---wt-header-search-field
+ *         |       +---wt-header-search-button
+ *         +---wt-secondary-navigation
+ *         |   +---wt-user-menu
+ *         +---wt-primary-navigation
+ *             +---wt-genealogy-menu
+ */
+
+.maj-header-part {
+	@include media-breakpoint-up(md) {
+		min-height: #{$maj-header-height / 3};
+	};
+}
+
+.wt-header-wrapper {
+	
+	color: $maj-c-theme-lighter;
+	
+	a {
+		font-weight: bold;
+	}
+			
+	.wt-header-container {
+		@include maj-base-layout-col;
+	}
+	
+	.wt-header-content {		
+		@extend .flex-fill;
+		
+		flex-direction: column;
+		flex-wrap: nowrap;
+		
+		
+	}
+	
+	.wt-site-logo {
+		@extend .d-none;
+		@extend .d-md-block;	
+		@extend .position-absolute;
+		height: $maj-header-height;
+		
+		background-repeat: no-repeat;
+		background-position: center left;
+	}
+	
+	.wt-site-title {
+		@extend .maj-header-part;
+		
+		order: 2;
+		margin: 0;
+
+		text-align: start;
+		font-size: 1.5rem;
+		font-weight: bold;
+
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+
+		@include media-breakpoint-up(md) {
+			text-align: end;
+			font-size: 1em;
+			font-weight: normal;
+
+			padding-top: unset;
+			padding-bottom: unset;
+		}		
+	}
+	
+	.wt-header-search {
+		@extend .d-none;
+		@extend .d-md-flex;
+		@extend .maj-header-part;
+		
+		order: 3;
+		width: max-content;
+		align-self: flex-end;
+		padding-bottom: 0.5em;
+		
+		display: flex;
+		flex-direction: column-reverse;
+		
+	}
+	
+	.wt-secondary-navigation {
+		@extend .maj-header-part;
+				
+		order: 1;
+		
+		//font-size: 1em;
+		font-weight: bold;
+		
+		.wt-user-menu {
+			flex-direction: row-reverse;
+
+			a {
+				font-weight: normal;
+				@include media-breakpoint-up(md) {
+					font-weight: unset;
+				}
+			}
+			
+			.menu-mymenu { order: 4; }
+			.menu-theme { 				
+				@extend .d-none;
+				@extend .d-sm-flex;
+
+				order: 3; 
+			}
+			.menu-language { order: 2; }
+			.menu-logout { order: 1; }
+			
+		}
+		
+		.nav-link {
+			color: $maj-c-theme-lighter;
+			
+			&:hover {
+				color: $maj-c-theme-light;
+			}
+		}
+		
+		.dropdown {
+			
+			.dropdown-item {
+				font-weight: normal;
+			}
+		}
+	}
+		
+	.wt-primary-navigation {
+		//height: #{$maj-header-height / 3};		
+		
+		order: 4;
+		
+		background-color: $white;
+		border-radius: 25px 25px 0 0;
+		
+		
+		.wt-genealogy-menu {
+			justify-content: space-evenly;
+			
+			border-radius: 20px;
+			margin-top: 15px;
+			padding-top: 0.5em;
+			padding-bottom: 1em;
+			background: $white linear-gradient(0,  rgba($maj-c-theme-medium, 0), rgba($maj-c-theme-medium, 0.6), rgba($maj-c-theme-medium, 1));
+
+			.nav-item {
+				text-align: center;
+				min-width: 5rem;
+				
+				flex: 1 1 auto;
+				
+			}
+			
+			.nav-item +	.nav-item {
+				background-image: linear-gradient(0,  $maj-c-theme-lighter, lighten($maj-c-theme-medium, 30%), lighten($maj-c-theme-medium, 70%), $maj-c-theme-medium);
+				background-size: 1px;
+				background-repeat: no-repeat;
+				background-position: left;
+			}
+			
+			.nav-link {
+				&::before {
+					display: block;
+				}
+			}
+			
+			.dropdown-menu {
+				margin-left: 1rem;
+			}
+			
+			.dropdown-item {
+				 /* Space between icons and align with submenu icons */
+				padding: 0 10px 0 0;
+				
+				&::before {
+					vertical-align: text-top;
+					line-height: 2;
+					padding: 0 .25rem;
+				}
+			}
+			
+		}
+		
+	}
+}

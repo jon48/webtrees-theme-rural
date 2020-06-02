@@ -1,0 +1,71 @@
+
+/**
+ * Rural Theme - Global variables
+ *
+ * webtrees-MyArtJaub
+ * Copyright (C) 2015-2020 Jonathan Jaubart
+ * 
+ * Based on webtrees: online genealogy
+ * Copyright (C) 2020 webtrees development team
+ *  
+ * This file is part of webtrees-MyArtJaub
+ *  
+ * webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * webtrees-MyArtJaub is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+ // Standard sizes
+
+$maj-basewidth-small: 95vw;
+$maj-basewidth-large: 85vw;
+
+$maj-base-font-size: 12px;
+
+$maj-header-height: 150px;
+
+// Colors
+//$maj-c-brown: #62584D;
+$maj-c-brown: #584937;;
+
+$maj-c-browngray:#8c847a;
+
+$maj-c-bluegray-dark: #1c3b4a;
+$maj-c-bluegray: #416271;
+
+$maj-c-greenolive : #7B983C;
+
+$maj-c-red: #FF4136;
+
+
+$maj-c-theme-primary: $maj-c-brown;
+//$maj-c-theme-primary: #584937;
+$maj-c-theme-secondary: $maj-c-greenolive;
+$maj-c-background: #6c5948;
+
+
+$maj-c-theme-darker: $maj-c-theme-primary;
+$maj-c-theme-dark2: #A28765;
+$maj-c-theme-dark: #9F8C77;
+$maj-c-theme-medium: #d3c6b8;
+$maj-c-theme-light: #e9e2db;
+$maj-c-theme-lighter: #f4f0ed;
+
+// Timelime colors
+$maj-c-persons: (
+    0: (background: #d3c6b8, border:#62584D),
+    1: (background: #a5be79, border:#1b491a),
+    2: (background: #e9e2db, border:#62584D),
+    3: (background: #bad196, border:#1b491a),
+    4: (background: #f4f0ed, border:#62584D),
+    5: (background: #cfe4b4, border:#1b491a)
+);
+
+$maj-bg-theme-medium-background-image: linear-gradient(0,  rgba($maj-c-theme-medium, 1), rgba($maj-c-theme-medium, 0.7), rgba($maj-c-theme-medium, 0));

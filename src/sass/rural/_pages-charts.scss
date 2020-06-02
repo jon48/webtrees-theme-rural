@@ -1,0 +1,285 @@
+/**
+ * Rural Theme - Specific pages - Charts
+ *
+ * webtrees-MyArtJaub
+ * Copyright (C) 2015-2020 Jonathan Jaubart
+ * 
+ * Based on webtrees: online genealogy
+ * Copyright (C) 2020 webtrees development team
+ *  
+ * This file is part of webtrees-MyArtJaub
+ *  
+ * webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * webtrees-MyArtJaub is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/*
+ * Chart-boxes are used to build the various charts.
+ * Each type of chart will set its own size and hide/show content.
+ *
+ * wt-chart-box
+ * +--- wt-chart-box-thumbnail
+ * +--- wt-chart-box-extra
+ *      +--- wt-chart-box-zoom
+ *           +--- wt-chart-box-icon
+ *           +--- wt-chart-box-dropdown wt-chart-box-zoom-dropdown
+ *      +--- wt-chart-box-links
+ *           +--- wt-chart-box-icon
+ *           +--- wt-chart-box-dropdown wt-chart-box-links-dropdown
+ * +--- wt-chart-box-name
+ * +--- wt-chart-box-lifespan
+ * +--- wt-chart-box-facts
+ *     +--- wt-chart-box-fact
+ */
+
+.wt-chart-box {
+
+	line-height: 1.1;
+	padding: 2px;
+	background: var(--sex-u-bg);
+	border: dashed var(--sex-u-fg) thin;
+
+	.dropdown-menu {
+		background: var(--sex-u-bg);
+		border-color: var(--sex-u-fg);
+	}
+	
+	&.wt-chart-box-m {
+		background: var(--sex-m-bg);
+		border: solid var(--sex-m-fg) thin;	
+		
+		.dropdown-menu {
+			background: var(--sex-m-bg);
+			border-color: var(--sex-m-fg);
+		}
+	}
+
+	&.wt-chart-box-f {
+		background: var(--sex-f-bg);
+		border: solid var(--sex-f-fg) thin;
+
+		.dropdown-menu {
+			background: var(--sex-f-bg);
+			border-color: var(--sex-f-fg);
+		}
+	}
+	
+	.small {
+		font-size: 90%;
+	}
+	
+	.wt-chart-box-thumbnail {
+		max-height: 7.5rem;
+	}
+
+	.svg-inline--fa, .icon-pedigree {
+		height: 16px;
+	}
+
+	// Specific width & heights
+
+	.wt-chart-ancestors & {
+		width: 23rem;
+		height: 8rem;		
+	}
+
+	.wt-chart-compact & {
+		min-height: 5rem;
+	}
+
+	.wt-chart-family-book & {
+		width: 20rem;
+		margin-top: 0.4rem;
+		margin-bottom: 0.4rem;
+	}
+
+	.wt-chart-pedigree-left & {
+		width: unset;
+		margin: 0.4rem;
+		margin-right: 0;
+	}
+
+	.wt-chart-pedigree-right & {
+		width: unset;
+		margin: 0.4rem;
+		margin-left: 0;
+	}
+
+	.wt-chart-pedigree-up & {
+		width: 20rem;
+		margin: 0.4rem;
+		margin-bottom: 0;
+	}
+
+	.wt-chart-pedigree-down & {
+		width: 20rem;
+		margin: 0.4rem;
+		margin-top: 0;
+	}
+
+	.wt-chart-relationships & {
+		width: 20rem;
+	}
+
+	.wt-chart-hourglass & {
+		width: 19.8rem;
+	}	
+}
+
+/*
+ * Pedigree map
+ */
+
+ .row.osm-wrapper {
+	 @extend .container;
+ }
+
+ .osm-sidebar {
+	 .gchart {
+		 border: dashed 1px $maj-c-theme-dark;
+		 margin-bottom: 0.5rem;
+		 color: $maj-c-theme-primary;
+
+		 .label{
+			 font-weight: bold;
+		 }
+	 }
+ }
+
+ .leaflet-popup-content-wrapper {
+	 @extend  .maj-font-color-blue;
+	 .label{
+		font-weight: bold;
+	}
+}
+
+ /*
+  * Timeline chart
+  */
+
+#timeline_chart {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+
+
+@each $nb, $colors in $maj-c-persons {
+	.person#{$nb} {
+		background-color: map-get($colors, 'background');
+		border: outset map-get($colors, 'border') 1px;
+		vertical-align: top;
+		border-radius: 3px;
+		margin-right: 0.2rem;
+	}
+}
+
+/**
+ * Lifespans
+ */
+
+.wt-lifespans {
+
+	&-subtitle {
+		text-align: center;
+	}
+
+	&-scale {
+		white-space: nowrap;
+	}
+
+	&-decade {
+		width: 70px;
+		height: 60px;
+		display: inline-block;
+		background-image: url('{{ webtrees }}/images/lifespan-decade.png');
+		background-position-y: bottom;
+		background-repeat: no-repeat;
+		background-size: 70px 37px;
+	}
+
+	&-individuals {
+		background: white;
+	}
+
+	&-summary {
+		background: #ffffff;
+		border: thin solid #000;
+		z-index: 1;
+
+		&-link {
+			font-weight: bold;
+		}
+	}
+}
+
+/*
+ * Family Book
+ */
+
+.wt-chart-family-book {
+	overflow-y: auto;
+}
+
+/*
+ * Relationship chart
+ */
+ .wt-chart-relationships {
+	overflow-y: auto;
+ }
+
+ .vline-text, .hline-text {
+	 font-size: unset;
+ }
+
+ /*
+  * Hourglass chart 
+  */
+
+  .wt-chart-hourglass {
+	overflow-y: auto;
+  }
+
+  /*
+   * Fan chart
+   */
+
+.fan_chart {
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+	}
+	
+	&_menu {
+		background: $maj-c-theme-lighter;
+		border: solid 1px $maj-c-theme-medium;
+		position: absolute;
+		display: none;
+		z-index: 100;
+		border-radius: 3px;
+	}
+}
+
+/*
+ * Statistics
+ */
+
+ .wt-statistics-chart {
+	@extend .maj-content-tabs;
+
+	.card {
+		.list-group-item {
+			background-color: $maj-c-theme-lighter;
+		}
+	}
+ }

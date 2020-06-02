@@ -1,6 +1,13 @@
 # Composer
 /vendor/
 
+# npm
+/node_modules/
+
+# build products
+/resources/css/
+mix-manifest.json
+
 # Eclipse
 .metadata
 .project
@@ -24,3 +31,20 @@ local.properties
 
 # PDT-specific (PHP Development Tools)
 .buildpath
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# dotenv environment variables file
+.env
+.env.test
+
+/*.txt

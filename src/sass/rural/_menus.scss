@@ -1,0 +1,87 @@
+/**
+ * Rural Theme - Menus icons
+ *
+ * webtrees-MyArtJaub
+ * Copyright (C) 2015-2020 Jonathan Jaubart
+ * 
+ * Based on webtrees: online genealogy
+ * Copyright (C) 2020 webtrees development team
+ *  
+ * This file is part of webtrees-MyArtJaub
+ *  
+ * webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * webtrees-MyArtJaub is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ */
+ 
+ /*
+ * Menus icons
+ */ 
+
+.menu-tree {
+	.nav-link::before 			{content: url(menu/tree.png);}
+	
+	.dropdown-item::before 		{content: url(menu/tree-tree.png);}
+}
+
+.menu-chart .nav-link::before 	{content: url(menu/chart.png);}
+.menu-chart-ancestry::before 	{content: url(menu/chart-ancestors.png);}
+.menu-chart-compact::before 	{content: url(menu/chart-compact.png);}
+.menu-chart-descendants::before {content: url(menu/chart-descendants.png);}
+.menu-chart-familybook::before 	{content: url(menu/chart-family-book.png);}
+.menu-chart-fanchart::before 	{content: url(menu/chart-fanchart.png);}
+.menu-chart-hourglass::before 	{content: url(menu/chart-hourglass.png);}
+.menu-chart-lifespan::before 	{content: url(menu/chart-lifespan.png);}
+.menu-chart-pedigree::before 	{content: url(menu/chart-pedigree.png);}
+.menu-chart-pedigreemap::before	{content: url(menu/chart-pedigree-map.png);}
+.menu-chart-relationship::before{content: url(menu/chart-relationship.png);}
+.menu-chart-statistics::before 	{content: url(menu/chart-statistics.png);}
+.menu-chart-timeline::before	{content: url(menu/chart-timeline.png);}
+.menu-chart-tree::before 		{content: url(menu/chart-tree.png);}
+
+
+.menu-list .nav-link::before 	{content: url(menu/list.png);}
+.menu-branches::before 			{content: url(menu/branches.png);}
+.menu-list-fam::before 			{content: url(menu/list-fam.png);}
+.menu-list-indi::before 		{content: url(menu/list-indi.png);}
+.menu-list-note::before 		{content: url(menu/list-note.png);}
+.menu-list-obje::before 		{content: url(menu/list-obje.png);}
+.menu-list-plac::before 		{content: url(menu/list-plac.png);}
+.menu-list-repo::before 		{content: url(menu/list-repo.png);}
+.menu-list-sour::before 		{content: url(menu/list-sour.png);}
+.menu-list-subm::before 		{content: url(menu/list-indi.png);}
+
+
+.menu-calendar .nav-link::before{content: url(menu/calendar.png);}
+.menu-calendar-day::before 		{content: url(menu/calendar-calendar.png);}
+.menu-calendar-month::before 	{content: url(menu/calendar-calendar.png);}
+.menu-calendar-year::before 	{content: url(menu/calendar-calendar.png);}
+
+.menu-report {
+	.nav-link::before 			{content: url(menu/report.png);}
+	
+	.dropdown-item::before 		{content: url(menu/report-report.png);}
+}
+
+.menu-search {
+	.nav-link::before 			{content: url(menu/search.png);}
+	
+	.dropdown-item::before 		{content: url(menu/search-search.png);}
+}
+
+.menu-faq .nav-link::before 	{content: url(menu/faq.png);}
+
+.menu-clippings .nav-link::before{content: url(menu/clippings.png);}
+.menu-clippings-add::before 	{content: url(menu/clippings-add.png);}
+.menu-clippings-cart::before 	{content: url(menu/clippings-cart.png);}
+.menu-clippings-download::before{content: url(menu/edit-preferences.png);}
+.menu-clippings-empty::before 	{content: url(menu/edit-delete.png);}
+
+.menu-story .nav-link::before 	{content: url(menu/story.png);}

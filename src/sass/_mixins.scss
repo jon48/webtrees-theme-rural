@@ -1,0 +1,59 @@
+/**
+ * Rural Theme - Mixins
+ *
+ * webtrees-MyArtJaub
+ * Copyright (C) 2015-2020 Jonathan Jaubart
+ * 
+ * Based on webtrees: online genealogy
+ * Copyright (C) 2020 webtrees development team
+ *  
+ * This file is part of webtrees-MyArtJaub
+ *  
+ * webtrees-MyArtJaub is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * webtrees-MyArtJaub is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License
+ * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+@mixin maj-font-color($normalcolor, $hovercolor) {
+	color: $normalcolor;
+	a { color: $normalcolor; }
+	a:hover { color: $hovercolor}
+}
+
+// Define column for base layout
+@mixin maj-base-layout-col {
+	max-width: $maj-basewidth-small;
+	
+	@include media-breakpoint-up(md) {
+		max-width: $maj-basewidth-large;
+	}
+}
+
+@mixin maj-secondary-button {
+	
+	.btn-secondary {
+		@include button-variant($maj-c-theme-lighter, $maj-c-theme-medium, $active-background: $primary);
+		
+		color: $primary;
+		&.btn {
+			background-color:transparent;
+			background: $maj-c-theme-lighter $maj-bg-theme-medium-background-image repeat-x;
+		}
+		
+		&:hover {
+			color: $primary;
+		}
+		
+		.active {
+			background-image: none;
+		}
+	}
+	
+}

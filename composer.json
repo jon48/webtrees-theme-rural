@@ -19,10 +19,15 @@
 		"webtrees",
 		"genealogy"
 	],
+	"config" : {
+		"preferred-install": {
+			"fisharebest/webtrees": "source"
+		}
+	},
 	"require-dev" : {
-		"fisharebest/webtrees" : "~1.7.8"
+		"fisharebest/webtrees" : "~2.0.4"
 	},
 	"extra" : {
-		"installer-name" : "rural"
+		"installer-name" : "myartjaub_ruraltheme"
 	}
 }
