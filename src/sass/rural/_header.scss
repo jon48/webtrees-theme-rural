@@ -42,9 +42,14 @@
  */
 
 .maj-header-part {
+
 	@include media-breakpoint-up(md) {
 		min-height: #{$maj-header-height / 3};
 	};
+
+	// Fix for Edge < 79 not supporting max-content.
+	width: auto;
+	white-space: nowrap;	
 }
 
 .wt-header-wrapper {
@@ -64,8 +69,6 @@
 		
 		flex-direction: column;
 		flex-wrap: nowrap;
-		
-		
 	}
 	
 	.wt-site-logo {
@@ -84,7 +87,7 @@
 		order: 2;
 		margin: 0;
 
-		text-align: start;
+		text-align: left;	// Fix for Edge < 79 not supporting start and end values.
 		font-size: 1.5rem;
 		font-weight: bold;
 
@@ -92,7 +95,7 @@
 		padding-bottom: 1.5rem;
 
 		@include media-breakpoint-up(md) {
-			text-align: end;
+			text-align: right;  // Fix for Edge < 79 not supporting start and end values.
 			font-size: 1em;
 			font-weight: normal;
 

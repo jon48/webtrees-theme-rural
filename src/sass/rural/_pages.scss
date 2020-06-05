@@ -159,6 +159,16 @@ form.wt-page-content {
 }
 
 /*
+ * Sign in page
+ */
+
+.hideShowPassword-wrapper {
+	button {
+		@extend .maj-secondary-button-theme-lighter;
+	}
+}
+
+/*
  * FAQ
  */
 

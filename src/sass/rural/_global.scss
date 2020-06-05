@@ -233,6 +233,7 @@ input, select, .custom-select{
 }
 
 .maj-secondary-button-theme-lighter {
+	@extend .btn;
 	@include button-variant($maj-c-theme-lighter, $maj-c-theme-medium, $active-background: $primary);
 		
 	color: $primary;
