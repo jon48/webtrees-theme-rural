@@ -258,6 +258,16 @@ div {
     min-width: 12rem;
 }
 
+/* Pending changes */
+
+.wt-new {
+    outline: solid 2px $maj-c-theme-primary;
+}
+
+.wt-old {
+    outline: solid 2px red;
+}
+
 /*
  * Miscellaneous
  */

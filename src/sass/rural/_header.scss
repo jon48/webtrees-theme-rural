@@ -146,6 +146,11 @@
 			}
 			.menu-language { order: 2; }
 			.menu-logout { order: 1; }
+			.menu-pending { 
+				order: 5;
+				border: solid 2px $maj-c-theme-lighter;
+				border-radius: 0.7rem;
+			}
 			
 		}
 		
