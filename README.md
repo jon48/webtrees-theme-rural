@@ -1,7 +1,7 @@
 ![Latest version)](https://img.shields.io/github/v/release/jon48/webtrees-theme-rural)
 ![Release date](https://img.shields.io/github/release-date-pre/jon48/webtrees-theme-rural)
 ![Downloads](https://img.shields.io/github/downloads/jon48/webtrees-theme-rural/total)
-![Licence](https://img.shields.io/github/license/fisharebest/webtrees)
+![Licence](https://img.shields.io/github/license/jon48/webtrees-theme-rural)
 
 # webtrees-theme-rural
 Rural Theme for the **[webtrees](https://webtrees.net/)** application

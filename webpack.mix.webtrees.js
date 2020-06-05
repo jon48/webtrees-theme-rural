@@ -17,6 +17,7 @@ const postcss_image_inliner = require("postcss-image-inliner")({
 mix
     .setPublicPath(config.build_dir)
     .postCss(config.webtrees_dir + '/_base.css' ,  config.build_dir + '/webtrees.base.css')
+    .postCss(config.webtrees_dir + '/_vendor-patches.css' ,  config.build_dir + '/webtrees.vendor-patches.css')
     .options({
         processCssUrls: false,
         postCss: [

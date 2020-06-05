@@ -22,7 +22,11 @@
  */
 
 /*
+* Bootstrap build may be overriding patches. We need to re-apply them
+*/
+@import '~build/webtrees.vendor-patches.css';
+
+/*
  * CSS from mainstream webtrees
  */
-
 @import '~build/webtrees.base';

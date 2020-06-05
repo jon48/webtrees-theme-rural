@@ -70,8 +70,14 @@ form.wt-page-content {
     }
 }
 
-.source_citations {
-    display: none;
+/*
+ * Family page
+ */
+
+.wt-family-members {
+    .wt-chart-box {
+        width: 25vw;
+    }
 }
 
 /*
@@ -254,10 +260,35 @@ div {
 
 /* Calendar */
 
+.wt-route-CalendarPage #content {
+    .wt-page-options {
+        padding: 0;
+    }
+
+    .wt-page-options-label {
+        text-align: center;
+    }
+}
+
 .topbottombar {
     background-color: $maj-c-theme-medium;
     font-weight: bold;
 }
+
+.current_day {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.cal_day {
+    color: $maj-c-theme-primary;
+    font-weight: bold;
+}
+
+.rtl_cal_day {
+    color: $maj-c-greenolive;
+}
+
 
 /* Clippings */
 #sb_clippings_content {
