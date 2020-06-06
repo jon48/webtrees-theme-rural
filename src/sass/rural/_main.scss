@@ -48,6 +48,10 @@
 			margin-left: 0;
 			margin-right: 0;
 		}
+
+		& > p {
+			text-align: center;
+		}
 	}
 	
 	.wt-page-title, .wt-main-container > h2 {
