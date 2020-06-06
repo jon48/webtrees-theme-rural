@@ -136,6 +136,11 @@
 
 		&.text-muted {
 			display: none;
+
+			.wt-tabs-individual & {
+				display: list-item;
+				opacity: 0.45;
+			}
 		}
 	}
 	

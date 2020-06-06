@@ -274,6 +274,10 @@ div {
 
  .text-muted {
 	color: $maj-c-bluegray !important;
+
+	&.nav-link {
+		@include  maj-font-color($maj-c-theme-primary !important, $maj-c-theme-medium !important);
+	}
  }
 
 
