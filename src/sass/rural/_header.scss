@@ -69,6 +69,9 @@
 		
 		flex-direction: column;
 		flex-wrap: nowrap;
+
+		// Issue #5: The min-height cannot be handled only by the header parts, as some of them may be missing.
+		min-height: $maj-header-height; 
 	}
 	
 	.wt-site-logo {
@@ -170,9 +173,7 @@
 		}
 	}
 		
-	.wt-primary-navigation {
-		//height: #{$maj-header-height / 3};		
-		
+	.wt-primary-navigation {		
 		order: 4;
 		
 		background-color: $white;
