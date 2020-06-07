@@ -5,4 +5,6 @@
 .vscode/       export-ignore
 tests/          export-ignore
 
+RoboFile.php	export-ignore
+
 *.psd         export-ignore
