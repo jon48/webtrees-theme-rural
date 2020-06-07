@@ -25,7 +25,16 @@
 		}
 	},
 	"require-dev" : {
-		"fisharebest/webtrees" : "~2.0.4"
+		"fisharebest/webtrees" : "~2.0.4",
+		"consolidation/robo": "^2.1"
+	},
+	"scripts": {
+        "webtrees-theme-rural:package": [
+            "./vendor/bin/robo package"
+        ]
+	},
+	"scripts-descriptions": {
+        "webtrees-theme-rural:package": "Create a package file for distribution. Add -- commit for specific commit."
 	},
 	"extra" : {
 		"installer-name" : "myartjaub_ruraltheme"
