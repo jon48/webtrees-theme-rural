@@ -44,10 +44,10 @@ $enable-gradients: true !default;
 /* 
  * Boostrap variables
  */
-$badge-font-size:                   80% !default;
-//$badge-font-weight:                 $font-weight-bold !default;
-$badge-padding-y:                   .3em !default;
-//$badge-padding-x:                   .4em !default;
+$badge-font-size: 85%;
+//$badge-font-weight: $font-weight-bold;
+//$badge-padding-y: .3em;
+//$badge-padding-x: .4em;
 
 $card-border-color: $maj-c-theme-medium;
 $card-color: $primary;

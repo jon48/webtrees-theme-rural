@@ -33,9 +33,9 @@ const postcss_image_inliner = require("postcss-image-inliner")({
 //Enable CSS variables in IE
 const postcss_custom_properties = require("postcss-custom-properties")();
 mix
-    .setPublicPath(config.public_dir)
+    .setPublicPath(config.public_dir + '/css')
     .alias('build', config.build_dir)
-    .sass('src/sass/theme.scss', config.public_dir + '/rural.min.css')
+    .sass('src/sass/theme.scss', config.public_dir + '/css/rural.min.css')
     .options({
         processCssUrls: false,
         postCss: [
@@ -47,5 +47,6 @@ mix
         ]
     })
     .sourceMaps()
+    .copy(config.images_dir + '/header.png', config.public_dir + '/images')
     .clean()
     ;

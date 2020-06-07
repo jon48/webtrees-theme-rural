@@ -59,7 +59,7 @@
  * Default icons are provided by FontAwesome.
  */
 .wt-icon-anniversary	{}
-.wt-icon-bing-maps 		{}
+.wt-icon-bing-maps 		{content: url('{{ webtrees }}/icons/bing-maps.png');}
 .wt-icon-calendar 		{}
 .wt-icon-collapse 		{}
 .wt-icon-coordinates 	{}
@@ -68,13 +68,13 @@
 .wt-icon-edit 			{}
 .wt-icon-expand			{}
 .wt-icon-family 		{}
-.wt-icon-google-maps 	{}
+.wt-icon-google-maps 	{content: url('{{ webtrees }}/icons/google-maps.png');}
 .wt-icon-help			{}
 .wt-icon-individual		{}
 .wt-icon-keyboard		{}
 .wt-icon-media			{}
 .wt-icon-note			{}
-.wt-icon-openstreetmap 	{}
+.wt-icon-openstreetmap 	{content: url('{{ webtrees }}/icons/openstreetmap.png');}
 .wt-icon-preferences	{}
 .wt-icon-reorder		{}
 .wt-icon-repository		{}
