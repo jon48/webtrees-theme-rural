@@ -27,7 +27,7 @@
  * +---wt-footer wt-footer-xxxxx
  */
 
-.wt-footers {
+.wt-global .wt-footers {
 	@include maj-base-layout-col;
 	
 	background-color: white;
