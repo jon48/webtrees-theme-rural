@@ -117,6 +117,24 @@ form.wt-page-content {
 	}
  }
 
+ #sidebar  {
+	.wt-family-navigator-family {
+		table-layout: fixed;
+
+		th {
+			width: 35%;
+
+			@include media-breakpoint-up(md) {
+				//min-width: 7rem;
+			}
+		}
+
+		.dropdown-toggle, .dropdown-item {
+			white-space: normal;
+		}
+	}
+}
+
  /*
   * Places list
   */
