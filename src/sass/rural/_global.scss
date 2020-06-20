@@ -179,22 +179,22 @@ input, select, .custom-select{
  * Select2 overrides
  */
 
-.select2 {
+ .select2-container {
 	.select2-selection, .select2-dropdown {
 		background-color: $maj-c-theme-lighter;
 	}
  
-	.select2-selection.select2-selection--single {
+	.select2-selection--single {
 		min-height: 28px;
 		height: auto;
-	}
-	
-	.select2-container .select2-selection--single .select2-selection__rendered {
-		padding-left: 2px;
-	}
-	
-	.select2-selection--single .NAME {
-		padding-left: 4px;
+
+		.select2-selection__rendered {
+			padding-left: 2px;
+		}
+
+		.NAME {
+			padding-left: 4px;
+		}
 	}
 }
 
@@ -202,14 +202,17 @@ input, select, .custom-select{
  * Common classes
  */
 
- .maj-font-color-brown {
+.center {
+	text-align: center;
+}
+
+.maj-font-color-brown {
 	@include maj-font-color($maj-c-theme-dark, $maj-c-theme-medium);
- }
+}
 
- .maj-font-color-blue {
+.maj-font-color-blue {
 	@include maj-font-color($maj-c-bluegray, $maj-c-bluegray-dark);
- }
-
+}
 
 .maj-content-tabs {
 	

@@ -124,6 +124,29 @@
 	text-align: center;
 }
 
+
+form.wt-page-content {
+	@extend .container;
+
+	> .form-group {
+
+		background-color: $maj-c-theme-light;
+	
+		.col-form-label {
+			color: $maj-c-theme-primary;
+			background-color: $maj-c-theme-medium;
+		}
+
+		> div {
+			padding: $input-padding-y $input-padding-x;
+		}
+	}
+
+	> .card {
+		@extend .row;
+	}
+}
+
 /* Tabs */
 
 .nav-tabs {

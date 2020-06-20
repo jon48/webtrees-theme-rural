@@ -21,8 +21,16 @@
  * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
  */
 
+ @mixin maj-block-large {
+	padding-top: 0;
+	padding-left: 46px;
+	background-image: url(block_bg.png);
+	background-repeat: repeat-y;
+ }
+
 .wt-block {
 	border-style: none;
+	background-color: transparent;
 	
 	&:first-child {
 			margin-top: 1rem;
@@ -36,17 +44,18 @@
 	.wt-side-blocks &.wt-side-block-optional {
 		display: none !important;
 	}
+
+	#edit-blocks & {
+		@include maj-block-large;
+	}
 	
-	@include media-breakpoint-up(md) {
-		.wt-main-blocks & {
+	.wt-main-blocks & {
+		@include media-breakpoint-up(md) {
+			@include maj-block-large;
+
 			&:first-child {
 				margin-top: 1rem;
 			}
-
-			padding-top: 0;
-			padding-left: 46px;
-			background-image: url(block_bg.png);
-			background-repeat: repeat-y;
 		}
 	}
 		
@@ -64,30 +73,17 @@
 		.dataTables_wrapper {
 			border: none;
 		}
+
+		& > p {
+			text-align: center;
+		}
 	}
 	
-	
-	
-	.wt-block-content-user_messages {
-		
-		
-		button {
-			@extend .btn;
-			@extend .btn-primary;
-			
-			margin-left: 1rem;
-		}
-		
-		h2 {
-			font-size: 1rem;
-			
-			&:first-child {
-				font-weight: bold;
-			}
-		}
-		
-		table {
-			@extend .table-striped;
+	.wt-block-content-charts {
+		overflow-y: auto;
+
+		.wt-chart-box {
+			width: 15rem;
 		}
 	}
 	
@@ -104,6 +100,43 @@
 			
 			td {
 				border: solid 1px $maj-c-theme-medium;
+			}
+		}
+	}
+
+	.wt-block-content-html {	
+		p {
+			text-align: unset;
+		}
+	}
+	
+	.wt-block-content-user_messages {		
+		button[type=submit] {
+			@extend .btn;
+			@extend .btn-primary;
+		}
+
+		label + select {
+			margin-left: 0.5rem;
+			margin-right: 0.5rem;
+		}
+		
+		h2 {
+			font-size: 1rem;
+			
+			&:first-child {
+				font-weight: bold;
+			}
+		}
+		
+		table {
+			@extend .table-striped;
+
+			tr:nth-child(even) .list_value_wrap	{background: $maj-c-theme-light}
+			tr:nth-child(odd) .list_value_wrap	{background: $maj-c-theme-lighter}
+
+			.list_value_wrap .btn-primary {
+				@extend .btn-primary;
 			}
 		}
 	}
