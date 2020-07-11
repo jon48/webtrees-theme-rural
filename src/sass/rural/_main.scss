@@ -199,6 +199,10 @@ form.wt-page-content {
 	margin-left: auto;
 	margin-right: auto;
 
+	&.table {
+		width: unset;
+	}
+
 	@include maj-font-color(theme-color(), $maj-c-theme-dark)
 }
 
@@ -258,6 +262,18 @@ form.wt-page-content {
 	.btn-light {
 		@extend .btn-primary;
 	}
+}
+
+/*
+ * Tag cloud
+ */
+
+.tag_cloud {
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+    padding: 10px 5px;
 }
 
 /*
