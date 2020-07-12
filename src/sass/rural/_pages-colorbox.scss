@@ -66,7 +66,10 @@
     background: #fff;
 }
 
-#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
-    color: $maj-c-theme-primary;
+#cboxPrevious,
+#cboxNext,
+#cboxSlideshow,
+#cboxClose {
     background: $maj-c-theme-light;
+    color: $maj-c-theme-primary;
 }

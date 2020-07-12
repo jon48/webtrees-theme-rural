@@ -22,33 +22,33 @@
  */
  
 html {
-	font-size: $maj-base-font-size;
+    font-size: $maj-base-font-size;
 }
 
 .wt-global {
-	background: white linear-gradient(0,  white, $maj-c-background) repeat-x;
+    background: #fff linear-gradient(to top, #fff, $maj-c-background) repeat-x;
 
 }
 
 /* Colors for chart boxes, etc. */
 :root {
-	--sex-f-fg: #ce5380;
+    --sex-f-fg: #ce5380;
     --sex-m-fg: #468bb6;
-    --sex-u-fg: gray;
+    --sex-u-fg: #808080;
     --sex-f-bg: #ede1e8;
     --sex-m-bg: #d2e2ec;
-    --sex-u-bg: #ffffff;
-    --chart-line: solid gray thin;
-	--chart-line-radius: 0.5rem;
+    --sex-u-bg: #fff;
+    --chart-line: solid #808080 thin;
+    --chart-line-radius: 0.5rem;
 }
 
 
 .maj-c-theme {
-	&-darker { background-color: $maj-c-theme-darker; }
-	&-dark { background-color: $maj-c-theme-dark; }
-	&-medium { background-color: $maj-c-theme-medium; }
-	&-light { background-color: $maj-c-theme-light; }
-	&-lighter { background-color: $maj-c-theme-lighter; }
+    &-darker { background-color: $maj-c-theme-darker; }
+    &-dark { background-color: $maj-c-theme-dark; }
+    &-medium { background-color: $maj-c-theme-medium; }
+    &-light { background-color: $maj-c-theme-light; }
+    &-lighter { background-color: $maj-c-theme-lighter; }
 }
 
 
@@ -57,8 +57,8 @@ html {
  * We can provide a "loading" placeholder for empty elements with this class.
  */
 .wt-ajax-load:empty {
-    height: 32px;
     background: url('{{ webtrees }}/images/loading-32x32.gif') no-repeat 50% 50%;
+    height: 32px;
 }
 
 
@@ -85,89 +85,92 @@ table {
  * Bootstrap overrides 
  */
 
-.alert {
-	margin-right: 0;	
-	margin-left: 0;
+.alert {	
+    margin-left: 0;
+    margin-right: 0;
 }
 
-.btn-secondary, .btn-outline-secondary {
-	@extend .maj-secondary-button-theme-lighter;
+.btn-secondary,
+.btn-outline-secondary {
+    @extend .maj-secondary-button-theme-lighter;
 }
 
 .dropdown {
-	
-	&-menu {		
-		max-height: 100vh;
-		overflow-x: hidden;
+    &-menu {		
+        max-height: 100vh;
+        overflow-x: hidden;
 		
-		.dropdown-item {
-			&.active {				
-				@include hover-focus() {
-					color: theme-color();
-				}
-			}
+        .dropdown-item {
+            &.active {				
+                @include hover-focus() {
+                    color: theme-color();
+                }
+            }
 
-			&.disabled {		
-				display: none;
-			}
-		}
-	}
+            &.disabled {		
+                display: none;
+            }
+        }
+    }
 
-	&-divider {
-		border-top-color: $maj-c-theme-medium;
+    &-divider {
+        border-top-color: $maj-c-theme-medium;
 
-		& + .disabled + & {
-			display: none;
-		}
-	}
+        & + .disabled + & {
+            display: none;
+        }
+    }
 }
 
 .input-group {
-	&-text {
-		*[class^='wt-icon-'] { color: white; }
-	}
+    &-text {
+        *[class^='wt-icon-'] { color: #fff; }
+    }
 }
 
 
-input, select, .custom-select{
-	background-color: $maj-c-theme-lighter;
-	border: solid 1px $maj-c-theme-medium;
+input,
+select,
+.custom-select {
+    background-color: $maj-c-theme-lighter;
+    border: solid 1px $maj-c-theme-medium;
 }
 
 .pagination {
-	.page-link {
-		background-image: $maj-bg-theme-medium-background-image;
-	}
+    .page-link {
+        background-image: $maj-bg-theme-medium-background-image;
+    }
 	
-	.page-item {
-		&.active .page-link {
-			background-image: none;
-		}
+    .page-item {
+        &.active .page-link {
+            background-image: none;
+        }
 		
-		&.disabled {
-			.page-link {
-				background-image: none;
-			}
+        &.disabled {
+            .page-link {
+                background-image: none;
+            }
 			
-			&.previous, &.next {
-				opacity: 0.5;
+            &.previous,
+            &.next {
+                opacity: 0.5;
 				
-				.page-link {
-					background-image: $maj-bg-theme-medium-background-image;
-				}
-			}
-		}
-	}
+                .page-link {
+                    background-image: $maj-bg-theme-medium-background-image;
+                }
+            }
+        }
+    }
 }
 
 .btn-link {
     padding-left: 0.25rem;
-	padding-right: 0.25rem;
+    padding-right: 0.25rem;
 	
-	&:hover {
-		text-decoration: unset;
-		color: $maj-c-theme-dark;
-	}
+    &:hover {
+        color: $maj-c-theme-dark;
+        text-decoration: unset;
+    }
 }
 
 .container-fluid {
@@ -179,23 +182,24 @@ input, select, .custom-select{
  * Select2 overrides
  */
 
- .select2-container {
-	.select2-selection, .select2-dropdown {
-		background-color: $maj-c-theme-lighter;
-	}
+.select2-container {
+    .select2-selection,
+    .select2-dropdown {
+        background-color: $maj-c-theme-lighter;
+    }
  
-	.select2-selection--single {
-		min-height: 28px;
-		height: auto;
+    .select2-selection--single {
+        height: auto;
+        min-height: 28px;
 
-		.select2-selection__rendered {
-			padding-left: 2px;
-		}
+        .select2-selection__rendered {
+            padding-left: 2px;
+        }
 
-		.NAME {
-			padding-left: 4px;
-		}
-	}
+        .NAME {
+            padding-left: 4px;
+        }
+    }
 }
 
 /*
@@ -203,55 +207,55 @@ input, select, .custom-select{
  */
 
 .center {
-	text-align: center;
+    text-align: center;
 }
 
 .maj-font-color-brown {
-	@include maj-font-color($maj-c-theme-dark, $maj-c-theme-medium);
+    @include maj-font-color($maj-c-theme-dark, $maj-c-theme-medium);
 }
 
 .maj-font-color-blue {
-	@include maj-font-color($maj-c-bluegray, $maj-c-bluegray-dark);
+    @include maj-font-color($maj-c-bluegray, $maj-c-bluegray-dark);
 }
 
 .maj-content-tabs {
+    @include border-radius($border-radius);
 	
-	background-color: $maj-c-theme-lighter;
-	padding-top: 0.3rem;
-	border: solid $maj-c-theme-medium $nav-tabs-border-width;
-	@include border-radius($border-radius);	
+    background-color: $maj-c-theme-lighter;
+    border: solid $maj-c-theme-medium $nav-tabs-border-width;
+    padding-top: 0.3rem;
 
-	.nav-tabs {		
-		background-color: $maj-c-theme-light;
-		border: solid $maj-c-theme-medium $nav-tabs-border-width;
-		@include border-radius($border-radius);
-		padding: 0.3rem 0.3rem 0 0.3rem;
-		margin-left: 0.3rem;		
-		margin-right: 0.3rem;
-	}
+    .nav-tabs {
+        @include border-radius($border-radius);		
+        background-color: $maj-c-theme-light;
+        border: solid $maj-c-theme-medium $nav-tabs-border-width;
+        margin-left: 0.3rem;
+        margin-right: 0.3rem;
+        padding: 0.3rem 0.3rem 0;
+    }
 	
-	.tab-content {
-		border-style: none;
-	}
+    .tab-content {
+        border-style: none;
+    }
 }
 
 .maj-secondary-button-theme-lighter {
-	@extend .btn;
-	@include button-variant($maj-c-theme-lighter, $maj-c-theme-medium, $active-background: $primary);
+    @extend .btn;
+    @include button-variant($maj-c-theme-lighter, $maj-c-theme-medium, $active-background: $primary);
 		
-	color: $primary;
-	&.btn {
-		background-color:transparent;
-		background: $maj-c-theme-lighter $maj-bg-theme-medium-background-image repeat-x;
-	}
+    color: $primary;
+
+    &.btn {
+        background: $maj-c-theme-lighter $maj-bg-theme-medium-background-image repeat-x;
+    }
 	
-	&:hover {
-		color: $primary;
-	}
+    &:hover {
+        color: $primary;
+    }
 	
-	.active {
-		background-image: none;
-	}
+    .active {
+        background-image: none;
+    }
 }
 
 

@@ -43,189 +43,188 @@
 
 .maj-header-part {
 
-	@include media-breakpoint-up(md) {
-		min-height: #{$maj-header-height / 3};
-	};
+    // Fix for Edge < 79 not supporting max-content.
+    white-space: nowrap;
+    width: auto;
 
-	// Fix for Edge < 79 not supporting max-content.
-	width: auto;
-	white-space: nowrap;	
+    @include media-breakpoint-up(md) {
+        min-height: #{$maj-header-height / 3};
+    }	
 }
 
 .wt-header-wrapper {
 	
-	color: $maj-c-theme-lighter;
+    color: $maj-c-theme-lighter;
 	
-	a {
-		font-weight: bold;
-	}
+    a {
+        font-weight: bold;
+    }
 			
-	.wt-header-container {
-		@include maj-base-layout-col;
-	}
+    .wt-header-container {
+        @include maj-base-layout-col;
+    }
 	
-	.wt-header-content {		
-		@extend .flex-fill;
+    .wt-header-content {		
+        @extend .flex-fill;
 		
-		flex-direction: column;
-		flex-wrap: nowrap;
+        flex-direction: column;
+        flex-wrap: nowrap;
 
-		// Issue #5: The min-height cannot be handled only by the header parts, as some of them may be missing.
-		min-height: $maj-header-height; 
-	}
+        // Issue #5: The min-height cannot be handled only by the header parts, as some of them may be missing.
+        min-height: $maj-header-height; 
+    }
 	
-	.wt-site-logo {
-		@extend .d-none;
-		@extend .d-md-block;	
-		@extend .position-absolute;
-		height: $maj-header-height;
+    .wt-site-logo {
+        @extend .d-none;
+        @extend .d-md-block;	
+        @extend .position-absolute;
 		
-		background-repeat: no-repeat;
-		background-position: center left;
-	}
+        background-position: center left;
+		
+        background-repeat: no-repeat;
+        height: $maj-header-height;
+    }
 	
-	.wt-site-title {
-		@extend .maj-header-part;
+    .wt-site-title {
+        @extend .maj-header-part;
+
+        order: 2; /* stylelint-disable-line order/properties-alphabetical-order */
 		
-		order: 2;
-		margin: 0;
+        font-size: 1.5rem; /* stylelint-disable-line order/properties-alphabetical-order */
+        font-weight: bold;
+		
+        margin: 0;
+        padding-bottom: 1.5rem;
+        padding-top: 1.5rem;
 
-		text-align: left;	// Fix for Edge < 79 not supporting start and end values.
-		font-size: 1.5rem;
-		font-weight: bold;
+        text-align: left;	// Fix for Edge < 79 not supporting start and end values.
 
-		padding-top: 1.5rem;
-		padding-bottom: 1.5rem;
+        @include media-breakpoint-up(md) {
+            font-size: 1em;
+            font-weight: normal;
+            padding-bottom: unset;
 
-		@include media-breakpoint-up(md) {
-			text-align: right;  // Fix for Edge < 79 not supporting start and end values.
-			font-size: 1em;
-			font-weight: normal;
-
-			padding-top: unset;
-			padding-bottom: unset;
-		}		
-	}
+            padding-top: unset;
+            text-align: right;  // Fix for Edge < 79 not supporting start and end values.
+        }		
+    }
 	
-	.wt-header-search {
-		@extend .d-none;
-		@extend .d-md-flex;
-		@extend .maj-header-part;
+    .wt-header-search {
+        @extend .d-none;
+        @extend .d-md-flex;
+        @extend .maj-header-part;
 		
-		order: 3;
-		width: max-content;
-		align-self: flex-end;
-		padding-bottom: 0.5em;
-		
-		display: flex;
-		flex-direction: column-reverse;
-		
-	}
+        order: 3; /* stylelint-disable-line order/properties-alphabetical-order */
+
+        align-self: flex-end; /* stylelint-disable-line order/properties-alphabetical-order */
+        display: flex;
+        flex-direction: column-reverse;
+
+        padding-bottom: 0.5em;
+        width: max-content;		
+    }
 	
-	.wt-secondary-navigation {
-		@extend .maj-header-part;
+    .wt-secondary-navigation {
+        @extend .maj-header-part;
+		
+        order: 1; /* stylelint-disable-line order/properties-alphabetical-order */
+		
+        //font-size: 1em;
+        font-weight: bold; /* stylelint-disable-line order/properties-alphabetical-order */
+		
+        .wt-user-menu {
+            flex-direction: row-reverse;
+
+            a {
+                font-weight: normal;
+                @include media-breakpoint-up(md) {
+                    font-weight: unset;
+                }
+            }
+			
+            .menu-mymenu { order: 4; }
+
+            .menu-theme { 				
+                @extend .d-none;
+                @extend .d-sm-flex;
+
+                order: 3; 
+            }
+            .menu-language { order: 2; }
+            .menu-logout { order: 1; }
+
+            .menu-pending {
+                border: solid 2px $maj-c-theme-lighter;
+                border-radius: 0.7rem;
+                order: 5;
+            }
+			
+        }
+		
+        .nav-link {
+            color: $maj-c-theme-lighter;
+			
+            &:hover {
+                color: $maj-c-theme-light;
+            }
+        }
+		
+        .dropdown {
+            .dropdown-item {
+                font-weight: normal;
+            }
+        }
+    }
+		
+    .wt-primary-navigation {
+        order: 4; /* stylelint-disable-line order/properties-alphabetical-order */
+		
+        background-color: $white; /* stylelint-disable-line order/properties-alphabetical-order */
+        border-radius: 25px 25px 0 0;
+		
+        .wt-genealogy-menu {
+            background: $white linear-gradient(to top, rgba($maj-c-theme-medium, 0), rgba($maj-c-theme-medium, 0.6), rgba($maj-c-theme-medium, 1));
+            border-radius: 20px;
+            justify-content: space-evenly;
+            margin-top: 15px;
+            padding-bottom: 1em;
+            padding-top: 0.5em;
+
+            .nav-item {
+                flex: 1 1 auto;
+                min-width: 5rem;
+                text-align: center;
+            }
+			
+            .nav-item +	.nav-item {
+                background-image: linear-gradient(to top, $maj-c-theme-lighter, lighten($maj-c-theme-medium, 30%), lighten($maj-c-theme-medium, 70%), $maj-c-theme-medium);
+                background-position: left;
+                background-repeat: no-repeat;
+                background-size: 1px;
+            }
+			
+            .nav-link {
+                &::before {
+                    display: block;
+                }
+            }
+			
+            .dropdown-menu {
+                margin-left: 1rem;
+            }
+			
+            .dropdown-item {
+                /* Space between icons and align with submenu icons */
+                padding: 0 10px 0 0;
 				
-		order: 1;
+                &::before {
+                    line-height: 2;
+                    padding: 0 0.25rem;
+                    vertical-align: text-top;
+                }
+            }
+			
+        }
 		
-		//font-size: 1em;
-		font-weight: bold;
-		
-		.wt-user-menu {
-			flex-direction: row-reverse;
-
-			a {
-				font-weight: normal;
-				@include media-breakpoint-up(md) {
-					font-weight: unset;
-				}
-			}
-			
-			.menu-mymenu { order: 4; }
-			.menu-theme { 				
-				@extend .d-none;
-				@extend .d-sm-flex;
-
-				order: 3; 
-			}
-			.menu-language { order: 2; }
-			.menu-logout { order: 1; }
-			.menu-pending { 
-				order: 5;
-				border: solid 2px $maj-c-theme-lighter;
-				border-radius: 0.7rem;
-			}
-			
-		}
-		
-		.nav-link {
-			color: $maj-c-theme-lighter;
-			
-			&:hover {
-				color: $maj-c-theme-light;
-			}
-		}
-		
-		.dropdown {
-			
-			.dropdown-item {
-				font-weight: normal;
-			}
-		}
-	}
-		
-	.wt-primary-navigation {		
-		order: 4;
-		
-		background-color: $white;
-		border-radius: 25px 25px 0 0;
-		
-		
-		.wt-genealogy-menu {
-			justify-content: space-evenly;
-			
-			border-radius: 20px;
-			margin-top: 15px;
-			padding-top: 0.5em;
-			padding-bottom: 1em;
-			background: $white linear-gradient(0,  rgba($maj-c-theme-medium, 0), rgba($maj-c-theme-medium, 0.6), rgba($maj-c-theme-medium, 1));
-
-			.nav-item {
-				text-align: center;
-				min-width: 5rem;
-				
-				flex: 1 1 auto;
-				
-			}
-			
-			.nav-item +	.nav-item {
-				background-image: linear-gradient(0,  $maj-c-theme-lighter, lighten($maj-c-theme-medium, 30%), lighten($maj-c-theme-medium, 70%), $maj-c-theme-medium);
-				background-size: 1px;
-				background-repeat: no-repeat;
-				background-position: left;
-			}
-			
-			.nav-link {
-				&::before {
-					display: block;
-				}
-			}
-			
-			.dropdown-menu {
-				margin-left: 1rem;
-			}
-			
-			.dropdown-item {
-				 /* Space between icons and align with submenu icons */
-				padding: 0 10px 0 0;
-				
-				&::before {
-					vertical-align: text-top;
-					line-height: 2;
-					padding: 0 .25rem;
-				}
-			}
-			
-		}
-		
-	}
+    }
 }

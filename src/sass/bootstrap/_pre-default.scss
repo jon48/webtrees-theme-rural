@@ -58,31 +58,31 @@ $card-cap-bg: $maj-c-theme-light;
 //$dropdown-color: theme-color();
 $dropdown-link-color: $primary;
 $dropdown-bg: $maj-c-theme-light;
-$dropdown-header-color: $primary; 
+$dropdown-header-color: $primary;
 $dropdown-link-hover-color: $primary;
 //$dropdown-link-hover-bg: $maj-c-theme-lighter;
-$dropdown-link-active-color:  $primary;
+$dropdown-link-active-color: $primary;
 $dropdown-link-active-bg: $maj-c-theme-medium;
-$dropdown-border-color: $maj-c-theme-medium; 
+$dropdown-border-color: $maj-c-theme-medium;
 $dropdown-border-radius: 0.4rem;
 
-$input-border-color: $maj-c-theme-medium; 
+$input-border-color: $maj-c-theme-medium;
 $input-bg: $maj-c-theme-lighter;
 $input-disabled-bg: color.scale($maj-c-theme-lighter, $lightness: -8%);
 $input-focus-bg: $maj-c-theme-lighter;
 
 $input-group-addon-bg: $primary;
-$input-group-addon-color: white;
-$input-group-addon-border-color: $primary; 
+$input-group-addon-color: #fff;
+$input-group-addon-border-color: $primary;
 
 $nav-tabs-border-color: $maj-c-theme-medium;
 //$nav-tabs-border-radius:
 $nav-tabs-link-hover-border-color: $maj-c-theme-medium;
 
-$nav-tabs-border-color:             $maj-c-theme-medium;
-$nav-tabs-link-hover-border-color:  $maj-c-theme-medium;
-$nav-tabs-link-active-color:        $primary;
-$nav-tabs-link-active-bg:           $maj-c-theme-lighter;
+$nav-tabs-border-color: $maj-c-theme-medium;
+$nav-tabs-link-hover-border-color: $maj-c-theme-medium;
+$nav-tabs-link-active-color: $primary;
+$nav-tabs-link-active-bg: $maj-c-theme-lighter;
 $nav-tabs-link-active-border-color: $maj-c-theme-medium $maj-c-theme-medium $nav-tabs-link-active-bg;
 
 $pagination-bg: transparent;
@@ -90,7 +90,7 @@ $pagination-border-color: $maj-c-theme-medium;
 $pagination-hover-bg: transparent;
 $pagination-hover-color: $maj-c-theme-dark;
 $pagination-hover-border-color: $pagination-border-color;
-$pagination-disabled-color: $maj-c-theme-dark; 
+$pagination-disabled-color: $maj-c-theme-dark;
 $pagination-disabled-bg: transparent;
 
 $table-color: $primary;

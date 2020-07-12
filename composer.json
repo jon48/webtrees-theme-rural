@@ -29,9 +29,10 @@
 		"consolidation/robo": "^2.1"
 	},
 	"scripts": {
-        "webtrees-theme-rural:package": [
-            "./vendor/bin/robo package"
-        ]
+		"webtrees-theme-rural:package": "./vendor/bin/robo package",
+		"webtrees-theme-rural:phpcs" : "phpcs -s",
+		"webtrees-theme-rural:phpcbf" : "phpcbf",
+		"webtrees-theme-rural:phpstan" : "phpstan analyze --no-progress --level=max module.php resources"
 	},
 	"scripts-descriptions": {
         "webtrees-theme-rural:package": "Create a package file for distribution. Add -- commit for specific commit."

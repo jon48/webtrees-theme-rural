@@ -21,14 +21,16 @@
  * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
  */
  
- /*
+/* stylelint-disable block-opening-brace-space-before, block-no-empty, function-url-quotes */
+
+/*
  * Menus icons
  */ 
 
 .menu-tree {
-	.nav-link::before 			{content: url(menu/tree.png);}
+    .nav-link::before 			{content: url(menu/tree.png);}
 	
-	.dropdown-item::before 		{content: url(menu/tree-tree.png);}
+    .dropdown-item::before 		{content: url(menu/tree-tree.png);}
 }
 
 .menu-chart .nav-link::before 	{content: url(menu/chart.png);}
@@ -65,15 +67,15 @@
 .menu-calendar-year::before 	{content: url(menu/calendar-calendar.png);}
 
 .menu-report {
-	.nav-link::before 			{content: url(menu/report.png);}
+    .nav-link::before 			{content: url(menu/report.png);}
 	
-	.dropdown-item::before 		{content: url(menu/report-report.png);}
+    .dropdown-item::before 		{content: url(menu/report-report.png);}
 }
 
 .menu-search {
-	.nav-link::before 			{content: url(menu/search.png);}
+    .nav-link::before 			{content: url(menu/search.png);}
 	
-	.dropdown-item::before 		{content: url(menu/search-search.png);}
+    .dropdown-item::before 		{content: url(menu/search-search.png);}
 }
 
 .menu-faq .nav-link::before 	{content: url(menu/faq.png);}

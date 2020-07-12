@@ -1,0 +1,17 @@
+name: Code style StyleLint CSS / SCSS
+
+on: [push, pull_request]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    name: StyleLint
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - uses: actions-hub/stylelint@master
+        env:
+          PATTERN: "src/**/*.scss"

@@ -1,7 +1,8 @@
 <?php
+
 /**
  * Robo tasks - Rural theme
- * 
+ *
  * @see http://robo.li/
  */
 
@@ -14,17 +15,18 @@ class RoboFile extends \Robo\Tasks
     /**
      * Package the specific commitish in a zip file for distribution.
      * Commitish can be a commit hash, a tag, or a branch.
-     * 
+     *
      * @param string $commit Commitish to be packaged
      * @throws \Exception
      * @return \Robo\Result
      */
-    function package($commit = 'master') {
-        $getCommitResult = 
+    public function package($commit = 'master')
+    {
+        $getCommitResult =
             $this->taskExec("git rev-parse --quiet --verify $commit")
                 ->interactive(false)
                 ->run();
-        if(!$getCommitResult->wasSuccessful() || $getCommitResult->getMessage() === '') {
+        if (!$getCommitResult->wasSuccessful() || $getCommitResult->getMessage() === '') {
             throw new \Exception('The commit requested does not exist');
         }
 
@@ -34,7 +36,7 @@ class RoboFile extends \Robo\Tasks
 
         $PROJECT_NAME = 'webtrees-theme-rural';
         $THEME_DIR = 'myartjaub_ruraltheme';
-        
+
         $output_name = "rural-webtrees-$commit";
         $output_name = str_replace('.', '_', str_replace('-v.', '.', $output_name));
 
@@ -42,7 +44,7 @@ class RoboFile extends \Robo\Tasks
         $build_archive_zip = "$build_archive_dir.zip";
 
         $build_release_path = "build/$output_name.zip";
-        
+
         $buildTasks = $this->collectionBuilder();
 
         $buildTasksResult = $buildTasks
@@ -73,7 +75,7 @@ class RoboFile extends \Robo\Tasks
             ->name('composer*.*')
             ->name('package*.*')
             ->name('webpack*.*');
-        
+
         $collection
             ->progressMessage("Starting packaging of $PROJECT_NAME $commit")
             ->taskDeleteDir("$build_archive_dir/build")
@@ -87,7 +89,7 @@ class RoboFile extends \Robo\Tasks
             ->taskDeleteDir($workDir)
             ->progressMessage("Package created: $build_release_path !!!")
             ;
-        
+
         return $collection->run();
     }
 }

@@ -22,38 +22,37 @@
  */
 
 @mixin maj-font-color($normalcolor, $hovercolor) {
-	color: $normalcolor;
-	a { color: $normalcolor; }
-	a:hover { color: $hovercolor}
+    color: $normalcolor;
+    a { color: $normalcolor; }
+    a:hover { color: $hovercolor;}
 }
 
 // Define column for base layout
 @mixin maj-base-layout-col {
-	max-width: $maj-basewidth-small;
+    max-width: $maj-basewidth-small;
 	
-	@include media-breakpoint-up(md) {
-		max-width: $maj-basewidth-large;
-	}
+    @include media-breakpoint-up(md) {
+        max-width: $maj-basewidth-large;
+    }
 }
 
 @mixin maj-secondary-button {
-	
-	.btn-secondary {
-		@include button-variant($maj-c-theme-lighter, $maj-c-theme-medium, $active-background: $primary);
+    .btn-secondary {
+        @include button-variant($maj-c-theme-lighter, $maj-c-theme-medium, $active-background: $primary);
 		
-		color: $primary;
-		&.btn {
-			background-color:transparent;
-			background: $maj-c-theme-lighter $maj-bg-theme-medium-background-image repeat-x;
-		}
+        color: $primary;
+
+        &.btn {
+            background: $maj-c-theme-lighter $maj-bg-theme-medium-background-image repeat-x;
+        }
 		
-		&:hover {
-			color: $primary;
-		}
+        &:hover {
+            color: $primary;
+        }
 		
-		.active {
-			background-image: none;
-		}
-	}
+        .active {
+            background-image: none;
+        }
+    }
 	
 }

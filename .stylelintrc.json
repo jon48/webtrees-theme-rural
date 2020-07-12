@@ -1,0 +1,15 @@
+{
+    "extends": "stylelint-config-sass-guidelines",
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "rules": {
+        "indentation": 4,
+        "max-nesting-depth": [4, { "severity": "warning" }],
+        "selector-class-pattern": null,
+        "selector-max-compound-selectors": [4, { "severity": "warning" }],
+        "selector-max-id": 1,
+        "selector-no-qualifying-type": null,
+        "scss/at-extend-no-missing-placeholder": null
+    }
+}

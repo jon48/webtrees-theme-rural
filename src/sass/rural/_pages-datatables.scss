@@ -21,34 +21,39 @@
  * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
  */
 
- table.center {
+table.center {
     margin-left: auto;
     margin-right: auto;
 }
 
 .dataTables_wrapper {	
-	@extend .table-responsive;
-	@extend .maj-content-tabs;
-	@extend .mx-auto;
+    @extend .table-responsive;
+    @extend .maj-content-tabs;
+    @extend .mx-auto;
 	
-	@include media-breakpoint-up(md) {
-		max-width: 75%;;
-	}
+    @include media-breakpoint-up(md) {
+        max-width: 75%;
+    }
 	
-	.dataTables_info, .dataTables_length, .dataTables_filter, .dataTables_paginate {
-		padding: 0.4em;
-	}
+    .dataTables_info,
+    .dataTables_length,
+    .dataTables_filter,
+    .dataTables_paginate {
+        padding: 0.4em;
+    }
 }
 
-.indi-list, .fam-list,
-.wt-block, .wt-chart-descendants,
+.indi-list,
+.fam-list,
+.wt-block,
+.wt-chart-descendants,
 #place-hierarchy,
 div[role=tabpanel],
-div[id^=table-indi],div[id^=table-fam]
-{
-	.dataTables_wrapper {
-		max-width: 100%;
-	}
+div[id^=table-indi],
+div[id^=table-fam] {
+    .dataTables_wrapper {
+        max-width: 100%;
+    }
 }
 
 /* Fix for https://github.com/DataTables/DataTablesSrc/issues/165 */
@@ -56,10 +61,12 @@ table.dataTable.table-sm > thead > tr > th :not(.sorting_disabled) {
     /* Most of the children were initially zero... */
     padding-right: 0;
 }
+
 table.dataTable.table-sm > thead > tr > th .btn-group-sm > .btn {
     /* ...except this one */
     padding-right: 0.5rem;
 }
+
 table.dataTable.table-sm > thead > tr > th:not(.sorting_disabled) {
     /* What the rule should have been! */
     padding-right: 20px;
@@ -69,38 +76,38 @@ table.dataTable.table-sm > thead > tr > th:not(.sorting_disabled) {
 
 
 table.dataTable {
-	@extend .table-striped;
-	//@extend .mx-auto;
-	//@extend .w-auto;
+    @extend .table-striped;
+    //@extend .mx-auto;
+    //@extend .w-auto;
 		
-	border-spacing: 2px;
+    border-spacing: 2px;
 		
-	thead {
-		tr {
-			th {
-				background-image: $maj-bg-theme-medium-background-image;
-			}
+    thead {
+        tr {
+            th {
+                background-image: $maj-bg-theme-medium-background-image;
+            }
 			
-			th:only-child {
-				background-image: none;
-			}
-		}
-	}
+            th:only-child {
+                background-image: none;
+            }
+        }
+    }
 	
-	&.table-bordered {
-		thead {
-			tr {
-				th {
-					border-color: $maj-c-theme-medium;
-					border-width: $border-width;
-				}
+    &.table-bordered {
+        thead {
+            tr {
+                th {
+                    border-color: $maj-c-theme-medium;
+                    border-width: $border-width;
+                }
 				
-				th:only-child {
-					border-style: none;
-				}
-			}
-		}
-	}
+                th:only-child {
+                    border-style: none;
+                }
+            }
+        }
+    }
 }
 
 .table-given-name {

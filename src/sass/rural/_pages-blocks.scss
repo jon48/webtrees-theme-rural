@@ -21,124 +21,123 @@
  * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
  */
 
- @mixin maj-block-large {
-	padding-top: 0;
-	padding-left: 46px;
-	background-image: url(block_bg.png);
-	background-repeat: repeat-y;
- }
+@mixin maj-block-large {
+    background-image: url('block_bg.png');
+    background-repeat: repeat-y;
+    padding-left: 46px;
+    padding-top: 0;
+}
 
 .wt-block {
-	border-style: none;
-	background-color: transparent;
+    background-color: transparent;
+    background-image: url('block_small_bg.png');
+    background-repeat: repeat-x;
+    border-style: none;
 	
-	&:first-child {
-			margin-top: 1rem;
-	}
+    padding-top: 9px;
 	
-	padding-top: 9px;
-	background-image: url(block_small_bg.png);
-	background-repeat: repeat-x;
+    &:first-child {
+        margin-top: 1rem;
+    }
 
 	
-	.wt-side-blocks &.wt-side-block-optional {
-		display: none !important;
-	}
+    .wt-side-blocks &.wt-side-block-optional {
+        display: none !important;
+    }
 
-	#edit-blocks & {
-		@include maj-block-large;
-	}
+    #edit-blocks & {
+        @include maj-block-large;
+    }
 	
-	.wt-main-blocks & {
-		@include media-breakpoint-up(md) {
-			@include maj-block-large;
+    .wt-main-blocks & {
+        @include media-breakpoint-up(md) {
+            @include maj-block-large;
 
-			&:first-child {
-				margin-top: 1rem;
-			}
-		}
-	}
+            &:first-child {
+                margin-top: 1rem;
+            }
+        }
+    }
 		
-	.wt-block-header {
-		border-bottom-style: dashed;
-		background-color: $maj-c-theme-lighter;
-		
-		font-weight: bolder;
-		color: color.scale($maj-c-theme-primary, $lightness: 20%);
-	}
+    .wt-block-header {
+        background-color: $maj-c-theme-lighter;
+        border-bottom-style: dashed;
+        color: color.scale($maj-c-theme-primary, $lightness: 20%);
+        font-weight: bolder;
+    }
 	
-	.wt-block-content {
-		background-color: $maj-c-theme-lighter;
+    .wt-block-content {
+        background-color: $maj-c-theme-lighter;
 		
-		.dataTables_wrapper {
-			border: none;
-		}
+        .dataTables_wrapper {
+            border-style: none;
+        }
 
-		& > p {
-			text-align: center;
-		}
-	}
+        > p {
+            text-align: center;
+        }
+    }
 	
-	.wt-block-content-charts {
-		overflow-y: auto;
+    .wt-block-content-charts {
+        overflow-y: auto;
 
-		.wt-chart-box {
-			width: 15rem;
-		}
-	}
+        .wt-chart-box {
+            width: 15rem;
+        }
+    }
 	
-	.wt-block-content-gedcom_stats {
-		.col {
-			&:first-child { padding-right: 0};
-			&:last-child { padding-left: 0};
-		}
+    .wt-block-content-gedcom_stats {
+        .col {
+            &:first-child { padding-right: 0;}
+            &:last-child { padding-left: 0;}
+        }
 		
-		.wt-facts-table {
-			th {
-				background-color: $maj-c-theme-medium;
-			}
+        .wt-facts-table {
+            th {
+                background-color: $maj-c-theme-medium;
+            }
 			
-			td {
-				border: solid 1px $maj-c-theme-medium;
-			}
-		}
-	}
+            td {
+                border: solid 1px $maj-c-theme-medium;
+            }
+        }
+    }
 
-	.wt-block-content-html {	
-		p {
-			text-align: unset;
-		}
-	}
+    .wt-block-content-html {	
+        p {
+            text-align: unset;
+        }
+    }
 	
-	.wt-block-content-user_messages {		
-		button[type=submit] {
-			@extend .btn;
-			@extend .btn-primary;
-		}
+    .wt-block-content-user_messages {		
+        button[type=submit] {
+            @extend .btn;
+            @extend .btn-primary;
+        }
 
-		label + select {
-			margin-left: 0.5rem;
-			margin-right: 0.5rem;
-		}
+        label + select {
+            margin-left: 0.5rem;
+            margin-right: 0.5rem;
+        }
 		
-		h2 {
-			font-size: 1rem;
+        h2 {
+            font-size: 1rem;
 			
-			&:first-child {
-				font-weight: bold;
-			}
-		}
+            &:first-child {
+                font-weight: bold;
+            }
+        }
 		
-		table {
-			@extend .table-striped;
+        table {
+            @extend .table-striped;
 
-			tr:nth-child(even) .list_value_wrap	{background: $maj-c-theme-light}
-			tr:nth-child(odd) .list_value_wrap	{background: $maj-c-theme-lighter}
+            tr:nth-child(even) .list_value_wrap {background: $maj-c-theme-light;}
+            tr:nth-child(odd) .list_value_wrap {background: $maj-c-theme-lighter;}
 
-			.list_value_wrap .btn-primary {
-				@extend .btn-primary;
-			}
-		}
-	}
+            .list_value_wrap .btn-primary {
+                @extend .btn-primary;
+            }
+        }
+    }
 	
 }

@@ -22,7 +22,7 @@
  * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
  */
 
- // Standard sizes
+// Standard sizes
 
 $maj-basewidth-small: 95vw;
 $maj-basewidth-large: 85vw;
@@ -33,16 +33,16 @@ $maj-header-height: 150px;
 
 // Colors
 //$maj-c-brown: #62584D;
-$maj-c-brown: #584937;;
+$maj-c-brown: #584937;
 
-$maj-c-browngray:#8c847a;
+$maj-c-browngray: #8c847a;
 
 $maj-c-bluegray-dark: #1c3b4a;
 $maj-c-bluegray: #416271;
 
-$maj-c-greenolive : #7B983C;
+$maj-c-greenolive: #7b983c;
 
-$maj-c-red: #FF4136;
+$maj-c-red: #ff4136;
 
 
 $maj-c-theme-primary: $maj-c-brown;
@@ -52,20 +52,20 @@ $maj-c-background: #6c5948;
 
 
 $maj-c-theme-darker: $maj-c-theme-primary;
-$maj-c-theme-dark2: #A28765;
-$maj-c-theme-dark: #9F8C77;
+$maj-c-theme-dark2: #a28765;
+$maj-c-theme-dark: #9f8c77;
 $maj-c-theme-medium: #d3c6b8;
 $maj-c-theme-light: #e9e2db;
 $maj-c-theme-lighter: #f4f0ed;
 
 // Timelime colors
 $maj-c-persons: (
-    0: (background: #d3c6b8, border:#62584D),
-    1: (background: #a5be79, border:#1b491a),
-    2: (background: #e9e2db, border:#62584D),
-    3: (background: #bad196, border:#1b491a),
-    4: (background: #f4f0ed, border:#62584D),
-    5: (background: #cfe4b4, border:#1b491a)
+    0: (background: #d3c6b8, border: #62584d),
+    1: (background: #a5be79, border: #1b491a),
+    2: (background: #e9e2db, border: #62584d),
+    3: (background: #bad196, border: #1b491a),
+    4: (background: #f4f0ed, border: #62584d),
+    5: (background: #cfe4b4, border: #1b491a)
 );
 
-$maj-bg-theme-medium-background-image: linear-gradient(0,  rgba($maj-c-theme-medium, 1), rgba($maj-c-theme-medium, 0.7), rgba($maj-c-theme-medium, 0));
+$maj-bg-theme-medium-background-image: linear-gradient(to top, rgba($maj-c-theme-medium, 1), rgba($maj-c-theme-medium, 0.7), rgba($maj-c-theme-medium, 0));

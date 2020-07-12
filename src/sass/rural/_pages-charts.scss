@@ -41,146 +41,147 @@
  */
 
 .wt-chart-box {
+    background: var(--sex-u-bg);
+    border: dashed var(--sex-u-fg) thin;
+    line-height: 1.1;
+    padding: 2px;
 
-	line-height: 1.1;
-	padding: 2px;
-	background: var(--sex-u-bg);
-	border: dashed var(--sex-u-fg) thin;
-
-	.dropdown-menu {
-		background: var(--sex-u-bg);
-		border-color: var(--sex-u-fg);
-	}
+    .dropdown-menu {
+        background: var(--sex-u-bg);
+        border-color: var(--sex-u-fg);
+    }
 	
-	&.wt-chart-box-m {
-		background: var(--sex-m-bg);
-		border: solid var(--sex-m-fg) thin;	
+    &.wt-chart-box-m {
+        background: var(--sex-m-bg);
+        border: solid var(--sex-m-fg) thin;
 		
-		.dropdown-menu {
-			background: var(--sex-m-bg);
-			border-color: var(--sex-m-fg);
-		}
-	}
+        .dropdown-menu {
+            background: var(--sex-m-bg);
+            border-color: var(--sex-m-fg);
+        }
+    }
 
-	&.wt-chart-box-f {
-		background: var(--sex-f-bg);
-		border: solid var(--sex-f-fg) thin;
+    &.wt-chart-box-f {
+        background: var(--sex-f-bg);
+        border: solid var(--sex-f-fg) thin;
 
-		.dropdown-menu {
-			background: var(--sex-f-bg);
-			border-color: var(--sex-f-fg);
-		}
-	}
+        .dropdown-menu {
+            background: var(--sex-f-bg);
+            border-color: var(--sex-f-fg);
+        }
+    }
 	
-	.small {
-		font-size: 90%;
-	}
+    .small {
+        font-size: 90%;
+    }
 	
-	.wt-chart-box-thumbnail {
-		max-height: 7.5rem;
-	}
+    .wt-chart-box-thumbnail {
+        max-height: 7.5rem;
+    }
 
-	.svg-inline--fa, .icon-pedigree {
-		height: 16px;
-	}
+    .svg-inline--fa,
+    .icon-pedigree {
+        height: 16px;
+    }
 
-	// Specific width & heights
+    // Specific width & heights
 
-	.wt-chart-ancestors & {
-		width: 23rem;
-		height: 8rem;		
-	}
+    .wt-chart-ancestors & {
+        height: 8rem;
+        width: 23rem;		
+    }
 
-	.wt-chart-compact & {
-		min-height: 5rem;
-	}
+    .wt-chart-compact & {
+        min-height: 5rem;
+    }
 
-	.wt-chart-family-book & {
-		width: 20rem;
-		margin-top: 0.4rem;
-		margin-bottom: 0.4rem;
-	}
+    .wt-chart-family-book & {
+        margin-bottom: 0.4rem;
+        margin-top: 0.4rem;
+        width: 20rem;
+    }
 
-	.wt-chart-pedigree-left & {
-		width: 20rem;
-		margin: 0.4rem;
-		margin-right: 0;
-	}
+    .wt-chart-pedigree-left & {
+        margin: 0.4rem;
+        margin-right: 0;
+        width: 20rem;
+    }
 
-	.wt-chart-pedigree-right & {
-		width: 20rem;
-		margin: 0.4rem;
-		margin-left: 0;
-	}
+    .wt-chart-pedigree-right & {
+        margin: 0.4rem;
+        margin-left: 0;
+        width: 20rem;
+    }
 
-	.wt-chart-pedigree-up & {
-		width: 20rem;
-		margin: 0.4rem;
-		margin-bottom: 0;
-	}
+    .wt-chart-pedigree-up & {
+        margin: 0.4rem;
+        margin-bottom: 0;
+        width: 20rem;
+    }
 
-	.wt-chart-pedigree-down & {
-		width: 20rem;
-		margin: 0.4rem;
-		margin-top: 0;
-	}
+    .wt-chart-pedigree-down & {
+        margin: 0.4rem;
+        margin-top: 0;
+        width: 20rem;
+    }
 
-	.wt-chart-relationships & {
-		width: 20rem;
-	}
+    .wt-chart-relationships & {
+        width: 20rem;
+    }
 
-	.wt-chart-hourglass & {
-		width: 19.8rem;
-	}	
+    .wt-chart-hourglass & {
+        width: 19.8rem;
+    }	
 }
 
 /*
  * Pedigree map
  */
 
- .row.osm-wrapper {
-	 @extend .container;
- }
-
- .osm-sidebar {
-	 .gchart {
-		 border: dashed 1px $maj-c-theme-dark;
-		 margin-bottom: 0.5rem;
-		 color: $maj-c-theme-primary;
-
-		 .label{
-			 font-weight: bold;
-		 }
-	 }
- }
-
- .leaflet-popup-content-wrapper {
-	 @extend  .maj-font-color-blue;
-	 .label{
-		font-weight: bold;
-	}
+.row.osm-wrapper {
+    @extend .container;
 }
 
- /*
+.osm-sidebar {
+    .gchart {
+        border: dashed 1px $maj-c-theme-dark;
+        color: $maj-c-theme-primary;
+        margin-bottom: 0.5rem;
+
+        .label {
+            font-weight: bold;
+        }
+    }
+}
+
+.leaflet-popup-content-wrapper {
+    @extend  .maj-font-color-blue;
+
+    .label {
+        font-weight: bold;
+    }
+}
+
+/*
   * Timeline chart
   */
 
 #timeline_chart {
+    left: 0;
     position: relative;
     top: 0;
-    left: 0;
 }
 
 
 
 @each $nb, $colors in $maj-c-persons {
-	.person#{$nb} {
-		background-color: map-get($colors, 'background');
-		border: outset map-get($colors, 'border') 1px;
-		vertical-align: top;
-		border-radius: 3px;
-		margin-right: 0.2rem;
-	}
+    .person#{$nb} {
+        background-color: map-get($colors, 'background');
+        border: outset map-get($colors, 'border') 1px;
+        border-radius: 3px;
+        margin-right: 0.2rem;
+        vertical-align: top;
+    }
 }
 
 /**
@@ -188,38 +189,37 @@
  */
 
 .wt-lifespans {
+    &-subtitle {
+        text-align: center;
+    }
 
-	&-subtitle {
-		text-align: center;
-	}
+    &-scale {
+        white-space: nowrap;
+    }
 
-	&-scale {
-		white-space: nowrap;
-	}
+    &-decade {
+        background-image: url('{{ webtrees }}/images/lifespan-decade.png');
+        background-position-y: bottom;
+        background-repeat: no-repeat;
+        background-size: 70px 37px;
+        display: inline-block;
+        height: 60px;
+        width: 70px;
+    }
 
-	&-decade {
-		width: 70px;
-		height: 60px;
-		display: inline-block;
-		background-image: url('{{ webtrees }}/images/lifespan-decade.png');
-		background-position-y: bottom;
-		background-repeat: no-repeat;
-		background-size: 70px 37px;
-	}
+    &-individuals {
+        background: #fff;
+    }
 
-	&-individuals {
-		background: white;
-	}
+    &-summary {
+        background: #fff;
+        border: thin solid #000;
+        z-index: 1;
 
-	&-summary {
-		background: #ffffff;
-		border: thin solid #000;
-		z-index: 1;
-
-		&-link {
-			font-weight: bold;
-		}
-	}
+        &-link {
+            font-weight: bold;
+        }
+    }
 }
 
 /*
@@ -227,59 +227,59 @@
  */
 
 .wt-chart-family-book {
-	overflow-y: auto;
+    overflow-y: auto;
 }
 
 /*
  * Relationship chart
  */
- .wt-chart-relationships {
-	overflow-y: auto;
- }
+.wt-chart-relationships {
+    overflow-y: auto;
+}
 
- .vline-text, .hline-text {
-	 font-size: unset;
- }
+.vline-text,
+.hline-text {
+    font-size: unset;
+}
 
- /*
+/*
   * Hourglass chart 
   */
 
-  .wt-chart-hourglass {
-	overflow-y: auto;
-  }
+.wt-chart-hourglass {
+    overflow-y: auto;
+}
 
-  /*
+/*
    * Fan chart
    */
 
 .fan_chart {
-
-	ul {
-		list-style-type: none;
-		margin: 0;
-	}
+    ul {
+        list-style-type: none;
+        margin: 0;
+    }
 	
-	&_menu {
-		background: $maj-c-theme-lighter;
-		border: solid 1px $maj-c-theme-medium;
-		position: absolute;
-		display: none;
-		z-index: 100;
-		border-radius: 3px;
-	}
+    &_menu {
+        background: $maj-c-theme-lighter;
+        border: solid 1px $maj-c-theme-medium;
+        border-radius: 3px;
+        display: none;
+        position: absolute;
+        z-index: 100;
+    }
 }
 
 /*
  * Statistics
  */
 
- .wt-statistics-chart {
-	@extend .maj-content-tabs;
+.wt-statistics-chart {
+    @extend .maj-content-tabs;
 
-	.card {
-		.list-group-item {
-			background-color: $maj-c-theme-lighter;
-		}
-	}
- }
+    .card {
+        .list-group-item {
+            background-color: $maj-c-theme-lighter;
+        }
+    }
+}

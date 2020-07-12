@@ -33,6 +33,9 @@ local.properties
 # PDT-specific (PHP Development Tools)
 .buildpath
 
+# SonarQube
+.scannerwork/
+
 # Visual Studio Code
 .vscode/*
 !.vscode/settings.json

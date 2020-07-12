@@ -1,15 +1,16 @@
 <?php
+
 /**
  * Rural Theme
- * 
+ *
  * webtrees-MyArtJaub
  * Copyright (C) 2009-2020 Jonathan Jaubart
- * 
+ *
  * Based on webtrees: online genealogy
  * Copyright (C) 2020 webtrees development team
- *  
+ *
  * This file is part of webtrees-MyArtJaub
- *  
+ *
  * webtrees-MyArtJaub is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
@@ -20,6 +21,7 @@
  * GNU General Public License for more details.
  * You should have received a copy of the GNU General Public License
  * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ *
  */
 
 declare(strict_types=1);
@@ -43,8 +45,9 @@ use Psr\Http\Message\ServerRequestInterface;
  */
 class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFooterInterface
 {
-    use ModuleCustomTrait, ModuleFooterTrait;
-    
+    use ModuleCustomTrait;
+    use ModuleFooterTrait;
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\AbstractModule::title()
@@ -108,7 +111,6 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
             'distribution-chart-low-values'  => 'e9e2db',
             'distribution-chart-no-values'   => 'e9e2db',
         ];
-
         return $parameters[$parameter_name];
     }
     
@@ -141,10 +143,9 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
     }
 
     
-    public function getCustomCssAction(ServerRequestInterface $request) : ResponseInterface
+    public function getCustomCssAction(ServerRequestInterface $request): ResponseInterface
     {
-        $content = view($this->name().'::style.css');
-        
+        $content = view($this->name() . '::style.css');
         return response($content, StatusCodeInterface::STATUS_OK)
             ->withHeader('Content-Type', 'text/css')
         ;
@@ -166,12 +167,11 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
      */
     public function getFooter(\Psr\Http\Message\ServerRequestInterface $request): string
     {
-        if(app(ModuleThemeInterface::class)->name() === $this->name()) {
-            return view($this->name().'::footer');
+        if (app(ModuleThemeInterface::class)->name() === $this->name()) {
+            return view($this->name() . '::footer');
         }
         return '';
     }
-
 }
 
 return new RuralTheme();

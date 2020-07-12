@@ -1,0 +1,18 @@
+name: Code style PHP
+
+on: [push, pull_request]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    name: PHP/PHTML
+
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+
+      - run: composer global require squizlabs/php_codesniffer=* --quiet
+
+      - name: PHP
+        run: ~/.composer/vendor/bin/phpcs -s

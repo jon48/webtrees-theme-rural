@@ -23,36 +23,37 @@
  * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
  */
 
+/* stylelint-disable block-opening-brace-space-before, block-no-empty */
+
 /* Arrow icons */
 
 
 .wt-icon-arrow {
+    &-down {
+        a > &:hover 	{}
+    }
 
-	&-down {
-		a > &:hover 	{}
-	}
+    &-left {
+        a > &:hover 	{}
+    }
 
-	&-left {
-		a > &:hover 	{}
-	}
+    &-right {
+        a > &:hover 	{}
+    }
 
-	&-right {
-		a > &:hover 	{}
-	}
-
-	&-up {
-		a > &:hover 	{}
-	}
+    &-up {
+        a > &:hover 	{}
+    }
 }
 
 
 /* Sex icons */
 
 .wt-icon-sex {	
-	&-f 	{color: var(--sex-f-fg)}
-	&-m 	{color: var(--sex-m-fg);}
-	&-u 	{color: var(--sex-u-fg);}
-	&-x 	{color: var(--sex-u-fg);}
+    &-f 	{color: var(--sex-f-fg);}
+    &-m 	{color: var(--sex-m-fg);}
+    &-u 	{color: var(--sex-u-fg);}
+    &-x 	{color: var(--sex-u-fg);}
 }
 
 /*
@@ -93,7 +94,7 @@
 .icon-indi-list 		{content: url('{{ webtrees }}/webtrees/images/indis.png');}
 .icon-loading-small 	{content: url('{{ webtrees }}/images/indicator.gif');}
 .icon-minus 			{content: url('{{ webtrees }}/icons/minus.png');}
-.icon-mypage 			{content: url(mypage.png);}
+.icon-mypage 			{content: url('mypage.png');}
 .icon-plus 				{content: url('{{ webtrees }}/icons/plus.png');}
 .icon-resn-confidential {content: url('{{ webtrees }}/images/resn_confidential.png');}
 .icon-resn-locked 		{content: url('{{ webtrees }}/images/resn_locked.png');}

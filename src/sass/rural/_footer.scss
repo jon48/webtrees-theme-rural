@@ -28,31 +28,31 @@
  */
 
 .wt-global .wt-footers {
-	@include maj-base-layout-col;
+    @include maj-base-layout-col;
 	
-	background-color: white;
+    background-color: #fff;
 	
-	.wt-footer-powered-by {
-		a {
-			content: url('powered-by-webtrees.png');
-		}
-	}
+    .wt-footer-powered-by {
+        a {
+            content: url('powered-by-webtrees.png');
+        }
+    }
 	
-	.maj-footer-rural {	
-		@extend .d-none;
-		@extend .d-sm-flex;
+    .maj-footer-rural {	
+        @extend .d-none;
+        @extend .d-sm-flex;
 		
-		height: 50px;
-		width: 100%;
+        height: 50px;
+        width: 100%;
 
-		&-left {
-			background: url('footer_bg_left.png') no-repeat bottom left;
-			width: 50%;
-		}
+        &-left {
+            background: url('footer_bg_left.png') no-repeat bottom left;
+            width: 50%;
+        }
 
-		&-right {
-			background: url('footer_bg_right.png') no-repeat bottom right;
-			width: 50%;
-		}
-	}		
+        &-right {
+            background: url('footer_bg_right.png') no-repeat bottom right;
+            width: 50%;
+        }
+    }		
 }

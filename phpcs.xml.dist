@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ruleset name="MyArtJaub-theme-rural" namespace="MyArtJaub\Webtrees\CS\Standard">
+    <description>MyArtJaub coding standard for Rural Theme</description>
+
+    <file>module.php</file>
+    <file>RoboFile.php</file>
+    <file>resources</file>
+
+    <arg name="extensions" value="php,phtml"/>
+    <arg name="colors"/>
+
+    <rule ref="PSR12" />
+
+    <rule ref="Internal.NoCodeFound">
+        <exclude-pattern>*.phtml</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
+        <exclude-pattern>module.php</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <exclude-pattern>RoboFile.php</exclude-pattern>
+    </rule>
+</ruleset>

@@ -34,234 +34,233 @@
  */
 
 #content {
-	
-	.wt-main-container {
-		@include maj-base-layout-col;
+    .wt-main-container {
+        @include maj-base-layout-col;
+		
+        background-color: $white;
 
-		/* Space between the header/footer and the main content. */
-		padding-top: 1rem;
-		padding-bottom: 1rem;
-		
-		background-color: $white;
+        /* Space between the header/footer and the main content. */
+        padding-bottom: 1rem;
+        padding-top: 1rem;
 
-		& > .row {
-			margin-left: 0;
-			margin-right: 0;
-		}
+        > .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
 
-		& > p {
-			text-align: center;
-		}
-	}
+        > p {
+            text-align: center;
+        }
+    }
 	
-	.wt-page-title, .wt-main-container > h2 {
-		color: theme-color(secondary);
-		font-size: 2em;
-		font-weight: normal;
-		text-align: center;
-	}
+    .wt-page-title,
+    .wt-main-container > h2 {
+        color: theme-color(secondary);
+        font-size: 2em;
+        font-weight: normal;
+        text-align: center;
+    }
 	
-	/* Page options tables */
+    /* Page options tables */
 	
-	.wt-page-options {
-		@extend .container;
+    .wt-page-options {
+        @extend .container;
 		
-		@include media-breakpoint-up(md) {
-			max-width: map-get($container-max-widths, 'md');
-		}
+        @include media-breakpoint-up(md) {
+            max-width: map-get($container-max-widths, 'md');
+        }
 		
-		&.w-100 {
-			max-width: 100%;
-		}
+        &.w-100 {
+            max-width: 100%;
+        }
 		
-		&.wt-page-options-media-list {
-			max-width: 100%;
-		}
+        &.wt-page-options-media-list {
+            max-width: 100%;
+        }
 		
-		.form-group {
-			margin-bottom: 0;
-		}
+        .form-group {
+            margin-bottom: 0;
+        }
 				
-		//border-style: outset;
-		//border-color: $maj-c-theme-dark;
-		//border-width: 0 1px 1px 0;
+        //border-style: outset;
+        //border-color: $maj-c-theme-dark;
+        //border-width: 0 1px 1px 0;
 		
-		p {
-			text-align: center;
-		}
+        p {
+            text-align: center;
+        }
 		
-		.btn-secondary {
-			@extend .maj-secondary-button-theme-lighter;
-		}
+        .btn-secondary {
+            @extend .maj-secondary-button-theme-lighter;
+        }
 		
-		&-label {
-			color: $maj-c-theme-darker;
-			background-color: $maj-c-theme-medium;
-			font-weight: bold;
-			border-style: none;
-		}
+        &-label {
+            background-color: $maj-c-theme-medium;
+            border-style: none;
+            color: $maj-c-theme-darker;
+            font-weight: bold;
+        }
 
-		&-value {
-			background-color: $maj-c-theme-light;
-			border-top: 1px solid $maj-c-theme-medium;
-			padding: 0.5rem 0.75rem;
-		}
+        &-value {
+            background-color: $maj-c-theme-light;
+            border-top: 1px solid $maj-c-theme-medium;
+            padding: 0.5rem 0.75rem;
+        }
 		
-	}
+    }
 	
-	/**
+    /**
 	 * Page content
 	 */
 	
-	.wt-page-content {
-		margin-top: 1rem;
-	}
+    .wt-page-content {
+        margin-top: 1rem;
+    }
 }
 
 /* Forms */
 .col-form-label {
-	font-weight: bold;
-	text-align: center;
+    font-weight: bold;
+    text-align: center;
 }
 
 
 form.wt-page-content {
-	@extend .container;
+    @extend .container;
 
-	> .form-group {
+    > .form-group {
 
-		background-color: $maj-c-theme-light;
+        background-color: $maj-c-theme-light;
 	
-		.col-form-label {
-			color: $maj-c-theme-primary;
-			background-color: $maj-c-theme-medium;
-		}
+        .col-form-label {
+            background-color: $maj-c-theme-medium;
+            color: $maj-c-theme-primary;
+        }
 
-		> div {
-			padding: $input-padding-y $input-padding-x;
-		}
-	}
+        > div {
+            padding: $input-padding-y $input-padding-x;
+        }
+    }
 
-	> .card {
-		@extend .row;
-	}
+    > .card {
+        @extend .row;
+    }
 }
 
 /* Tabs */
 
 .nav-tabs {
-	
-	.nav-link {
-		background-color: $maj-c-theme-medium;
-		margin-right: 0.3em;
+    .nav-link {
+        background-color: $maj-c-theme-medium;
+        margin-right: 0.3em;
 		
-		&.active { 
-			font-weight: bold;
-			
-			background-color: $maj-c-theme-lighter;
-		}
+        &.active {
+            background-color: $maj-c-theme-lighter;
+            font-weight: bold;
+        }
 
-		&.text-muted {
-			display: none;
+        &.text-muted {
+            display: none;
 
-			.wt-tabs-individual & {
-				display: list-item;
-				opacity: 0.45;
-			}
-		}
-	}
+            .wt-tabs-individual & {
+                display: list-item;
+                opacity: 0.45;
+            }
+        }
+    }
 	
 }
 
 .tab-content {
-	border: solid 1px $maj-c-theme-medium;
-	border-top-style: none;
-	background-color: $maj-c-theme-lighter;	
-	padding: 1em;
+    background-color: $maj-c-theme-lighter;
+    border: solid 1px $maj-c-theme-medium;
+    border-top-style: none;
+    padding: 1em;
 
-	.dataTables_wrapper {
-		border-style: none;
-	}
+    .dataTables_wrapper {
+        border-style: none;
+    }
 
-	&.mt-4 {
-		margin-top: unset !important;
-	}
+    &.mt-4 {
+        margin-top: unset !important;
+    }
 
-	.wt-tabs-individual & {
-		padding: 0;
-	}
+    .wt-tabs-individual & {
+        padding: 0;
+    }
 }
 
 /**
  * Lists
  */
 .list_table {
-	margin-left: auto;
-	margin-right: auto;
+    @include maj-font-color(theme-color(), $maj-c-theme-dark);
 
-	&.table {
-		width: unset;
-	}
+    margin-left: auto;
+    margin-right: auto;
 
-	@include maj-font-color(theme-color(), $maj-c-theme-dark)
+    &.table {
+        width: unset;
+    }}
+
+.list_label,
+.list_label_wrap {
+    @include maj-font-color(theme-color(), $maj-c-theme-dark);
+
+    background-color: $maj-c-theme-medium;
+    font-weight: bold;
+    text-align: center;}
+
+.list_value,
+.list_value_wrap {
+    @include maj-font-color(theme-color(), $maj-c-theme-dark);
+    
+    background-color: $maj-c-theme-light;}
+
+.list_label,
+.list_value {
+    white-space: nowrap;
 }
 
-.list_label, .list_label_wrap {
-	text-align: center;
-	font-weight: bold;
-	background-color: $maj-c-theme-medium;
-
-	@include maj-font-color(theme-color(), $maj-c-theme-dark)
-}
-
-.list_value, .list_value_wrap {
-	background-color: $maj-c-theme-light;
-
-	@include maj-font-color(theme-color(), $maj-c-theme-dark)
-}
-
- .list_label,.list_value {
-	 white-space: nowrap;
-}
-
- .list_label_wrap,.list_value_wrap {
-	 white-space: normal;
+.list_label_wrap,
+.list_value_wrap {
+    white-space: normal;
 }
 
 /**
  * Facts table
  */
- .wt-facts-table {
-	caption {
-		caption-side: top;
-	}
+.wt-facts-table {
+    caption {
+        caption-side: top;
+    }
 	
-	th {
-		background-color: $maj-c-theme-medium;
-		border: none;
-		text-align: center;
-		font-weight: bold;
-		width: 20%;
-	}
+    th {
+        background-color: $maj-c-theme-medium;
+        border-style: none;
+        font-weight: bold;
+        text-align: center;
+        width: 20%;
+    }
 	
-	td {
-		background-color: $maj-c-theme-light;
-		border: none;
-	}
+    td {
+        background-color: $maj-c-theme-light;
+        border-style: none;
+    }
 	
-	.wt-gender-M td {
-		background-color: var(--sex-m-bg);
-		border-color: var(--sex-m-fg);
-	}
+    .wt-gender-M td {
+        background-color: var(--sex-m-bg);
+        border-color: var(--sex-m-fg);
+    }
 
-	.wt-gender-F td {
-		background-color: var(--sex-f-bg);
-		border-color: var(--sex-f-fg);
-	}
+    .wt-gender-F td {
+        background-color: var(--sex-f-bg);
+        border-color: var(--sex-f-fg);
+    }
 
-	.btn-light {
-		@extend .btn-primary;
-	}
+    .btn-light {
+        @extend .btn-primary;
+    }
 }
 
 /*
@@ -269,11 +268,11 @@ form.wt-page-content {
  */
 
 .tag_cloud {
-	width: 70%;
-	margin-left: auto;
-	margin-right: auto;
-	text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     padding: 10px 5px;
+    text-align: center;
+    width: 70%;
 }
 
 /*
@@ -281,25 +280,26 @@ form.wt-page-content {
  */
 
 .markdown {
-	overflow-x: auto;
+    overflow-x: auto;
 	
-	p {
-		margin: 0 0 0.5em;
-		white-space: pre-wrap;
-	}
+    p {
+        margin: 0 0 0.5em;
+        white-space: pre-wrap;
+    }
 
-	table {
-		border-collapse: collapse;
-		font-size: 10px;
-		margin-bottom: 5px;
-	}
+    table {
+        border-collapse: collapse;
+        font-size: 10px;
+        margin-bottom: 5px;
+    }
 
-	th {
-		font-weight: bold;
-	}
+    th {
+        font-weight: bold;
+    }
 
-	td, th {
-		border: solid thin $maj-c-theme-medium;
-		padding: 3px;
-	}
+    td,
+    th {
+        border: solid thin $maj-c-theme-medium;
+        padding: 3px;
+    }
 }
