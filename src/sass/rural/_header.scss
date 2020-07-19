@@ -88,7 +88,7 @@
     .wt-site-title {
         @extend .maj-header-part;
 
-        order: 2; /* stylelint-disable-line order/properties-alphabetical-order */
+        order: 2;
 		
         font-size: 1.5rem; /* stylelint-disable-line order/properties-alphabetical-order */
         font-weight: bold;
@@ -114,7 +114,7 @@
         @extend .d-md-flex;
         @extend .maj-header-part;
 		
-        order: 3; /* stylelint-disable-line order/properties-alphabetical-order */
+        order: 3;
 
         align-self: flex-end; /* stylelint-disable-line order/properties-alphabetical-order */
         display: flex;
@@ -127,7 +127,7 @@
     .wt-secondary-navigation {
         @extend .maj-header-part;
 		
-        order: 1; /* stylelint-disable-line order/properties-alphabetical-order */
+        order: 1;
 		
         //font-size: 1em;
         font-weight: bold; /* stylelint-disable-line order/properties-alphabetical-order */
@@ -177,7 +177,7 @@
     }
 		
     .wt-primary-navigation {
-        order: 4; /* stylelint-disable-line order/properties-alphabetical-order */
+        order: 4;
 		
         background-color: $white; /* stylelint-disable-line order/properties-alphabetical-order */
         border-radius: 25px 25px 0 0;

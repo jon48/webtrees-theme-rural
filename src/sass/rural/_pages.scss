@@ -117,19 +117,18 @@ form.wt-page-content {
 }
 
 #sidebar {
+    > .card {
+        overflow: visible;
+    }
+
     .wt-family-navigator-family {
         table-layout: fixed;
 
         th {
             width: 35%;
-
-            @include media-breakpoint-up(md) {
-                //min-width: 7rem;
-            }
         }
 
-        .dropdown-toggle,
-        .dropdown-item {
+        .dropdown-toggle {
             white-space: normal;
         }
     }
