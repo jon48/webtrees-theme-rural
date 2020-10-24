@@ -278,28 +278,11 @@ form.wt-page-content {
 /*
  * Markdown
  */
-
+ 
 .markdown {
-    overflow-x: auto;
-	
-    p {
-        margin: 0 0 0.5em;
-        white-space: pre-wrap;
-    }
-
-    table {
-        border-collapse: collapse;
-        font-size: 10px;
-        margin-bottom: 5px;
-    }
-
-    th {
-        font-weight: bold;
-    }
-
     td,
     th {
-        border: solid thin $maj-c-theme-medium;
-        padding: 3px;
+        border-color: $maj-c-theme-medium;
+        border-style: solid;
     }
 }

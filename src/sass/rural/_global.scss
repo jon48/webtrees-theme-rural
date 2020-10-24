@@ -42,6 +42,14 @@ html {
     --chart-line-radius: 0.5rem;
 }
 
+@include maj-cssvars((
+    c-theme-darker: $maj-c-theme-darker,
+    c-theme-dark: $maj-c-theme-dark,
+    c-theme-medium: $maj-c-theme-medium,
+    c-theme-light: $maj-c-theme-light,
+    c-theme-lighter: $maj-c-theme-lighter,
+));
+
 
 .maj-c-theme {
     &-darker { background-color: $maj-c-theme-darker; }
@@ -80,6 +88,17 @@ table {
     border-collapse: separate;
 }
 
+h3 {
+    color: $maj-c-theme-darker;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+h4 {
+    color: $maj-c-theme-darker;
+    font-size: 1em;
+    font-weight: bold;
+}
 
 /* 
  * Bootstrap overrides 
@@ -173,10 +192,12 @@ select,
     }
 }
 
+/* Introduces issues in webtrees 2.0.9, but not sure why it was implemented in the first place
 .container-fluid {
     padding-left: 5px;
     padding-right: 5px;
 }
+*/
 
 /**
  * Select2 overrides

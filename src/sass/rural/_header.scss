@@ -163,6 +163,7 @@
 		
         .nav-link {
             color: $maj-c-theme-lighter;
+            //mix-blend-mode: difference;
 			
             &:hover {
                 color: $maj-c-theme-light;
