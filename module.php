@@ -56,7 +56,7 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
     {
         return I18N::translate('Rural');
     }
-    
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\AbstractModule::boot()
@@ -66,7 +66,7 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
         // Register a namespace for our views.
         View::registerNamespace($this->name(), $this->resourcesFolder() . 'views/');
     }
-        
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\AbstractModule::resourcesFolder()
@@ -75,8 +75,8 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
     {
         return __DIR__ . '/resources/';
     }
-    
-    
+
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\AbstractModule::stylesheets()
@@ -89,7 +89,7 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
         ];
     }
 
-    
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleThemeInterface::stylesheets()
@@ -113,7 +113,7 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
         ];
         return $parameters[$parameter_name];
     }
-    
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleAuthorName()
@@ -122,8 +122,8 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
     {
         return 'Jonathan Jaubart';
     }
-    
-    
+
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleVersion()
@@ -142,7 +142,7 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
         return 'https://github.com/jon48/webtrees-theme-rural';
     }
 
-    
+
     public function getCustomCssAction(ServerRequestInterface $request): ResponseInterface
     {
         $content = view($this->name() . '::style.css');
@@ -150,8 +150,8 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
             ->withHeader('Content-Type', 'text/css')
         ;
     }
-    
-    
+
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleFooterInterface::defaultFooterOrder()
@@ -160,7 +160,7 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
     {
         return 99;
     }
-    
+
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleFooterInterface::getFooter()
