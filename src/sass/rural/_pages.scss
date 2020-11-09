@@ -189,6 +189,14 @@ form.wt-page-content {
  * Sign in page
  */
 
+.wt-register-caution {
+    @extend .mx-auto;
+    
+    @include media-breakpoint-up(md) {
+        max-width: map-get($container-max-widths, 'md');
+    }
+}
+
 .hideShowPassword-wrapper {
     button {
         @extend .maj-secondary-button-theme-lighter;

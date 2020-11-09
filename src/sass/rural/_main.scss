@@ -86,7 +86,7 @@
         //border-color: $maj-c-theme-dark;
         //border-width: 0 1px 1px 0;
 		
-        p {
+        p:not(.small) {
             text-align: center;
         }
 		
@@ -105,6 +105,10 @@
             background-color: $maj-c-theme-light;
             border-top: 1px solid $maj-c-theme-medium;
             padding: 0.5rem 0.75rem;
+        }
+        
+        .text-muted {
+            color: $maj-c-theme-darker !important;
         }
 		
     }
