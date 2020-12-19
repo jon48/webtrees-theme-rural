@@ -50,7 +50,8 @@ table.center {
 #place-hierarchy,
 div[role=tabpanel],
 div[id^=table-indi],
-div[id^=table-fam] {
+div[id^=table-fam],
+.maj-table-full-width {
     .dataTables_wrapper {
         max-width: 100%;
     }
@@ -65,27 +66,29 @@ table.dataTable {
 		
     border-spacing: 2px;
 		
-    thead {
+    thead,
+    tfoot {
         tr {
             th {
                 background-image: $maj-bg-theme-medium-background-image;
             }
 			
-            th:only-child {
+            th:only-child:not(.maj-th-background) {
                 background-image: none;
             }
         }
     }
 	
     &.table-bordered {
-        thead {
+        thead,
+        tfoot {
             tr {
                 th {
                     border-color: $maj-c-theme-medium;
                     border-width: $border-width;
                 }
 				
-                th:only-child {
+                th:only-child:not(.maj-th-background) {
                     border-style: none;
                 }
             }
