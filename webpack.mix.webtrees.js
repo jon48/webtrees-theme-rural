@@ -8,6 +8,9 @@
 let mix = require('laravel-mix');
 let config = require('./webpack.mix.config');
 
+// https://github.com/postcss/postcss-import
+const postcss_import = require("postcss-import")();
+
 //https://github.com/bezoerb/postcss-image-inliner
 const postcss_image_inliner = require("postcss-image-inliner")({
     assetPaths: [config.webtrees_dir],
@@ -21,6 +24,7 @@ mix
     .options({
         processCssUrls: false,
         postCss: [
+            postcss_import,
             postcss_image_inliner,
         ]
     });

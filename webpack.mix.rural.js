@@ -7,14 +7,13 @@
 
 let mix = require('laravel-mix');
 let config = require('./webpack.mix.config');
-require('laravel-mix-alias');
 require('laravel-mix-clean');
 
 //https://github.com/postcss/autoprefixer
 const postcss_autoprefixer = require("autoprefixer")();
 
 //https://github.com/jakob101/postcss-inline-rtl
-const postcss_rtl = require("postcss-rtl")();
+const postcss_rtl = require("@mjhenkes/postcss-rtl")();
 
 //https://github.com/gridonic/postcss-replace
 const postcss_replace = require("postcss-replace")({
@@ -34,7 +33,9 @@ const postcss_image_inliner = require("postcss-image-inliner")({
 const postcss_custom_properties = require("postcss-custom-properties")();
 mix
     .setPublicPath(config.public_dir + '/css')
-    .alias('build', config.build_dir)
+    .alias({
+        '~build': config.build_dir
+    })
     .sass('src/sass/theme.scss', config.public_dir + '/css/rural.min.css')
     .options({
         processCssUrls: false,

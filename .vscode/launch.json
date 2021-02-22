@@ -8,15 +8,18 @@
             "type": "node",
             "request": "launch",
             "name": "Launch via NPM",
-            "runtimeExecutable": "npm",
+            "autoAttachChildProcesses": true,
+            "runtimeExecutable": "npx",
             "runtimeArgs": [
-                "run-script",
-                "debug"
+                "mix"
             ],
             "port": 9229,
             "skipFiles": [
                 "<node_internals>/**"
-            ]
-        }
+            ],
+            "env" :{
+                "section": "rural"
+            }
+        },
     ]
 }

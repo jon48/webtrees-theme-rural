@@ -22,7 +22,11 @@
 	"config" : {
 		"preferred-install": {
 			"fisharebest/webtrees": "source"
-		}
+		},
+        "platform" : {
+            "php" : "7.2"
+        },
+        "sort-packages" : true
 	},
 	"require-dev" : {
 		"fisharebest/webtrees" : "2.0.9",
