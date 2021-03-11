@@ -130,7 +130,7 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
      */
     public function customModuleVersion(): string
     {
-        return '2.0.9-v.3';
+        return '2.0.12-v.1';
     }
 
     /**

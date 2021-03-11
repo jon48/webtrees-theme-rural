@@ -47,7 +47,6 @@ mix
             postcss_custom_properties,
         ]
     })
-    .sourceMaps()
     .copy(config.images_dir + '/header.png', config.public_dir + '/images')
     .clean()
     ;

@@ -29,8 +29,8 @@
         "sort-packages" : true
 	},
 	"require-dev" : {
-		"fisharebest/webtrees" : "2.0.9",
-		"consolidation/robo": "^2.1"
+		"fisharebest/webtrees" : "^2.0.12,<=2.0.12",
+		"consolidation/robo": "^3.0"
 	},
 	"scripts": {
 		"webtrees-theme-rural:package": "./vendor/bin/robo package",
