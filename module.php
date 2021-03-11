@@ -4,7 +4,7 @@
  * Rural Theme
  *
  * webtrees-MyArtJaub
- * Copyright (C) 2009-2020 Jonathan Jaubart
+ * Copyright (C) 2009-2021 Jonathan Jaubart
  *
  * Based on webtrees: online genealogy
  * Copyright (C) 2020 webtrees development team
@@ -20,7 +20,7 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  * You should have received a copy of the GNU General Public License
- * along with webtrees-MyArtJaub. If not, see <http://www.gnu.org/licenses/>.
+ * along with webtrees-MyArtJaub. If not, see <https://www.gnu.org/licenses/>.
  *
  */
 
@@ -130,7 +130,7 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
      */
     public function customModuleVersion(): string
     {
-        return '2.0.12-v.1';
+        return '2.0.12-v.2';
     }
 
     /**
