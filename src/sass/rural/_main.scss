@@ -35,6 +35,7 @@
 
 #content {
     .wt-main-container {
+        @extend .table-responsive;
         @include maj-base-layout-col;
 		
         background-color: $white;
@@ -192,6 +193,10 @@ form.wt-page-content {
     .wt-tabs-individual & {
         padding: 0;
     }
+}
+
+.tab-pane {
+    @extend .table-responsive;
 }
 
 /**
