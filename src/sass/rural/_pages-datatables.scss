@@ -26,7 +26,7 @@ table.center {
     margin-right: auto;
 }
 
-.dataTables_wrapper {	
+.dataTables_wrapper {
     @extend .table-responsive;
     @extend .maj-content-tabs;
     @extend .mx-auto;

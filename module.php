@@ -28,25 +28,26 @@ declare(strict_types=1);
 
 namespace MyArtJaub\Webtrees\Module;
 
-use Fig\Http\Message\StatusCodeInterface;
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\View;
-use Fisharebest\Webtrees\Module\MinimalTheme;
+use Fisharebest\Webtrees\Module\AbstractModule;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
 use Fisharebest\Webtrees\Module\ModuleFooterInterface;
 use Fisharebest\Webtrees\Module\ModuleFooterTrait;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
+use Fisharebest\Webtrees\Module\ModuleThemeTrait;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
 /**
  * Class RuralTheme - Main class for Rural Theme.
  */
-class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFooterInterface
+class RuralTheme extends AbstractModule implements ModuleCustomInterface, ModuleFooterInterface, ModuleThemeInterface
 {
     use ModuleCustomTrait;
     use ModuleFooterTrait;
+    use ModuleThemeTrait;
 
     /**
      * {@inheritDoc}
@@ -146,7 +147,8 @@ class RuralTheme extends MinimalTheme implements ModuleCustomInterface, ModuleFo
     public function getCustomCssAction(ServerRequestInterface $request): ResponseInterface
     {
         $content = view($this->name() . '::style.css');
-        return response($content, StatusCodeInterface::STATUS_OK)
+        return response($content)
+            ->withHeader('Cache-Control', 'public,max-age=31536000')
             ->withHeader('Content-Type', 'text/css')
         ;
     }

@@ -62,8 +62,21 @@
     border-color: #ccc;
 }
 
+#cboxLoadedContent {
+    margin-bottom: 0;
+    margin-top: 2rem;
+}
+
 #cboxTitle {
     background: #fff;
+    bottom: unset;
+    font-weight: bold;
+    left: 0;
+    margin: 0 2rem;
+    position: absolute;
+    text-align: center;
+    top: 0.5em;
+    width: 100%;
 }
 
 #cboxPrevious,
