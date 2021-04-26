@@ -33,7 +33,7 @@
  *         +---wt-page-content
  */
 
-#content {
+main {
     .wt-main-container {
         @extend .table-responsive;
         @include maj-base-layout-col;

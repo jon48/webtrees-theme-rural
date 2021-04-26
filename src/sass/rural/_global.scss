@@ -231,6 +231,26 @@ select,
     text-align: center;
 }
 
+.error {
+    color: #d00;
+    font-weight: bold;
+}
+
+.largeError {
+    color: #d00;
+    font-size: large;
+    font-weight: bold;
+}
+
+.warning {
+    color: #f00;
+    font-weight: bold;
+}
+
+.indent {
+    padding-left: 1rem;
+}
+
 .maj-font-color-brown {
     @include maj-font-color($maj-c-theme-dark, $maj-c-theme-medium);
 }
