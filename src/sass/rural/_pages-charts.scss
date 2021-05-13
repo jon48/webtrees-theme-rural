@@ -51,26 +51,6 @@
         border-color: var(--sex-u-fg);
     }
 	
-    &.wt-chart-box-m {
-        background: var(--sex-m-bg);
-        border: solid var(--sex-m-fg) thin;
-		
-        .dropdown-menu {
-            background: var(--sex-m-bg);
-            border-color: var(--sex-m-fg);
-        }
-    }
-
-    &.wt-chart-box-f {
-        background: var(--sex-f-bg);
-        border: solid var(--sex-f-fg) thin;
-
-        .dropdown-menu {
-            background: var(--sex-f-bg);
-            border-color: var(--sex-f-fg);
-        }
-    }
-	
     .small {
         font-size: 90%;
     }
@@ -132,6 +112,26 @@
     .wt-chart-hourglass & {
         width: 19.8rem;
     }	
+}
+
+.wt-chart-box-m {
+    background: var(--sex-m-bg);
+    border: solid var(--sex-m-fg) thin;
+    
+    .dropdown-menu {
+        background: var(--sex-m-bg);
+        border-color: var(--sex-m-fg);
+    }
+}
+
+.wt-chart-box-f {
+    background: var(--sex-f-bg);
+    border: solid var(--sex-f-fg) thin;
+
+    .dropdown-menu {
+        background: var(--sex-f-bg);
+        border-color: var(--sex-f-fg);
+    }
 }
 
 /*
