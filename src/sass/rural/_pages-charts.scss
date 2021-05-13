@@ -98,31 +98,31 @@
     .wt-chart-family-book & {
         margin-bottom: 0.4rem;
         margin-top: 0.4rem;
-        width: 20rem;
+        width: 23rem;
     }
 
     .wt-chart-pedigree-left & {
         margin: 0.4rem;
         margin-right: 0;
-        width: 20rem;
+        width: 23rem;
     }
 
     .wt-chart-pedigree-right & {
         margin: 0.4rem;
         margin-left: 0;
-        width: 20rem;
+        width: 23rem;
     }
 
     .wt-chart-pedigree-up & {
         margin: 0.4rem;
         margin-bottom: 0;
-        width: 20rem;
+        width: 23rem;
     }
 
     .wt-chart-pedigree-down & {
         margin: 0.4rem;
         margin-top: 0;
-        width: 20rem;
+        width: 23rem;
     }
 
     .wt-chart-relationships & {
@@ -163,16 +163,14 @@
 }
 
 /*
-  * Timeline chart
-  */
+ * Timeline chart
+ */
 
 #timeline_chart {
     left: 0;
     position: relative;
     top: 0;
 }
-
-
 
 @each $nb, $colors in $maj-c-persons {
     .person#{$nb} {
@@ -228,6 +226,12 @@
 
 .wt-chart-family-book {
     overflow-y: auto;
+
+    &.wt-chart {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /*
@@ -243,32 +247,53 @@
 }
 
 /*
-  * Hourglass chart 
-  */
+ * Hourglass chart 
+ */
 
 .wt-chart-hourglass {
+    display: flex;
+    justify-content: center;
     overflow-y: auto;
 }
 
 /*
-   * Fan chart
-   */
+ * Fan chart
+ */
 
 .fan_chart {
     ul {
         list-style-type: none;
         margin: 0;
     }
-	
+
     &_menu {
-        background: $maj-c-theme-lighter;
+        background: $maj-c-theme-light;
+        background-clip: padding-box;
         border: solid 1px $maj-c-theme-medium;
-        border-radius: 3px;
+        border-radius: 0.4rem;
         display: none;
+        padding: 0.5rem 0;
         position: absolute;
         z-index: 100;
     }
 }
+
+/*
+ * Pedigree chart
+ */
+
+.wt-chart-pedigree {
+    &-left,
+    &-right,
+    &-up,
+    &-down {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*
+
 
 /*
  * Statistics
