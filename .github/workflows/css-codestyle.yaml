@@ -1,6 +1,10 @@
 name: Code style StyleLint CSS / SCSS
 
-on: [push, pull_request]
+on:
+   push:
+      branches-ignore:
+         - '**-dev'
+   pull_request:
 
 jobs:
   run:
@@ -8,9 +12,8 @@ jobs:
     name: StyleLint
 
     steps:
-      - uses: actions/checkout@v1
-        with:
-          fetch-depth: 1
+      - name: Checkout code
+        uses: actions/checkout@v2
 
       - uses: actions-hub/stylelint@master
         env:

@@ -1,18 +1,23 @@
 name: Static analysis PHP
 
-on: [push, pull_request]
+on:
+   push:
+      branches-ignore:
+         - '**-dev'
+   pull_request:
 
 jobs:
-  run:
+
+  phpstan:
     runs-on: ubuntu-latest
     name: phpstan
 
     steps:
-      - uses: actions/checkout@v1
-        with:
-          fetch-depth: 1
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-      - uses: shivammathur/setup-php@master
+      - name: Setup PHP
+        uses: shivammathur/setup-php@master
         with:
           php-version: 7.4
           extensions: gd,intl,mbstring,sqlite,zip

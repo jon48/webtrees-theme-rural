@@ -1,0 +1,29 @@
+name: Code style PHP
+
+on:
+   push:
+      branches-ignore:
+         - '**-dev'
+   pull_request:
+
+jobs:
+
+  phpcs:
+    runs-on: ubuntu-latest
+    name: phpcs PHP/PHTML
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Setup PHP
+        uses: shivammathur/setup-php@master
+        with:
+          php-version: 7.4
+          extensions: gd,intl,mbstring,sqlite,zip
+          coverage: disable
+
+      - run: composer global require squizlabs/php_codesniffer=* --quiet
+
+      - name: PHP
+        run: ~/.composer/vendor/bin/phpcs -s

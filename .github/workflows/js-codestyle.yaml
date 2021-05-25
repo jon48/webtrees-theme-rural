@@ -1,0 +1,23 @@
+name: Code style JavaScript
+
+on:
+   push:
+      branches-ignore:
+         - '**-dev'
+   pull_request:
+
+jobs:
+
+  semistandard:
+    runs-on: ubuntu-latest
+    name: SemiStandard
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - run: npm install semistandard
+
+      - uses: goto-bus-stop/standard-action@v1
+        with:
+          linter: semistandard
