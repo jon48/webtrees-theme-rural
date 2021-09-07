@@ -178,12 +178,13 @@ Let it compile until the `rural.min.css` has been generated in `/modules_v4/myar
 
 NPM modes are:
 
-- `production`: generate the `rural.min.css` file in production mode, and all required files. (Laravel Mix entry point: `webpack.mix.rural.js`)
-- `webtrees`: generates intermediary CSS from the mainstream webtrees into the `/build/` folder. Those intermediary files are then injected in the main Rural theme CSS. If not running `production`, those files needs to be generated once before running other modes, or after webtrees version has been updated via Composer. (Laravel Mix entry point: `webpack.mix.webtrees.js`)
-- `development`: generates the `rural.min.css` file in development mode (not minified). Requires the `webtrees` mode to have run once. (Laravel Mix entry point: `webpack.mix.rural.js`)
-- `development-webtrees`: run both `webtrees` and `development` modes in the correct order.
+- `production`: generates the `rural.min.css` file in production mode, and all required files. (Runs the `webtrees` and `rural` modes below, with the production flag)
+- `development`: generates the `rural.min.css` file in development mode, and all required files. (Runs the `webtrees` and `rural` modes below)
+- `webtrees`: generates intermediary CSS from the mainstream webtrees into the `/build/` folder. Those intermediary files are then injected in the main Rural theme CSS. Those files needs to be generated once before running other modes, or after webtrees version has been updated via Composer. (Laravel Mix entry point: `webpack.mix.webtrees.js`)
+- `rural`: generates the `rural.min.css` file in development mode (not minified). Requires the `webtrees` mode to have run once. (Laravel Mix entry point: `webpack.mix.rural.js`)
 - `watch`: watches for changes in SASS code, and generate the `rural.min.css` file in development mode. Requires the `webtrees` mode to have run once. (Laravel Mix entry point: `webpack.mix.rural.js`)
-- `debug`: used within Visual Studio Code to debug the NPM build. (Laravel Mix entry point: `webpack.mix.rural.js`)
+- `eslint` / `eslint-fix`: Respectively checks and automatically format Javascript code to enforce Semi-Standard code style
+- `stylelint` / `stylelint-fix`: Respectively checks and automatically format CSS & SASS code to enforce StyleLint code style
 
 ### Issues / Security
 
