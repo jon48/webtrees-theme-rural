@@ -68,12 +68,18 @@
     text-decoration: underline;
 }
 
+.parentdeath {
+    border: thin solid #888;
+    padding: 1px;
+}
+
 form.wt-page-content {
     .small {
         font-size: 90%;
     }
 }
 
+.wt-associate-fact,
 .wt-relation-fact,
 .wt-historic-fact {
     opacity: 0.8;
@@ -349,12 +355,12 @@ div {
     color: $maj-c-bluegray !important;
 
     &.nav-link {
-        @include  maj-font-color($maj-c-theme-primary !important, $maj-c-theme-medium !important);
+        @include maj-font-color($maj-c-theme-primary !important, $maj-c-theme-medium !important);
     }
 }
 
 
 .odometer {
     @extend .badge;
-    @extend .badge-secondary;
+    @extend .bg-secondary;
 }

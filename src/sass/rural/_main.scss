@@ -56,7 +56,7 @@ main {
 	
     .wt-page-title,
     .wt-main-container > h2 {
-        color: theme-color(secondary);
+        color: $secondary;
         font-size: 2em;
         font-weight: normal;
         text-align: center;
@@ -78,10 +78,6 @@ main {
         &.wt-page-options-media-list {
             max-width: 100%;
         }
-		
-        .form-group {
-            margin-bottom: 0;
-        }
 				
         //border-style: outset;
         //border-color: $maj-c-theme-dark;
@@ -93,6 +89,10 @@ main {
 		
         .btn-secondary {
             @extend .maj-secondary-button-theme-lighter;
+        }
+        
+        .form-group {
+            margin-bottom: unset;
         }
 		
         &-label {
@@ -133,7 +133,7 @@ main {
 form.wt-page-content {
     @extend .container;
 
-    > .form-group {
+    > .row {
 
         background-color: $maj-c-theme-light;
 	
@@ -203,7 +203,7 @@ form.wt-page-content {
  * Lists
  */
 .list_table {
-    @include maj-font-color(theme-color(), $maj-c-theme-dark);
+    @include maj-font-color($primary, $maj-c-theme-dark);
 
     margin-left: auto;
     margin-right: auto;
@@ -214,7 +214,7 @@ form.wt-page-content {
 
 .list_label,
 .list_label_wrap {
-    @include maj-font-color(theme-color(), $maj-c-theme-dark);
+    @include maj-font-color($primary, $maj-c-theme-dark);
 
     background-color: $maj-c-theme-medium;
     font-weight: bold;
@@ -222,7 +222,7 @@ form.wt-page-content {
 
 .list_value,
 .list_value_wrap {
-    @include maj-font-color(theme-color(), $maj-c-theme-dark);
+    @include maj-font-color($primary, $maj-c-theme-dark);
     
     background-color: $maj-c-theme-light;}
 
@@ -279,11 +279,10 @@ form.wt-page-content {
  * Tag cloud
  */
 
-.tag_cloud {
+.wt-surnames-tag-cloud {
     margin-left: auto;
     margin-right: auto;
     padding: 10px 5px;
-    text-align: center;
     width: 70%;
 }
 

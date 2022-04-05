@@ -32,14 +32,27 @@ html {
 
 /* Colors for chart boxes, etc. */
 :root {
-    --sex-f-fg: #ce5380;
-    --sex-m-fg: #468bb6;
-    --sex-u-fg: #808080;
-    --sex-f-bg: #ede1e8;
-    --sex-m-bg: #d2e2ec;
-    --sex-u-bg: #fff;
-    --chart-line: solid #808080 thin;
     --chart-line-radius: 0.5rem;
+    --chart-line: solid #808080 thin;
+    --chart-values-default: #b9afa4;
+    --chart-values-high: #584937;
+    --chart-values-low: #e9e2db;
+    --chart-values-avg: #584937;
+    --link-color-hover: #{$maj-c-theme-dark};
+    --link-color: #{$maj-c-theme-darker};
+    --link-decoration-hover: none;
+    --link-decoration: none;
+    --sex-f-bg: #ede1e8;
+    --sex-f-fg: #ce5380;
+    --sex-f-chart: #ede1e8;
+    --sex-f-chart-dark: #beb4ba;
+    --sex-m-bg: #d2e2ec;
+    --sex-m-fg: #468bb6;
+    --sex-m-chart: #d2e2ec;
+    --sex-m-chart-dark: #a8b5bd;
+    --sex-u-bg: #fff;
+    --sex-u-fg: #808080;
+    --sex-u-chart: #ebebeb;
 }
 
 @include maj-cssvars((
@@ -74,16 +87,6 @@ html {
  * Html elements
  */
 
-a {
-    color: $maj-c-theme-darker;
-    text-decoration: none;
-}
-
-a:hover {
-    color: $maj-c-theme-dark;
-    text-decoration: none;
-}
-
 table {
     border-collapse: separate;
 }
@@ -115,18 +118,20 @@ h4 {
 }
 
 .dropdown {
-    &-menu {		
+    &-menu {
         max-height: 100vh;
         overflow-x: hidden;
-		
+
         .dropdown-item {
-            &.active {				
-                @include hover-focus() {
-                    color: theme-color();
+            &.active {
+                &:hover,
+                &:focus {
+                    background-color: $maj-c-theme-medium;
+                    color: $primary;
                 }
             }
 
-            &.disabled {		
+            &.disabled {
                 display: none;
             }
         }
@@ -141,6 +146,10 @@ h4 {
     }
 }
 
+.form-group {
+    margin-bottom: $spacer;
+}
+
 .input-group {
     &-text {
         *[class^='wt-icon-'] { color: #fff; }
@@ -150,7 +159,7 @@ h4 {
 
 input,
 select,
-.custom-select {
+.form-select {
     background-color: $maj-c-theme-lighter;
     border: solid 1px $maj-c-theme-medium;
 }
@@ -182,6 +191,13 @@ select,
     }
 }
 
+.btn-close {
+    &:hover {
+        background-color: $maj-c-theme-medium;
+        background-image: escape-svg($btn-close-bg);
+    }
+}
+
 .btn-link {
     padding-left: 0.25rem;
     padding-right: 0.25rem;
@@ -190,6 +206,11 @@ select,
         color: $maj-c-theme-dark;
         text-decoration: unset;
     }
+}
+
+.accordion-button,
+.accordion-button:not(.collapsed) {
+    background-color: $maj-c-theme-light;
 }
 
 /* Introduces issues in webtrees 2.0.9, but not sure why it was implemented in the first place
@@ -208,17 +229,54 @@ select,
     .select2-dropdown {
         background-color: $maj-c-theme-lighter;
     }
- 
+    
+    .select2-results {
+        > .select2-results__options {
+            padding-left: 0;
+        }
+        
+        .select2-results__option {
+            &[aria-selected=true] {
+                background-color: $maj-c-theme-light;
+            }
+            
+            &--highlighted[aria-selected] {
+                background-color: $maj-c-theme-medium;
+                color: unset;
+            }
+        }
+    }
+    
     .select2-selection--single {
         height: auto;
         min-height: 28px;
+        
+        .select2-container--default .select2-results__option--highlighted[aria-selected]
 
         .select2-selection__rendered {
-            padding-left: 2px;
+            padding-left: $input-padding-x;
+            
+            .gallery {
+                margin-left: - 0.75 * $input-padding-x;
+                margin-right: 0.5 * $input-padding-x;
+            }
         }
+    }
+}
 
-        .NAME {
-            padding-left: 4px;
+/**
+ * Twitter Typeahead
+ */
+span.twitter-typeahead {
+    .tt-menu {
+        background-color: $maj-c-theme-lighter;
+    }
+    
+    .tt-suggestion.tt-cursor {
+        &,
+        &:hover {
+            background-color: $maj-c-theme-medium;
+            color: unset;
         }
     }
 }

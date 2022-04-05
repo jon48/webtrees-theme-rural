@@ -44,10 +44,21 @@ $enable-gradients: true !default;
 /* 
  * Boostrap variables
  */
-$badge-font-size: 85%;
-//$badge-font-weight: $font-weight-bold;
-//$badge-padding-y: .3em;
-//$badge-padding-x: .4em;
+ 
+$accordion-bg: $maj-c-theme-lighter;
+$accordion-color: $primary;
+$accordion-border-color: $maj-c-theme-medium;
+$accordion-button-bg: $maj-c-theme-light;
+$accordion-button-active-bg: $accordion-button-bg;
+$accordion-button-active-color: $primary;
+
+$border-color: $maj-c-theme-medium;
+
+$btn-close-color: $primary;
+$btn-close-opacity: 1;
+$btn-close-hover-opacity: 1;
+
+$badge-font-size: 0.85em;
 
 $card-border-color: $maj-c-theme-medium;
 $card-color: $primary;
@@ -55,16 +66,18 @@ $card-bg: $maj-c-theme-lighter;
 $card-cap-color: $primary;
 $card-cap-bg: $maj-c-theme-light;
 
-//$dropdown-color: theme-color();
+//$dropdown-color: $primary;
 $dropdown-link-color: $primary;
 $dropdown-bg: $maj-c-theme-light;
 $dropdown-header-color: $primary;
 $dropdown-link-hover-color: $primary;
-//$dropdown-link-hover-bg: $maj-c-theme-lighter;
+$dropdown-link-hover-bg: $maj-c-theme-lighter;
 $dropdown-link-active-color: $primary;
 $dropdown-link-active-bg: $maj-c-theme-medium;
 $dropdown-border-color: $maj-c-theme-medium;
 $dropdown-border-radius: 0.4rem;
+
+$grid-gutter-width: 2.5rem;
 
 $input-border-color: $maj-c-theme-medium;
 $input-bg: $maj-c-theme-lighter;
@@ -74,6 +87,11 @@ $input-focus-bg: $maj-c-theme-lighter;
 $input-group-addon-bg: $primary;
 $input-group-addon-color: #fff;
 $input-group-addon-border-color: $primary;
+
+$link-color: $maj-c-theme-darker;
+$link-decoration: none;
+$link-hover-color: $maj-c-theme-dark;
+$link-hover-decoration: none;
 
 $nav-tabs-border-color: $maj-c-theme-medium;
 //$nav-tabs-border-radius:
@@ -95,4 +113,5 @@ $pagination-disabled-bg: transparent;
 
 $table-color: $primary;
 $table-border-color: transparent;
-$table-accent-bg: $maj-c-theme-light;
+$table-group-separator-color: transparent;
+$table-striped-bg: $maj-c-theme-light;

@@ -48,7 +48,7 @@
     width: auto;
 
     @include media-breakpoint-up(md) {
-        min-height: #{$maj-header-height / 3};
+        min-height: math.div($maj-header-height, 3);
     }	
 }
 
@@ -83,6 +83,7 @@
 		
         background-repeat: no-repeat;
         height: $maj-header-height;
+        z-index: -99;
     }
 	
     .wt-site-title {
@@ -178,18 +179,20 @@
     }
 		
     .wt-primary-navigation {
+        @include border-top-radius(2rem);
+        
         order: 4;
 		
         background-color: $white; /* stylelint-disable-line order/properties-alphabetical-order */
-        border-radius: 25px 25px 0 0;
 		
         .wt-genealogy-menu {
+            @include border-radius(1.75rem);
+            
             background: $white linear-gradient(to top, rgba($maj-c-theme-medium, 0), rgba($maj-c-theme-medium, 0.6), rgba($maj-c-theme-medium, 1));
-            border-radius: 20px;
             justify-content: space-evenly;
-            margin-top: 15px;
-            padding-bottom: 1em;
-            padding-top: 0.5em;
+            margin-top: $container-padding-x;
+            padding-bottom: 1rem;
+            padding-top: 0.5rem;
 
             .nav-item {
                 flex: 1 1 auto;
@@ -211,7 +214,7 @@
             }
 			
             .dropdown-menu {
-                margin-left: 1rem;
+                margin-left: 1rem !important;
             }
 			
             .dropdown-item {

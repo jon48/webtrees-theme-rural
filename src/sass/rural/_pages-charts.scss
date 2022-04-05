@@ -154,11 +154,17 @@
     }
 }
 
-.leaflet-popup-content-wrapper {
-    @extend  .maj-font-color-blue;
-
-    .label {
-        font-weight: bold;
+.leaflet {
+    &-container {
+        font-size: 1rem;
+    }
+    
+    &-popup-content-wrapper {
+        @extend  .maj-font-color-blue;
+    
+        .label {
+            font-weight: bold;
+        }
     }
 }
 

@@ -91,31 +91,6 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
         ];
     }
 
-
-    /**
-     * {@inheritDoc}
-     * @see \Fisharebest\Webtrees\Module\ModuleThemeInterface::stylesheets()
-     */
-    public function parameter($parameter_name)
-    {
-        $parameters = [
-            'chart-background-f'             => 'ede1e8',
-            'chart-background-m'             => 'd2e2ec',
-            'chart-background-u'             => 'eeeeee',
-            'chart-box-x'                    => 260,
-            'chart-box-y'                    => 85,
-            'chart-font-color'               => '584937',
-            'chart-spacing-x'                => 5,
-            'chart-spacing-y'                => 10,
-            'compact-chart-box-x'            => 240,
-            'compact-chart-box-y'            => 50,
-            'distribution-chart-high-values' => '584937',
-            'distribution-chart-low-values'  => 'e9e2db',
-            'distribution-chart-no-values'   => 'e9e2db',
-        ];
-        return $parameters[$parameter_name];
-    }
-
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleAuthorName()
@@ -132,7 +107,7 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
      */
     public function customModuleVersion(): string
     {
-        return '2.0.23-v.2';
+        return '2.1.0-alpha.1';
     }
 
     /**

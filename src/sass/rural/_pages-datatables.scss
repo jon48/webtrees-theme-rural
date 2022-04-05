@@ -84,7 +84,7 @@ table.dataTable {
         tfoot {
             tr {
                 th {
-                    border-color: $maj-c-theme-medium;
+                    border-color: $maj-c-theme-medium !important;
                     border-width: $border-width;
                 }
 				
@@ -92,6 +92,14 @@ table.dataTable {
                     border-style: none;
                 }
             }
+        }
+    }
+    
+    a.text-muted {
+        color: $maj-c-theme-dark !important;
+        
+        &:hover {
+            color: $maj-c-theme-medium !important;
         }
     }
 }
