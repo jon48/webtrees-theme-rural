@@ -252,7 +252,10 @@
 
 .wt-chart-hourglass {
     display: flex;
-    justify-content: center;
+    // Cannot use true flex centering, due to problem scrolling left.
+    // Review when safe center is supported more widely
+    //justify-content: center;
+    margin: auto;
     overflow-y: auto;
 }
 
@@ -283,12 +286,16 @@
  */
 
 .wt-chart-pedigree {
+    display: flex;
+
     &-left,
     &-right,
     &-up,
     &-down {
-        display: flex;
-        justify-content: center;
+        // Cannot use true flex centering, due to problem scrolling left.
+        // Review when safe center is supported more widely
+        //justify-content: center;
+        margin: auto;
     }
 }
 
