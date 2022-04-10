@@ -11,7 +11,6 @@ use Symfony\Component\Finder\Finder;
 
 class RoboFile extends \Robo\Tasks
 {
-
     /**
      * Package the specific commitish in a zip file for distribution.
      * Commitish can be a commit hash, a tag, or a branch.

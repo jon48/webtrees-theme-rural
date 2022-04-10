@@ -30,6 +30,7 @@ namespace MyArtJaub\Webtrees\Module;
 
 use Fisharebest\Webtrees\I18N;
 use Fisharebest\Webtrees\View;
+use Fisharebest\Webtrees\Webtrees;
 use Fisharebest\Webtrees\Module\AbstractModule;
 use Fisharebest\Webtrees\Module\ModuleCustomInterface;
 use Fisharebest\Webtrees\Module\ModuleCustomTrait;
@@ -131,7 +132,22 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
      */
     public function customModuleVersion(): string
     {
-        return '2.0.12-v.3';
+        return '2.0.23-v.1';
+    }
+
+    /**
+     * {@inheritDoc}
+     * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleLatestVersionUrl()
+     */
+    public function customModuleLatestVersionUrl(): string
+    {
+        return 'https://apps.jaubart.com/myartjaub/webtrees-modules/api/module/myartjaub_ruraltheme/latest?' .
+            http_build_query([
+                'm' => $this->customModuleVersion(),
+                'w' => Webtrees::VERSION,
+                'p' => PHP_VERSION,
+                'o' => DIRECTORY_SEPARATOR === '/' ? 'u' : 'w'
+            ]);
     }
 
     /**

@@ -1,0 +1,7 @@
+
+parameters:
+   level: max
+   paths:
+      - module.php
+      - resources
+   checkExplicitMixed: false

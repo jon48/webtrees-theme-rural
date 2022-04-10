@@ -13,4 +13,5 @@ RoboFile.php	export-ignore
 .github/                    export-ignore
 .stylelintrc.json           export-ignore
 phpcs.xml.dist              export-ignore
+phpstan.neon.dist           export-ignore
 sonar-project.properties    export-ignore

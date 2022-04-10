@@ -26,10 +26,13 @@
         "platform" : {
             "php" : "7.2"
         },
-        "sort-packages" : true
+        "sort-packages" : true,
+		"allow-plugins": {
+			"composer/package-versions-deprecated": true
+		}
 	},
 	"require-dev" : {
-		"fisharebest/webtrees" : "^2.0.12,<=2.0.12",
+		"fisharebest/webtrees" : "^2.0.23,<=2.0.23",
 		"consolidation/robo": "^3.0",
         "psr/http-message": "^1.0"
 	},
@@ -37,7 +40,7 @@
 		"webtrees-theme-rural:package": "./vendor/bin/robo package",
 		"webtrees-theme-rural:phpcs" : "phpcs -s",
 		"webtrees-theme-rural:phpcbf" : "phpcbf",
-		"webtrees-theme-rural:phpstan" : "phpstan analyze --no-progress --level=max module.php resources"
+		"webtrees-theme-rural:phpstan" : "phpstan analyze --no-progress"
 	},
 	"scripts-descriptions": {
         "webtrees-theme-rural:package": "Create a package file for distribution. Add -- commit for specific commit."

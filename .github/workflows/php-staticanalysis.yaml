@@ -27,4 +27,4 @@ jobs:
 
       - run: composer install --no-progress --no-suggest --ignore-platform-reqs
 
-      - run: ~/.composer/vendor/bin/phpstan analyze --no-progress --level=max module.php resources
+      - run: ~/.composer/vendor/bin/phpstan analyze --no-progress --error-format=github
