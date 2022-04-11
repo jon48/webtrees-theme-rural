@@ -104,9 +104,10 @@
 .icon-selected 			{content: url('{{ webtrees }}/webtrees/images/selected.png');}
 
 /* Silhouettes on charts */
-.icon-silhouette-F 		{content: url('{{ webtrees }}/webtrees/images/silhouette_female_small.png');}
-.icon-silhouette-M 		{content: url('{{ webtrees }}/webtrees/images/silhouette_male_small.png');}
-.icon-silhouette-U 		{content: url('{{ webtrees }}/webtrees/images/silhouette_unknown_small.png');}
+.icon-silhouette-f 		{content: url('{{ webtrees }}/webtrees/images/silhouette_female_small.png');}
+.icon-silhouette-m 		{content: url('{{ webtrees }}/webtrees/images/silhouette_male_small.png');}
+.icon-silhouette-u      {content: url('{{ webtrees }}/webtrees/images/silhouette_unknown_small.png');}
+.icon-silhouette-x 		{content: url('{{ webtrees }}/webtrees/images/silhouette_unknown_small.png');}
 .icon-indis 			{content: url('{{ webtrees }}/webtrees/images/indis.png');}
 .icon-patriarch 		{content: url('{{ webtrees }}/webtrees/images/patriarch.png');}
 .icon-pedigree 			{content: url('{{ webtrees }}/webtrees/images/pedigree.png');}

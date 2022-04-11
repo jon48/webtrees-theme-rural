@@ -53,6 +53,12 @@ html {
     --sex-u-bg: #fff;
     --sex-u-fg: #808080;
     --sex-u-chart: #ebebeb;
+    // Yellow tones for sex X
+    --sex-x-bg: #fae8c7;
+    --sex-x-fg: #f4ab62;
+    // Purple tones for sex X
+    //--sex-x-bg: #e0e2ea;
+    //--sex-x-fg: #8a6f9b;
 }
 
 @include maj-cssvars((
@@ -221,46 +227,29 @@ select,
 */
 
 /**
- * Select2 overrides
+ * Tom-select overrides
  */
 
-.select2-container {
-    .select2-selection,
-    .select2-dropdown {
-        background-color: $maj-c-theme-lighter;
+.ts-dropdown {
+    background-color: $maj-c-theme-lighter;
+    
+    .active {
+        background-color: $maj-c-theme-light;
     }
     
-    .select2-results {
-        > .select2-results__options {
-            padding-left: 0;
+    .option {
+        &:hover {
+            background-color: $maj-c-theme-medium;
+            color: unset;
         }
         
-        .select2-results__option {
-            &[aria-selected=true] {
-                background-color: $maj-c-theme-light;
-            }
-            
-            &--highlighted[aria-selected] {
-                background-color: $maj-c-theme-medium;
-                color: unset;
-            }
+        .gallery {
+            margin-right: 0.5 * $input-padding-x;
         }
     }
     
-    .select2-selection--single {
-        height: auto;
-        min-height: 28px;
-        
-        .select2-container--default .select2-results__option--highlighted[aria-selected]
-
-        .select2-selection__rendered {
-            padding-left: $input-padding-x;
-            
-            .gallery {
-                margin-left: - 0.75 * $input-padding-x;
-                margin-right: 0.5 * $input-padding-x;
-            }
-        }
+    .spinner::after {
+        border-color: $maj-c-theme-medium transparent;
     }
 }
 

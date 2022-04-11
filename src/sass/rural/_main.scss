@@ -34,6 +34,8 @@
  */
 
 main {
+    flex: unset;
+    
     .wt-main-container {
         @extend .table-responsive;
         @include maj-base-layout-col;
@@ -259,15 +261,25 @@ form.wt-page-content {
         background-color: $maj-c-theme-light;
         border-style: none;
     }
+    
+    .wt-sex-f td {
+        background-color: var(--sex-f-bg);
+        border-color: var(--sex-f-fg);
+    }
 	
-    .wt-gender-M td {
+    .wt-sex-m td {
         background-color: var(--sex-m-bg);
         border-color: var(--sex-m-fg);
     }
-
-    .wt-gender-F td {
-        background-color: var(--sex-f-bg);
-        border-color: var(--sex-f-fg);
+    
+    .wt-sex-u td {
+        background-color: var(--sex-u-bg);
+        border-color: var(--sex-u-fg);
+    }
+    
+    .wt-sex-x td {
+        background-color: var(--sex-x-bg);
+        border-color: var(--sex-x-fg);
     }
 
     .btn-light {

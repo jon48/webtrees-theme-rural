@@ -41,8 +41,6 @@
  */
 
 .wt-chart-box {
-    background: var(--sex-u-bg);
-    border: dashed var(--sex-u-fg) thin;
     line-height: 1.1;
     padding: 2px;
 
@@ -111,26 +109,38 @@
 
     .wt-chart-hourglass & {
         width: 19.8rem;
-    }	
-}
-
-.wt-chart-box-m {
-    background: var(--sex-m-bg);
-    border: solid var(--sex-m-fg) thin;
-    
-    .dropdown-menu {
-        background: var(--sex-m-bg);
-        border-color: var(--sex-m-fg);
     }
-}
-
-.wt-chart-box-f {
-    background: var(--sex-f-bg);
-    border: solid var(--sex-f-fg) thin;
-
-    .dropdown-menu {
-        background: var(--sex-f-bg);
-        border-color: var(--sex-f-fg);
+    
+    &-m {
+        &,
+        .dropdown-menu {
+            background: var(--sex-m-bg);
+            border: solid var(--sex-m-fg) thin;
+        }
+    }
+    
+    &-f {
+        &,
+        .dropdown-menu {
+            background: var(--sex-f-bg);
+            border: solid var(--sex-f-fg) thin;
+        }
+    }
+    
+    &-u {
+        &,
+        .dropdown-menu {
+            background: var(--sex-u-bg);
+            border: dashed var(--sex-u-fg) thin;
+        }
+    }
+    
+    &-x {
+        &,
+        .dropdown-menu {
+            background: var(--sex-x-bg);
+            border: solid var(--sex-x-fg) thin;
+        }
     }
 }
 

@@ -36,14 +36,17 @@
 }
 
 .wt-individual-silhouette {
-    content: url('{{ webtrees }}/images/individual-silhouette-unknown.png');
-	
     &-f {
         content: url('{{ webtrees }}/images/individual-silhouette-female.png');
     }
 
     &-m {
         content: url('{{ webtrees }}/images/individual-silhouette-male.png');
+    }
+    
+    &-u,
+    &-x {
+        content: url('{{ webtrees }}/images/individual-silhouette-unknown.png');
     }
 }
 
