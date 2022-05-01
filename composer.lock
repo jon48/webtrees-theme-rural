@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fd133b31828940437783a0ebdf7a2a63",
+    "content-hash": "7d587ad1f5b24416fa796397f6762441",
     "packages": [],
     "packages-dev": [
         {
@@ -1578,16 +1578,16 @@
         },
         {
             "name": "fisharebest/webtrees",
-            "version": "2.1.0",
+            "version": "2.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fisharebest/webtrees.git",
-                "reference": "4a60ae3079a9443784756d1214bedd6d346f9e54"
+                "reference": "1dce02290371c1f0bd8da4b758c60502bbf67957"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fisharebest/webtrees/zipball/4a60ae3079a9443784756d1214bedd6d346f9e54",
-                "reference": "4a60ae3079a9443784756d1214bedd6d346f9e54",
+                "url": "https://api.github.com/repos/fisharebest/webtrees/zipball/1dce02290371c1f0bd8da4b758c60502bbf67957",
+                "reference": "1dce02290371c1f0bd8da4b758c60502bbf67957",
                 "shasum": ""
             },
             "require": {
@@ -1681,9 +1681,9 @@
             ],
             "support": {
                 "issues": "https://github.com/fisharebest/webtrees/issues",
-                "source": "https://github.com/fisharebest/webtrees/tree/2.1.0"
+                "source": "https://github.com/fisharebest/webtrees/tree/2.1.1"
             },
-            "time": "2022-04-20T12:49:31+00:00"
+            "time": "2022-04-29T08:58:45+00:00"
         },
         {
             "name": "grasmash/expander",
