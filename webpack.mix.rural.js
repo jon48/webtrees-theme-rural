@@ -12,8 +12,8 @@ require('laravel-mix-clean');
 // https://github.com/postcss/autoprefixer
 const postcssAutoprefixer = require('autoprefixer')();
 
-// https://github.com/jakob101/postcss-inline-rtl
-const postcssRtl = require('@mjhenkes/postcss-rtl')();
+// https://github.com/elchininet/postcss-rtlcss
+const postcssRtl = require('postcss-rtlcss')({ safeBothPrefix: true });
 
 // https://github.com/gridonic/postcss-replace
 const postcssReplace = require('postcss-replace')({
