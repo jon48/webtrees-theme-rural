@@ -93,10 +93,6 @@ main {
         .btn-secondary {
             @extend .maj-secondary-button-theme-lighter;
         }
-        
-        .form-group {
-            margin-bottom: unset;
-        }
 		
         &-label {
             background-color: $maj-c-theme-medium;
