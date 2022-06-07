@@ -29,6 +29,7 @@ declare(strict_types=1);
 namespace MyArtJaub\Webtrees\Module;
 
 use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\Site;
 use Fisharebest\Webtrees\View;
 use Fisharebest\Webtrees\Webtrees;
 use Fisharebest\Webtrees\Module\AbstractModule;
@@ -125,14 +126,13 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
         return 'Jonathan Jaubart';
     }
 
-
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleCustomInterface::customModuleVersion()
      */
     public function customModuleVersion(): string
     {
-        return '2.0.23-v.2';
+        return '2.0.24-v.1';
     }
 
     /**
@@ -146,7 +146,8 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
                 'm' => $this->customModuleVersion(),
                 'w' => Webtrees::VERSION,
                 'p' => PHP_VERSION,
-                'o' => DIRECTORY_SEPARATOR === '/' ? 'u' : 'w'
+                'o' => DIRECTORY_SEPARATOR === '/' ? 'u' : 'w',
+                's' => Site::getPreference('SITE_UUID')
             ]);
     }
 
