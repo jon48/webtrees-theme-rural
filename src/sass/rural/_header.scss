@@ -218,8 +218,7 @@
             }
 			
             .dropdown-item {
-                /* Space between icons and align with submenu icons */
-                padding: 0 10px 0 0;
+                @include maj-dropdown-left-align($padding-y: 0);
 				
                 &::before {
                     line-height: 2;

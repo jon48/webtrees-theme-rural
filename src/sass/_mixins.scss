@@ -48,6 +48,25 @@
     }
 }
 
+@mixin maj-chartbox-sex($sex, $border-style: solid) {
+    &-#{$sex} {
+        &,
+        .dropdown-menu {
+            background: var(--sex-#{$sex}-bg);
+            border: $border-style var(--sex-#{$sex}-fg) thin;
+            
+            .dropdown-item:hover {
+                background: var(--sex-#{$sex}-bg);
+                filter: brightness(93%);
+            }
+        }
+    }
+}
+
+@mixin maj-dropdown-left-align($padding-y: $dropdown-item-padding-y, $important: false) {
+    padding: $padding-y (2 * $dropdown-item-padding-x) $padding-y 0 #{if($important, '!important', '')};
+}
+
 @mixin maj-secondary-button {
     .btn-secondary {
         @include button-variant($maj-c-theme-lighter, $maj-c-theme-medium, $active-background: $primary);

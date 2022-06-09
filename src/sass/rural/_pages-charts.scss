@@ -112,37 +112,22 @@
         width: 19.8rem;
     }
     
-    &-m {
-        &,
-        .dropdown-menu {
-            background: var(--sex-m-bg);
-            border: solid var(--sex-m-fg) thin;
+    .dropdown-item {
+        @include maj-dropdown-left-align;
+        
+        &.p-1 {
+            @include maj-dropdown-left-align($important: true);
         }
     }
-    
-    &-f {
-        &,
-        .dropdown-menu {
-            background: var(--sex-f-bg);
-            border: solid var(--sex-f-fg) thin;
-        }
-    }
-    
-    &-u {
-        &,
-        .dropdown-menu {
-            background: var(--sex-u-bg);
-            border: dashed var(--sex-u-fg) thin;
-        }
-    }
-    
-    &-x {
-        &,
-        .dropdown-menu {
-            background: var(--sex-x-bg);
-            border: solid var(--sex-x-fg) thin;
-        }
-    }
+
+    /* stylelint-disable order/order */
+
+    @include maj-chartbox-sex('m');
+    @include maj-chartbox-sex('f');
+    @include maj-chartbox-sex('u', $border-style: dashed);
+    @include maj-chartbox-sex('x');
+
+    /* stylelint-enable order/order */
 }
 
 /*

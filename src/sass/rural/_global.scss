@@ -129,6 +129,8 @@ h4 {
         overflow-x: hidden;
 
         .dropdown-item {
+            box-sizing: content-box;
+
             &.active {
                 &:hover,
                 &:focus {
