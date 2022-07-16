@@ -83,13 +83,21 @@
     .wt-chart-pedigree-left & {
         margin: 0.4rem;
         margin-right: 0;
-        width: 23rem;
+        width: 20rem;
+        
+        @include media-breakpoint-up(xxl) {
+            width: 23rem;
+        }
     }
 
     .wt-chart-pedigree-right & {
         margin: 0.4rem;
         margin-left: 0;
-        width: 23rem;
+        width: 20rem;
+        
+        @include media-breakpoint-up(xxl) {
+            width: 23rem;
+        }
     }
 
     .wt-chart-pedigree-up & {
