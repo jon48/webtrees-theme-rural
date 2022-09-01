@@ -190,7 +190,7 @@
             
             background: $white linear-gradient(to top, rgba($maj-c-theme-medium, 0), rgba($maj-c-theme-medium, 0.6), rgba($maj-c-theme-medium, 1));
             justify-content: space-evenly;
-            margin-top: $container-padding-x;
+            margin-top: $container-padding-x * 0.5;
             padding-bottom: 1rem;
             padding-top: 0.5rem;
 

@@ -34,7 +34,7 @@ $info: $maj-c-theme-dark;
 //$enable-caret: true !default;
 //$enable-rounded: true !default;
 //$enable-shadows: false !default;
-$enable-gradients: true !default;
+$enable-gradients: true;
 //$enable-transitions: true !default;
 //$enable-prefers-reduced-motion-media-query: true !default;
 //$enable-grid-classes: true !default;
@@ -113,5 +113,5 @@ $pagination-disabled-bg: transparent;
 
 $table-color: $primary;
 $table-border-color: transparent;
-$table-group-separator-color: transparent;
+//$table-group-separator-color: transparent;
 $table-striped-bg: $maj-c-theme-light;
