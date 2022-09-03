@@ -71,13 +71,16 @@
 .wt-tabs-individual {
     @extend .maj-content-tabs;
 
-    .row.osm-wrapper {
-        padding-left: 0.5rem;
-        padding-right: 0.5rem;
-    }
-
     .field {
         color: #000;
+    }
+    
+    .wt-places-tab-wrapper {
+        @extend .mx-2;
+        
+        .wt-page-options-value {
+            border-style: none;
+        }
     }
 }
 

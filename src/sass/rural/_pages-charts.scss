@@ -142,17 +142,23 @@
  * Pedigree map
  */
 
-.row.osm-wrapper {
-    @extend .container;
+.wt-pedigree-map-wrapper {
+    @extend .mx-1;
 }
 
-.osm-sidebar {
+.wt-pedigree-map-sidebar {
+    row-gap: 0.5rem;
+    
+    &.wt-page-options-value {
+        border-style: none;
+    }
+    
     .gchart {
         border: dashed 1px $maj-c-theme-dark;
         color: $maj-c-theme-primary;
-        margin-bottom: 0.5rem;
-
-        .label {
+        padding: 3px;
+        
+        > div > div > div:first-child {
             font-weight: bold;
         }
     }
