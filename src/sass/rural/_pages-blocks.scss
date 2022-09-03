@@ -21,11 +21,24 @@
  * along with webtrees-MyArtJaub. If not, see <https://www.gnu.org/licenses/>.
  */
 
+
 @mixin maj-block-large {
     background-image: url('block_bg.png');
     background-repeat: repeat-y;
     padding-left: 46px;
     padding-top: 0;
+}
+
+.wt-main-blocks {
+    @extend .px-0;
+    
+    @include media-breakpoint-up(md) {
+        padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+    }
+}
+
+.wt-side-blocks {
+    @extend .px-0;
 }
 
 .wt-block {

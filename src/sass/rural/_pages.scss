@@ -30,6 +30,24 @@
  * The individual page.
  *
  */
+ 
+.wt-route-IndividualPage .wt-main-container > .row {
+    .col-sm-8 {
+        @extend .px-0;
+        
+        @include media-breakpoint-up(sm) {
+            padding-right: calc(var(--bs-gutter-x) * 0.5) !important;
+        }
+    }
+
+    .col-sm-4 {
+        @extend .px-0;
+        
+        @include media-breakpoint-down(sm) {
+            margin-top: 1rem;
+        }
+    }
+}
 
 .img-thumbnail {
     text-align: center;
