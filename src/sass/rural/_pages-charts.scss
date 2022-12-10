@@ -186,6 +186,15 @@
     left: 0;
     position: relative;
     top: 0;
+    
+    /*
+    Hack for removing leftover elements after removing all individuals.
+    Other themes do not show this behaviour.
+    See https://github.com/jon48/webtrees-theme-rural/issues/56
+    */
+    &:not([style]) {
+        display: none;
+    }
 }
 
 @each $nb, $colors in $maj-c-persons {
