@@ -29,6 +29,9 @@
 // Import Bootstrap config first
 @import './bootstrap/config';
 
+// Apply vendors patches
+@import './vendor-patches';
+
 @import './mixins';
 
 @import './webtrees/config';

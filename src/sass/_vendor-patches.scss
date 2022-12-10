@@ -25,11 +25,3 @@
   * Use this file to apply temporary patches to upstream libraries.
   * To be reviewed at each release.
   */
-
-/**
- * Bootstrap 5.2.0 introduce background gradient to btn-link buttons.
- * See https://github.com/twbs/bootstrap/discussions/36998
- */
-.btn-link {
-    background-image: none;
-}

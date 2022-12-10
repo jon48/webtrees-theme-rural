@@ -1,0 +1,19 @@
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-type: "production"
+    open-pull-requests-limit: 0
+  - package-ecosystem: "composer"
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+    allow:
+      - dependency-type: "production"
+    open-pull-requests-limit: 0
