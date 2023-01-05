@@ -26,7 +26,7 @@
     "laravel-mix": "^6.0.19",
     "laravel-mix-clean": "^0.1.0",
     "postcss": "^8.3.0",
-    "postcss-custom-properties": "^13.0.0",
+    "postcss-custom-properties": "^12.1.11",
     "postcss-image-inliner": "^6.0.1",
     "postcss-import": "^15.0.0",
     "postcss-replace": "^1.1.3",

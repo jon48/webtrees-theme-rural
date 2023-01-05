@@ -1,7 +1,7 @@
-![Latest version)](https://img.shields.io/github/v/release/jon48/webtrees-theme-rural)
+![Latest version](https://img.shields.io/github/v/release/jon48/webtrees-theme-rural)
 ![Release date](https://img.shields.io/github/release-date-pre/jon48/webtrees-theme-rural)
 ![Downloads](https://img.shields.io/github/downloads/jon48/webtrees-theme-rural/total)
-![Licence](https://img.shields.io/github/license/jon48/webtrees-theme-rural)
+![License](https://img.shields.io/github/license/jon48/webtrees-theme-rural)
 
 # webtrees-theme-rural
 Rural Theme for the **[webtrees](https://webtrees.net/)** application
@@ -38,14 +38,14 @@ See the [LICENSE](LICENSE.md) included with this software for more detailed lice
 ### Introduction
 
 The Rural theme has first been created for PhpGedView in 2009.
-It has since then be migrated to **webtrees**, and followed the subsequent evolutions, up to the latest version.
+It has since then been migrated to **webtrees**, and followed the subsequent evolutions, up to the latest version.
 Initially embedded in a larger code base, I have extracted it to its own GitHub repository in 2018.
 
-The Rural theme is mainly based on brown tones, as a tribute to the earth our ancestors used to cultivate, with some green, color of nature. Contrary to other standard themes which use the full width of the screen, its characteristic layout is  organised around the main genealogical content being wrapped within a responsive white panel on a brown background.
+The Rural theme is mainly based on brown tones, as a tribute to the earth our ancestors used to cultivate, with some green, colour of nature. Contrary to other standard themes which use the full width of the screen, its characteristic layout is organised around the main genealogical content being wrapped within a responsive white panel on a brown background.
 
 The header logo can be customised to any image, as long as its height does not exceed 150px (instructions below).
 
-Having been a loyal companion to my **webtrees** experience for so many year now, I am happy to share the Rural theme and hope it can find its way to your list of themes.
+Having been a loyal companion to my **webtrees** experience for so many years now, I am happy to share the Rural theme and hope it can find its way to your list of themes.
 
 *Jonathan Jaubart*
 
@@ -72,7 +72,7 @@ The installation or upgrade process follows the standard one for webtrees themes
 
 Steps:
 
-1. Download the latest release compatible with your **webtrees** version from the [webtrees-theme-rural Github repository](https://github.com/jon48/webtrees-theme-rural/releases).
+1. Download the latest release compatible with your **webtrees** version from the [webtrees-theme-rural GitHub repository](https://github.com/jon48/webtrees-theme-rural/releases).
 2. Unzip the archive in the root of your webtrees installation. The zip file contains the full structure of folders, and will merge with your current one.
 3. Check if the folder `rural` is now present in the `/themes/` directory.
 4. Open **webtrees** and the Rural Theme should now be available in the list of themes.
@@ -81,7 +81,7 @@ Steps:
 
 Steps:
 
-1. Download the latest release compatible with your **webtrees** version from the [webtrees-theme-rural Github repository](https://github.com/jon48/webtrees-theme-rural/releases).
+1. Download the latest release compatible with your **webtrees** version from the [webtrees-theme-rural GitHub repository](https://github.com/jon48/webtrees-theme-rural/releases).
 2. Unzip the archive in `/modules_v4/`.
 3. Check if the folder `myartjaub_ruraltheme` is now present in the `/modules_v4/` directory.
 4. Open **webtrees** and the Rural Theme should now be available in the list of themes.
@@ -180,10 +180,10 @@ NPM modes are:
 
 - `production`: generates the `rural.min.css` file in production mode, and all required files. (Runs the `webtrees` and `rural` modes below, with the production flag)
 - `development`: generates the `rural.min.css` file in development mode, and all required files. (Runs the `webtrees` and `rural` modes below)
-- `webtrees`: generates intermediary CSS from the mainstream webtrees into the `/build/` folder. Those intermediary files are then injected in the main Rural theme CSS. Those files needs to be generated once before running other modes, or after webtrees version has been updated via Composer. (Laravel Mix entry point: `webpack.mix.webtrees.js`)
+- `webtrees`: generates intermediary CSS from the mainstream webtrees into the `/build/` folder. Those intermediary files are then injected in the main Rural theme CSS. Those files need to be generated once before running other modes, or after webtrees version has been updated via Composer. (Laravel Mix entry point: `webpack.mix.webtrees.js`)
 - `rural`: generates the `rural.min.css` file in development mode (not minified). Requires the `webtrees` mode to have run once. (Laravel Mix entry point: `webpack.mix.rural.js`)
 - `watch`: watches for changes in SASS code, and generate the `rural.min.css` file in development mode. Requires the `webtrees` mode to have run once. (Laravel Mix entry point: `webpack.mix.rural.js`)
-- `eslint` / `eslint-fix`: Respectively checks and automatically format Javascript code to enforce Semi-Standard code style
+- `eslint` / `eslint-fix`: Respectively checks and automatically format JavaScript code to enforce Semi-Standard code style
 - `stylelint` / `stylelint-fix`: Respectively checks and automatically format CSS & SASS code to enforce StyleLint code style
 
 ### Issues / Security
@@ -197,5 +197,5 @@ A [security policy document](SECURITY.md) has been issued for this repository.
 General questions on the standard **webtrees** software should be addressed to the
 [official forum](https://www.webtrees.net/index.php/forum).
 
-You can contact the author (Jonathan Jaubart) of the **webtrees-theme-rural** projects through his personal [GeneaJaubart website](https://genea.jaubart.com/wt/) (link at the bottom of the page), or raise in issue in Github.
+You can contact the author (Jonathan Jaubart) of the **webtrees-theme-rural** projects through his personal [GeneaJaubart website](https://genea.jaubart.com/wt/) (link at the bottom of the page), or raise in issue in GitHub.
 
