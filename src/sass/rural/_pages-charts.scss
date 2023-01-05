@@ -139,29 +139,11 @@
 }
 
 /*
- * Pedigree map
+ * Pedigree map and Place hierarchy
  */
-
-.wt-pedigree-map-wrapper {
-    @extend .mx-1;
-}
-
-.wt-pedigree-map-sidebar {
-    row-gap: 0.5rem;
-    
-    &.wt-page-options-value {
-        border-style: none;
-    }
-    
-    .gchart {
-        border: dashed 1px $maj-c-theme-dark;
-        color: $maj-c-theme-primary;
-        padding: 3px;
-        
-        > div > div > div:first-child {
-            font-weight: bold;
-        }
-    }
+ 
+.wt-map {
+    outline: none;
 }
 
 .leaflet {
@@ -174,6 +156,59 @@
     
         .label {
             font-weight: bold;
+        }
+    }
+}
+
+// Map wrapper
+
+.wt-pedigree-map-wrapper,
+.wt-place-hierarchy-wrapper {
+    @extend .mx-1;
+}
+
+.wt-place-hierarchy-wrapper {
+    &,
+    ~ .text-center {
+        @extend .my-3;
+    }
+}
+
+// Map sidebar
+
+.wt-pedigree-map-sidebar,
+.wt-place-hierarchy-sidebar {
+    row-gap: 0.5rem;
+    
+    &.wt-page-options-value {
+        border-style: none;
+    }
+    
+    .gchart {
+        border: dashed 1px $maj-c-theme-dark;
+        color: $maj-c-theme-primary;
+        padding: 3px !important;
+        
+        > div > div > div:first-child {
+            font-weight: bold;
+        }
+    }
+}
+
+.wt-place-hierarchy-sidebar {
+    .gchart {
+        @extend .my-1;
+        
+        > .row {
+            @extend .mx-0;
+            
+            > * {
+                @extend .px-1;
+            }
+            
+            .align-digits {
+                text-align: right;
+            }
         }
     }
 }
