@@ -154,3 +154,28 @@
     }
 	
 }
+
+// News block
+
+.news_ {
+    &box {
+        hr {
+            border-top-style: dashed;
+            margin: 0;
+        }
+        
+        & + & {
+            @extend .pt-2;
+            
+            border-top: solid $maj-c-theme-dark 1px;
+        }
+    }
+
+    &title {
+        font-weight: bold;
+    }
+    
+    &date {
+        margin-bottom: 1rem;
+    }
+}
