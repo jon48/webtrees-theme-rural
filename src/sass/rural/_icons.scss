@@ -60,7 +60,7 @@
  * Default icons are provided by FontAwesome.
  */
 .wt-icon-anniversary	{}
-.wt-icon-bing-maps 		{content: url('{{ webtrees }}/icons/bing-maps.png');}
+.wt-icon-bing-maps 		{content: url($maj-webtrees-dir + '/icons/bing-maps.png');}
 .wt-icon-calendar 		{}
 .wt-icon-collapse 		{}
 .wt-icon-coordinates 	{}
@@ -69,13 +69,13 @@
 .wt-icon-edit 			{}
 .wt-icon-expand			{}
 .wt-icon-family 		{}
-.wt-icon-google-maps 	{content: url('{{ webtrees }}/icons/google-maps.png');}
+.wt-icon-google-maps 	{content: url($maj-webtrees-dir + '/icons/google-maps.png');}
 .wt-icon-help			{}
-.wt-icon-individual		{content: url('{{ webtrees }}/icons/individual.png');}
+.wt-icon-individual		{content: url($maj-webtrees-dir + '/icons/individual.png');}
 .wt-icon-keyboard		{}
 .wt-icon-media			{}
 .wt-icon-note			{}
-.wt-icon-openstreetmap 	{content: url('{{ webtrees }}/icons/openstreetmap.png');}
+.wt-icon-openstreetmap 	{content: url($maj-webtrees-dir + '/icons/openstreetmap.png');}
 .wt-icon-preferences	{}
 .wt-icon-reorder		{}
 .wt-icon-repository		{}
@@ -87,29 +87,29 @@
 
 /* Miscellaneous images */
 .icon-cfamily 			{}
-.icon-childless			{content: url('{{ webtrees }}/images/childless.png');}
-.icon-children			{content: url('{{ webtrees }}/images/children.png');}
-.icon-edit_indi 		{content: url('{{ webtrees }}/webtrees/images/edit_indi.png');}
-.icon-fam-list 			{content: url('{{ webtrees }}/webtrees/images/family.png');}
-.icon-indi-list 		{content: url('{{ webtrees }}/webtrees/images/indis.png');}
-.icon-loading-small 	{content: url('{{ webtrees }}/images/indicator.gif');}
-.icon-minus 			{content: url('{{ webtrees }}/icons/minus.png');}
+.icon-childless			{content: url($maj-webtrees-dir + '/images/childless.png');}
+.icon-children			{content: url($maj-webtrees-dir + '/images/children.png');}
+.icon-edit_indi 		{content: url($maj-webtrees-dir + '/webtrees/images/edit_indi.png');}
+.icon-fam-list 			{content: url($maj-webtrees-dir + '/webtrees/images/family.png');}
+.icon-indi-list 		{content: url($maj-webtrees-dir + '/webtrees/images/indis.png');}
+.icon-loading-small 	{content: url($maj-webtrees-dir + '/images/indicator.gif');}
+.icon-minus 			{content: url($maj-webtrees-dir + '/icons/minus.png');}
 .icon-mypage 			{content: url('mypage.png');}
-.icon-plus 				{content: url('{{ webtrees }}/icons/plus.png');}
-.icon-resn-confidential {content: url('{{ webtrees }}/images/resn_confidential.png');}
-.icon-resn-locked 		{content: url('{{ webtrees }}/images/resn_locked.png');}
-.icon-resn-none 		{content: url('{{ webtrees }}/images/resn_none.png');}
-.icon-resn-privacy 		{content: url('{{ webtrees }}/images/resn_privacy.png');}
-.icon-rings 			{content: url('{{ webtrees }}/images/rings.png');}
-.icon-selected 			{content: url('{{ webtrees }}/webtrees/images/selected.png');}
+.icon-plus 				{content: url($maj-webtrees-dir + '/icons/plus.png');}
+.icon-resn-confidential {content: url($maj-webtrees-dir + '/images/resn_confidential.png');}
+.icon-resn-locked 		{content: url($maj-webtrees-dir + '/images/resn_locked.png');}
+.icon-resn-none 		{content: url($maj-webtrees-dir + '/images/resn_none.png');}
+.icon-resn-privacy 		{content: url($maj-webtrees-dir + '/images/resn_privacy.png');}
+.icon-rings 			{content: url($maj-webtrees-dir + '/images/rings.png');}
+.icon-selected 			{content: url($maj-webtrees-dir + '/webtrees/images/selected.png');}
 
 /* Silhouettes on charts */
-.icon-silhouette-f 		{content: url('{{ webtrees }}/webtrees/images/silhouette_female_small.png');}
-.icon-silhouette-m 		{content: url('{{ webtrees }}/webtrees/images/silhouette_male_small.png');}
-.icon-silhouette-u      {content: url('{{ webtrees }}/webtrees/images/silhouette_unknown_small.png');}
-.icon-silhouette-x 		{content: url('{{ webtrees }}/webtrees/images/silhouette_unknown_small.png');}
-.icon-indis 			{content: url('{{ webtrees }}/webtrees/images/indis.png');}
-.icon-patriarch 		{content: url('{{ webtrees }}/webtrees/images/patriarch.png');}
-.icon-pedigree 			{content: url('{{ webtrees }}/webtrees/images/pedigree.png');}
-.icon-sfamily 			{content: url('{{ webtrees }}/webtrees/images/family.png');}
-.icon-user_add 			{content: url('{{ webtrees }}/webtrees/images/user_add.png');}
+.icon-silhouette-f 		{content: url($maj-webtrees-dir + '/webtrees/images/silhouette_female_small.png');}
+.icon-silhouette-m 		{content: url($maj-webtrees-dir + '/webtrees/images/silhouette_male_small.png');}
+.icon-silhouette-u      {content: url($maj-webtrees-dir + '/webtrees/images/silhouette_unknown_small.png');}
+.icon-silhouette-x 		{content: url($maj-webtrees-dir + '/webtrees/images/silhouette_unknown_small.png');}
+.icon-indis 			{content: url($maj-webtrees-dir + '/webtrees/images/indis.png');}
+.icon-patriarch 		{content: url($maj-webtrees-dir + '/webtrees/images/patriarch.png');}
+.icon-pedigree 			{content: url($maj-webtrees-dir + '/webtrees/images/pedigree.png');}
+.icon-sfamily 			{content: url($maj-webtrees-dir + '/webtrees/images/family.png');}
+.icon-user_add 			{content: url($maj-webtrees-dir + '/webtrees/images/user_add.png');}

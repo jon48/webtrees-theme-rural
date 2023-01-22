@@ -55,16 +55,16 @@
 
 .wt-individual-silhouette {
     &-f {
-        content: url('{{ webtrees }}/images/individual-silhouette-female.png');
+        content: url($maj-webtrees-dir + '/images/individual-silhouette-female.png');
     }
 
     &-m {
-        content: url('{{ webtrees }}/images/individual-silhouette-male.png');
+        content: url($maj-webtrees-dir + '/images/individual-silhouette-male.png');
     }
     
     &-u,
     &-x {
-        content: url('{{ webtrees }}/images/individual-silhouette-unknown.png');
+        content: url($maj-webtrees-dir + '/images/individual-silhouette-unknown.png');
     }
 }
 
