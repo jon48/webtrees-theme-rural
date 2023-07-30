@@ -177,14 +177,15 @@
 // Map sidebar
 
 .wt-pedigree-map-sidebar,
-.wt-place-hierarchy-sidebar {
-    row-gap: 0.5rem;
-    
+.wt-place-hierarchy-sidebar,
+.wt-places-tab-sidebar {
     &.wt-page-options-value {
         border-style: none;
     }
     
     .gchart {
+        @extend .my-1;
+
         border: dashed 1px $maj-c-theme-dark;
         color: $maj-c-theme-primary;
         padding: 3px !important;
@@ -197,8 +198,6 @@
 
 .wt-place-hierarchy-sidebar {
     .gchart {
-        @extend .my-1;
-        
         > .row {
             @extend .mx-0;
             
