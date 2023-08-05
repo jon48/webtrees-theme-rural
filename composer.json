@@ -32,9 +32,9 @@
 		}
 	},
 	"require-dev" : {
-		"fisharebest/webtrees" : "2.1.16",
+		"fisharebest/webtrees" : "2.1.17",
 		"consolidation/robo": "^3.0",
-        "psr/http-message": "^1.0"
+        "psr/http-message": "^1.1"
 	},
 	"scripts": {
 		"webtrees-theme-rural:package": "./vendor/bin/robo package",

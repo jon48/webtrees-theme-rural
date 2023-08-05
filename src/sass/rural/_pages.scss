@@ -236,7 +236,7 @@ form.wt-page-content {
     @extend .mx-auto;
     
     @include media-breakpoint-up(md) {
-        max-width: map-get($container-max-widths, 'md');
+        max-width: map.get($container-max-widths, 'md');
     }
 }
 
@@ -362,7 +362,7 @@ div {
  * Miscellaneous
  */
 
-.text-muted {
+.text-muted, .text-body-secondary {
     color: $maj-c-bluegray !important;
 
     &.nav-link {

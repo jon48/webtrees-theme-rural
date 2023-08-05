@@ -95,7 +95,7 @@ table.dataTable {
         }
     }
     
-    a.text-muted {
+    a.text-muted, a.text-body-secondary {
         color: $maj-c-theme-dark !important;
         
         &:hover {

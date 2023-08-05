@@ -71,7 +71,7 @@ main {
         @extend .container;
 		
         @include media-breakpoint-up(md) {
-            max-width: map-get($container-max-widths, 'md');
+            max-width: map.get($container-max-widths, 'md');
         }
 		
         &.w-100 {
@@ -107,7 +107,7 @@ main {
             padding: 0.5rem 0.75rem;
         }
         
-        .text-muted {
+        .text-muted, .text-body-secondary {
             color: $maj-c-theme-darker !important;
         }
 		
@@ -163,7 +163,7 @@ form.wt-page-content {
             font-weight: bold;
         }
 
-        &.text-muted {
+        &.text-muted, &.text-body-secondary {
             display: none;
 
             .wt-tabs-individual & {
@@ -251,6 +251,9 @@ form.wt-page-content {
         border-style: none;
         font-weight: bold;
         text-align: center;
+    }
+    
+    tbody > tr > th {
         width: 20%;
     }
 	

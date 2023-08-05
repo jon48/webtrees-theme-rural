@@ -201,7 +201,7 @@
             }
 			
             .nav-item +	.nav-item {
-                background-image: linear-gradient(to top, $maj-c-theme-lighter, lighten($maj-c-theme-medium, 30%), lighten($maj-c-theme-medium, 70%), $maj-c-theme-medium);
+                background-image: linear-gradient(to top, $maj-c-theme-lighter, color.adjust($maj-c-theme-medium, $lightness:30%), color.adjust($maj-c-theme-medium, $lightness:70%), $maj-c-theme-medium);
                 background-position: left;
                 background-repeat: no-repeat;
                 background-size: 1px;

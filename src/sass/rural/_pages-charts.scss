@@ -176,9 +176,7 @@
 
 // Map sidebar
 
-.wt-pedigree-map-sidebar,
-.wt-place-hierarchy-sidebar,
-.wt-places-tab-sidebar {
+.wt-map-sidebar {
     &.wt-page-options-value {
         border-style: none;
     }
@@ -194,19 +192,19 @@
             font-weight: bold;
         }
     }
-}
-
-.wt-place-hierarchy-sidebar {
-    .gchart {
-        > .row {
-            @extend .mx-0;
-            
-            > * {
-                @extend .px-1;
-            }
-            
-            .align-digits {
-                text-align: right;
+    
+    #place-hierarchy & {
+        .gchart {
+            > .row {
+                @extend .mx-0;
+                
+                > * {
+                    @extend .px-1;
+                }
+                
+                .align-digits {
+                    text-align: right;
+                }
             }
         }
     }
@@ -233,8 +231,8 @@
 
 @each $nb, $colors in $maj-c-persons {
     .person#{$nb} {
-        background-color: map-get($colors, 'background');
-        border: outset map-get($colors, 'border') 1px;
+        background-color: map.get($colors, 'background');
+        border: outset map.get($colors, 'border') 1px;
         border-radius: 3px;
         margin-right: 0.2rem;
         vertical-align: top;
