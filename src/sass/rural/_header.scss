@@ -91,7 +91,7 @@
 
         order: 2;
 		
-        font-size: 1.5rem; /* stylelint-disable-line order/properties-alphabetical-order */
+        font-size: 1.5rem;
         font-weight: bold;
 		
         margin: 0;
@@ -117,7 +117,7 @@
 		
         order: 3;
 
-        align-self: flex-end; /* stylelint-disable-line order/properties-alphabetical-order */
+        align-self: flex-end;
         display: flex;
         flex-direction: column-reverse;
 
@@ -131,7 +131,7 @@
         order: 1;
 		
         //font-size: 1em;
-        font-weight: bold; /* stylelint-disable-line order/properties-alphabetical-order */
+        font-weight: bold;
 		
         .wt-user-menu {
             flex-direction: row-reverse;
@@ -183,7 +183,7 @@
         
         order: 4;
 		
-        background-color: $white; /* stylelint-disable-line order/properties-alphabetical-order */
+        background-color: $white;
 		
         .wt-genealogy-menu {
             @include border-radius(1.75rem);
