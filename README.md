@@ -20,8 +20,8 @@ Rural Theme for the **[webtrees](https://webtrees.net/)** application
 ### License
 
 * **webtrees-theme-rural: Rural Theme for webtrees**
-* Copyright (C) 2009 to 2023 Jonathan Jaubart.
-* Derived from **webtrees** - Copyright (C) 2010 to 2023  webtrees development team.
+* Copyright (C) 2009 to 2024 Jonathan Jaubart.
+* Derived from **webtrees** - Copyright (C) 2010 to 2024  webtrees development team.
 * Derived from PhpGedView - Copyright (C) 2002 to 2010  PGV Development Team.
 
 This program is free software; you can redistribute it and/or modify it under the

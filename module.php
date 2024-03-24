@@ -4,7 +4,7 @@
  * Rural Theme
  *
  * webtrees-MyArtJaub
- * Copyright (C) 2009-2023 Jonathan Jaubart
+ * Copyright (C) 2009-2024 Jonathan Jaubart
  *
  * Based on webtrees: online genealogy
  * Copyright (C) 2020 webtrees development team
