@@ -169,28 +169,17 @@ select,
 }
 
 .pagination {
-    .page-link {
-        background-image: $maj-bg-theme-medium-background-image;
-    }
-	
     .page-item {
+        .page-link, &.disabled .page-link {
+            background-image: $maj-bg-theme-medium-background-image;
+        }
+        
         &.active .page-link {
             background-image: none;
         }
-		
+        
         &.disabled {
-            .page-link {
-                background-image: none;
-            }
-			
-            &.previous,
-            &.next {
-                opacity: 0.5;
-				
-                .page-link {
-                    background-image: $maj-bg-theme-medium-background-image;
-                }
-            }
+            opacity: 0.5;
         }
     }
 }

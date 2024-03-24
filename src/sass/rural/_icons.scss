@@ -49,7 +49,9 @@
 
 /* Sex icons */
 
-.wt-icon-sex {	
+.wt-icon-sex {
+    height: 1em;
+    
     &-f 	{color: var(--sex-f-fg);}
     &-m 	{color: var(--sex-m-fg);}
     &-u 	{color: var(--sex-u-fg);}

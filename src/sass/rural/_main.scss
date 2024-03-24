@@ -181,7 +181,7 @@ form.wt-page-content {
     border-top-style: none;
     padding: 1em;
 
-    .dataTables_wrapper {
+    .dt-container {
         border-style: none;
     }
 
@@ -284,6 +284,21 @@ form.wt-page-content {
 
     .btn-light {
         @extend .btn-primary;
+    }
+    
+    table {
+        td {
+            border-bottom: thin dashed $maj-c-theme-medium;
+            border-right: thin dashed $maj-c-theme-medium;
+            
+            &:last-child {
+                border-right-style: none;
+            }
+        }
+        
+        tr:last-child td {
+            border-bottom-style: none;
+        }
     }
 }
 
