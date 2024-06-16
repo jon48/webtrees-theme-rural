@@ -25,19 +25,3 @@
   * Use this file to apply temporary patches to upstream libraries.
   * To be reviewed at each release.
   */
-
-
-/*webtrees 2.1.19 switched to datatables.net-bs5 2.0, which comes with breaking changes
- * Temporarily revert/neutralise them, to give time to analyse the best way to address the version change
- */ 
-
-table.dataTable {
-    &.table {
-        margin-bottom: 6px;
-        border-spacing: 2px;
-    }
-    
-    th.dt-type-numeric, td.dt-type-numeric {
-        text-align: unset;
-    }
-}

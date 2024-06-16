@@ -26,7 +26,7 @@ table.center {
     margin-right: auto;
 }
 
-.dt-container {
+.dataTables_wrapper {
     @extend .table-responsive;
     @extend .maj-content-tabs;
     @extend .mx-auto;
@@ -35,10 +35,10 @@ table.center {
         max-width: 75%;
     }
 	
-    .dt-info,
-    .dt-length,
-    .dt-search,
-    .dt-paging {
+    .dataTables_info,
+    .dataTables_length,
+    .dataTables_filter,
+    .dataTables_paginate {
         padding: 0.4em;
     }
 }
@@ -52,7 +52,7 @@ div[role=tabpanel],
 div[id^=table-indi],
 div[id^=table-fam],
 .maj-table-full-width {
-    .dt-container {
+    .dataTables_wrapper {
         max-width: 100%;
     }
 }
