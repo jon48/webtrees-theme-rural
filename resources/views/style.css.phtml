@@ -5,4 +5,4 @@
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 
 ?>
-.wt-site-logo { background-image: url('<?= app(ModuleThemeInterface::class)->assetUrl('images/header.png'); ?>'); }
+.wt-site-logo { background-image: url('<?= Registry::container()->get(ModuleThemeInterface::class)->assetUrl('images/header.png'); ?>'); }
