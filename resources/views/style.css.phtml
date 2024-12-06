@@ -3,6 +3,7 @@
 /* Customisable CSS entries */
 
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
+use Fisharebest\Webtrees\Registry;
 
 ?>
 .wt-site-logo { background-image: url('<?= Registry::container()->get(ModuleThemeInterface::class)->assetUrl('images/header.png'); ?>'); }
