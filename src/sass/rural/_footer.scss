@@ -28,9 +28,9 @@
  */
 
 .wt-global .wt-footers {
-    @include maj-base-layout-col;
-	
     background-color: #fff;
+    
+    @include maj-base-layout-col;
 	
     .wt-footer-powered-by {
         a {

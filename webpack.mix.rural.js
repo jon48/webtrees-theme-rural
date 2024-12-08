@@ -30,7 +30,11 @@ mix
     '~build': config.build_dir
   })
   .sass('src/sass/theme.scss', config.public_dir + '/css/rural.min.css', {
-    additionalData: '$maj-webtrees-dir: ' + config.webtrees_dir + ';'
+    additionalData: '$maj-webtrees-dir: ' + config.webtrees_dir + ';',
+    sassOptions: {
+      quietDeps: true,
+      silenceDeprecations: ['import']
+    }
   })
   .options({
     processCssUrls: false,
@@ -41,6 +45,7 @@ mix
       postcssCustomProperties
     ]
   })
+  // .webpackConfig({ stats: { children: true } })
   .copy(config.images_dir + '/header.png', config.public_dir + '/images')
   .clean()
 ;

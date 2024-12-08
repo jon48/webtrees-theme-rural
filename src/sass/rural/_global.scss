@@ -25,7 +25,8 @@ html {
     font-size: $maj-base-font-size;
 }
 
-::backdrop, .wt-global {
+::backdrop,
+.wt-global {
     background: #fff linear-gradient(to top, #fff, $maj-c-background) repeat-x;
 
 }
@@ -170,7 +171,8 @@ select,
 
 .pagination {
     .page-item {
-        .page-link, &.disabled .page-link {
+        .page-link,
+        &.disabled .page-link {
             background-image: $maj-bg-theme-medium-background-image;
         }
         
