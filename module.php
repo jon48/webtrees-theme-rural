@@ -39,6 +39,7 @@ use Fisharebest\Webtrees\Module\ModuleFooterInterface;
 use Fisharebest\Webtrees\Module\ModuleFooterTrait;
 use Fisharebest\Webtrees\Module\ModuleThemeInterface;
 use Fisharebest\Webtrees\Module\ModuleThemeTrait;
+use Fisharebest\Webtrees\Registry;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 
@@ -162,7 +163,7 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
      */
     public function getFooter(\Psr\Http\Message\ServerRequestInterface $request): string
     {
-        if (app(ModuleThemeInterface::class)->name() === $this->name()) {
+        if (Registry::container()->get(ModuleThemeInterface::class)->name() === $this->name()) {
             return view($this->name() . '::footer');
         }
         return '';
