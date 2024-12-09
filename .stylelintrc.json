@@ -9,6 +9,7 @@
         "selector-max-compound-selectors": [4, { "severity": "warning" }],
         "selector-max-id": 1,
         "selector-no-qualifying-type": null,
-        "scss/at-extend-no-missing-placeholder": null
+        "scss/at-extend-no-missing-placeholder": null,
+        "@stylistic/indentation": 4
     }
 }

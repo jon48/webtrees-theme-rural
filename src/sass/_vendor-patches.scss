@@ -20,8 +20,43 @@
  * You should have received a copy of the GNU General Public License
  * along with webtrees-MyArtJaub. If not, see <https://www.gnu.org/licenses/>.
  */
- 
+
 /*
   * Use this file to apply temporary patches to upstream libraries.
   * To be reviewed at each release.
   */
+
+/*webtrees 2.1.21 switched to datatables.net-bs5 2.0, which comes with breaking changes
+ * Temporarily revert/neutralise them, to give time to analyse the best way to address the version change
+*/
+
+.dt-container.dt-bootstrap5 {
+    padding-top: 0;
+    
+    > .row {
+        margin-left: 0;
+        margin-right: 0;
+        
+        &:first-child {
+            margin-top: 0 !important;
+        }
+        
+        > .dt-layout-start,
+        > .dt-layout-full {
+            padding-left: 0;
+        } 
+        
+
+        > .dt-layout-end,
+        > .dt-layout-full {
+            padding-right: 0;
+        } 
+    }
+    
+    .dataTable {
+        th.dt-type-numeric,
+        td.dt-type-numeric {
+            text-align: inherit;
+        }
+    }
+}

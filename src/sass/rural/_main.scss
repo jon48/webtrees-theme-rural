@@ -38,7 +38,6 @@ main {
     
     .wt-main-container {
         @extend .table-responsive;
-        @include maj-base-layout-col;
 		
         background-color: $white;
         overflow-x: visible;
@@ -46,6 +45,8 @@ main {
         /* Space between the header/footer and the main content. */
         padding-bottom: 1rem;
         padding-top: 1rem;
+        
+        @include maj-base-layout-col;
 
         > .row {
             margin-left: 0;
@@ -107,7 +108,8 @@ main {
             padding: 0.5rem 0.75rem;
         }
         
-        .text-muted, .text-body-secondary {
+        .text-muted,
+        .text-body-secondary {
             color: $maj-c-theme-darker !important;
         }
 		
@@ -163,7 +165,8 @@ form.wt-page-content {
             font-weight: bold;
         }
 
-        &.text-muted, &.text-body-secondary {
+        &.text-muted,
+        &.text-body-secondary {
             display: none;
 
             .wt-tabs-individual & {
@@ -181,7 +184,7 @@ form.wt-page-content {
     border-top-style: none;
     padding: 1em;
 
-    .dataTables_wrapper {
+    .dt-container {
         border-style: none;
     }
 

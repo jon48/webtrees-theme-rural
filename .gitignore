@@ -1,5 +1,6 @@
 # Composer
 /vendor/
+/vendor-bin/*/vendor/
 
 # npm
 /node_modules/
