@@ -2,13 +2,13 @@
 
 ## Supported Versions
 
-The latest versions of the 2.0 and 2.1 branches are supported for security issues.
+The latest versions of the 2.1 and 2.2 branches are supported for security issues.
 
 | Version        | Supported          |
 | -------------- | ------------------ |
+| 2.2.x (latest) | :heavy_check_mark: |
 | 2.1.x (latest) | :heavy_check_mark: |
-| 2.0.x (latest) | :heavy_check_mark: |
-| < 2.0          | :x:                |
+| < 2.1          | :x:                |
 
 ## Reporting a Vulnerability
 

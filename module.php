@@ -29,6 +29,7 @@ declare(strict_types=1);
 namespace MyArtJaub\Webtrees\Module;
 
 use Fisharebest\Webtrees\I18N;
+use Fisharebest\Webtrees\Registry;
 use Fisharebest\Webtrees\Site;
 use Fisharebest\Webtrees\View;
 use Fisharebest\Webtrees\Webtrees;
@@ -111,7 +112,7 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
      */
     public function customModuleVersion(): string
     {
-        return '2.1.21-v.1';
+        return '2.2.0-v.1';
     }
 
     /**
@@ -162,7 +163,6 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
         ;
     }
 
-
     /**
      * {@inheritDoc}
      * @see \Fisharebest\Webtrees\Module\ModuleFooterInterface::defaultFooterOrder()
@@ -178,7 +178,7 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
      */
     public function getFooter(\Psr\Http\Message\ServerRequestInterface $request): string
     {
-        if (app(ModuleThemeInterface::class)->name() === $this->name()) {
+        if (Registry::container()->get(ModuleThemeInterface::class)->name() === $this->name()) {
             return view($this->name() . '::footer');
         }
         return '';
