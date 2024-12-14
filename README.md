@@ -43,7 +43,7 @@ Initially embedded in a larger code base, I have extracted it to its own GitHub 
 
 The Rural theme is mainly based on brown tones, as a tribute to the earth our ancestors used to cultivate, with some green, colour of nature. Contrary to other standard themes which use the full width of the screen, its characteristic layout is organised around the main genealogical content being wrapped within a responsive white panel on a brown background.
 
-The header logo can be customised to any image, as long as its height does not exceed 150px (instructions below).
+The header logo can be customised to any image (instructions below).
 
 Having been a loyal companion to my **webtrees** experience for so many years now, I am happy to share the Rural theme and hope it can find its way to your list of themes.
 
@@ -90,15 +90,22 @@ Steps:
 
 It is possible to change the default webtrees logo in the header, and use a personal image instead.
 I am using a customised header on my own website.
-In all cases, please make sure that the personal image does not exceed ***150px*** in height.
 
 #### Versions up to 1.7
 
 Replace the image `/themes/rural/css-1.7.8/images/header.png` by a personal one.
+Please make sure that the personal image does not exceed ***150px*** in height.
 
 #### Versions from 2.0
 
 Replace the image `/modules_v4/myartjaub_ruraltheme/resources/images/header.png` by a personal one.
+Please make sure that the personal image does not exceed ***150px*** in height.
+
+#### Versions from 2.2
+
+Add a personal image `header.png` in the folder `/modules_v4/myartjaub_ruraltheme/resources/images/`.
+This image will not be overwritten by future upgrades of the theme.
+It is recommended, but not mandatory, that the image does not exceed 150px in height. If that height is exceeded, the image will be automatically scaled down.
 
 ### Development
 
@@ -135,7 +142,7 @@ npm install
 |   |-- css/
 |   |   |-- rural.min.js          ->  Rural Theme compiled stylesheet
 |   |-- images/
-|   |   |-- header.png            ->  Customisable header image
+|   |   |-- header.default.png    ->  Default header image
 |   |-- views/
 |       |-- footer.phtml          ->  HTML view to extend the footer with Rural images
 |       |-- style.css.phtml       ->  Extra CSS stylesheet to load header image

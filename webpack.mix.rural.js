@@ -46,6 +46,6 @@ mix
     ]
   })
   // .webpackConfig({ stats: { children: true } })
-  .copy(config.images_dir + '/header.png', config.public_dir + '/images')
+  .copy(config.images_dir + '/header.png', config.public_dir + '/images/header.default.png')
   .clean()
 ;

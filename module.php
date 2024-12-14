@@ -86,9 +86,12 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
      */
     public function stylesheets(): array
     {
+        $header_path = $this->resourcesFolder() . $this->getHeaderImagePath();
+        $hash = hash('xxh64', $this->customModuleVersion() . '#' . filemtime($header_path));
+
         return [
             $this->assetUrl('css/rural.min.css'),
-            route('module', ['module' => $this->name(), 'action' => 'CustomCss', 'v' => $this->customModuleVersion()])
+            route('module', ['module' => $this->name(), 'action' => 'CustomCss', 'h' => $hash])
         ];
     }
 
@@ -136,10 +139,23 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
         return 'https://github.com/jon48/webtrees-theme-rural';
     }
 
-
+    /**
+     * Request handler for CustomCss
+     *
+     * @param ServerRequestInterface $request
+     * @return ResponseInterface
+     */
     public function getCustomCssAction(ServerRequestInterface $request): ResponseInterface
     {
-        $content = view($this->name() . '::style.css');
+        $header_file = $this->getHeaderImagePath();
+
+        $content = view(
+            $this->name() . '::style.css',
+            [
+                'header_path'   => Registry::container()->get(ModuleThemeInterface::class)->assetUrl($header_file),
+                'header_height' => $this->getPngHeight($this->resourcesFolder() . $header_file)
+            ]
+        );
         return response($content)
             ->withHeader('Cache-Control', 'public,max-age=31536000')
             ->withHeader('Content-Type', 'text/css')
@@ -166,6 +182,37 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
             return view($this->name() . '::footer');
         }
         return '';
+    }
+
+    /**
+     * Returns the path of the header file to use
+     *
+     * @return string
+     */
+    private function getHeaderImagePath(): string
+    {
+        return file_exists($this->resourcesFolder() . 'images/header.png') ?
+            'images/header.png' :
+            'images/header.default.png';
+    }
+
+    /**
+     * Extracts the height of a PNG image.
+     * This is a faster implementation than going through the getimagesize function.
+     *
+     * @param string $path Path of the PNG image
+     * @return int Height
+     */
+    private function getPngHeight(string $path): int
+    {
+        $handle = fopen($path, 'r');
+        if ($handle !== false) {
+            $contents = fread($handle, 25);
+            fclose($handle);
+            $height = $contents === false ? 0 : (unpack('N*', substr($contents, 20, 4))[1] ?? null);
+            return is_int($height) ? $height : 0;
+        }
+        return 0;
     }
 }
 

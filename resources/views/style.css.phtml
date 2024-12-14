@@ -1,8 +1,11 @@
 <?php
 
-/* Customisable CSS entries */
-
-use Fisharebest\Webtrees\Module\ModuleThemeInterface;
+/**
+ * Customisable CSS entries
+ *
+ * @var string  $header_path
+ * @var int     $header_height
+ */
 
 ?>
-.wt-site-logo { background-image: url('<?= app(ModuleThemeInterface::class)->assetUrl('images/header.png'); ?>'); }
+.wt-site-logo { background-image: url('<?= $header_path ?>'); background-size: auto <?= min($header_height, 150) ?>px;}
