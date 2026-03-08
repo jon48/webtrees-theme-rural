@@ -65,6 +65,7 @@
 .wt-icon-anniversary	{}
 .wt-icon-bing-maps 		{content: url($maj-webtrees-dir + '/icons/bing-maps.png');}
 .wt-icon-calendar 		{}
+.wt-icon-children       {}
 .wt-icon-collapse 		{}
 .wt-icon-coordinates 	{}
 .wt-icon-copy 			{}
@@ -89,7 +90,6 @@
 .wt-icon-zoom-out 		{}
 
 /* Miscellaneous images */
-.icon-children			{content: url($maj-webtrees-dir + '/images/children.png');}
 .icon-loading-small 	{content: url($maj-webtrees-dir + '/images/indicator.gif');}
 .icon-minus 			{content: url($maj-webtrees-dir + '/icons/minus.png');}
 .icon-mypage 			{content: url('mypage.png');}
