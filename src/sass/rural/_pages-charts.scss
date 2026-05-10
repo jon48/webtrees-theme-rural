@@ -210,23 +210,25 @@
  * Timeline chart
  */
 
-#timeline_chart {
-    left: 0;
-    position: relative;
-    top: 0;
-    
+#timeline_chart {    
     /*
     Hack for removing leftover elements after removing all individuals.
     Other themes do not show this behaviour.
     See https://github.com/jon48/webtrees-theme-rural/issues/56
     */
+    /* TODO: Temporary disable - check again in 2.2.7
     &:not([style]) {
         display: none;
     }
+    */
+    overflow-y: scroll;
 }
 
 @each $nb, $colors in $maj-c-persons {
     .person#{$nb} {
+        @extend .p-1;
+        @extend .g-1;
+
         background-color: map.get($colors, 'background');
         border: outset map.get($colors, 'border') 1px;
         border-radius: 3px;

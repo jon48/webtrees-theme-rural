@@ -79,17 +79,6 @@ html {
     &-lighter { background-color: $maj-c-theme-lighter; }
 }
 
-
-/*
- * Any element that is loaded dynamically has the class wt-ajax-load.
- * We can provide a "loading" placeholder for empty elements with this class.
- */
-.wt-ajax-load:empty {
-    background: url($maj-webtrees-dir + '/images/loading-32x32.gif') no-repeat 50% 50%;
-    height: 32px;
-}
-
-
 /*
  * Html elements
  */
@@ -244,6 +233,10 @@ select,
 span.twitter-typeahead {
     .tt-menu {
         background-color: $maj-c-theme-lighter;
+    }
+    
+    .tt-input {
+        background-color: $maj-c-theme-lighter !important;
     }
     
     .tt-suggestion.tt-cursor {
