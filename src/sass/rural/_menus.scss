@@ -27,6 +27,12 @@
  * Menus icons
  */ 
 
+/* Create default icons, for custom modules not providing one */
+:where(.wt-genealogy-menu > .nav-item .nav-link)::before            {content: url(menu/generic-menu.svg);}
+:where(.wt-genealogy-menu .dropdown-menu .dropdown-item)::before    {content: url(menu/generic-submenu.svg);}
+
+/* Standard webtrees menu icons */
+
 .menu-tree {
     .nav-link::before 			{content: url(menu/tree.png);}
 	

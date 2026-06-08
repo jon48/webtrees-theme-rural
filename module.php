@@ -112,7 +112,7 @@ class RuralTheme extends AbstractModule implements ModuleCustomInterface, Module
      */
     public function customModuleVersion(): string
     {
-        return '2.2.6-v.1';
+        return '2.2.6-v.2';
     }
 
     /**
