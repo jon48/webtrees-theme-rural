@@ -10,11 +10,11 @@
   "license": "GPL-3.0-or-later",
   "homepage": "https://github.com/jon48/webtrees-theme-rural#readme",
   "scripts": {
-    "webtrees": "npx mix --mix-config=webpack.mix.webtrees.js",
-    "rural": "npx mix --mix-config=webpack.mix.rural.js",
-    "watch": "npx mix watch --mix-config=webpack.mix.rural.js",
-    "development": "npm run webtrees && npm run rural",
-    "production": "npm run webtrees && npm run rural -- --production",
+    "webtrees": "vite build --config=vite.config.webtrees.js",
+    "rural": "vite build --config=vite.config.rural.js",
+    "watch": "vite build --watch --config=vite.config.rural.js",
+    "development": "npm run webtrees && npm run rural -- --mode development",
+    "production": "npm run webtrees && npm run rural",
     "eslint": "semistandard --verbose | snazzy",
     "eslint-fix": "semistandard --verbose --fix | snazzy",
     "stylelint": "stylelint \"src/**/*.scss\" --rd",
@@ -24,26 +24,16 @@
     "bootstrap": "5.3.8"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "clean-webpack-plugin": "^4.0.0",
-    "laravel-mix": "^6.0.19",
-    "laravel-mix-clean": "^0.1.0",
-    "postcss": "^8.3.0",
+    "autoprefixer": "^10.5.0",
+    "browserslist-to-esbuild": "^2.1.1",
     "postcss-image-inliner": "^7.0.0",
-    "postcss-import": "^16.1.0",
     "postcss-rtlcss": "^6.0.0",
     "sass": "^1.34.0",
-    "sass-loader": "^17.0.0",
     "stylelint": "^17.4.0",
     "stylelint-config-sass-guidelines": "^13.0.0",
     "stylelint-config-standard": "^40.0.0",
-    "webpack": "5.106.2",
-    "webpack-cli": "7.0.2"
-  },
-  "overrides": {
-    "laravel-mix": {
-      "webpackbar": "^7.0.0"
-    }
+    "vite": "^7.3.5",
+    "vite-plugin-static-copy": "^4.1.1"
   },
   "browserslist": [
     ">0.1% and not dead"

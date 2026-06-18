@@ -28,69 +28,69 @@
  */ 
 
 /* Create default icons, for custom modules not providing one */
-:where(.wt-genealogy-menu > .nav-item .nav-link)::before            {content: url(menu/generic-menu.svg);}
-:where(.wt-genealogy-menu .dropdown-menu .dropdown-item)::before    {content: url(menu/generic-submenu.svg);}
+:where(.wt-genealogy-menu > .nav-item .nav-link)::before            {content: url(~images/menu/generic-menu.svg);}
+:where(.wt-genealogy-menu .dropdown-menu .dropdown-item)::before    {content: url(~images/menu/generic-submenu.svg);}
 
 /* Standard webtrees menu icons */
 
 .menu-tree {
-    .nav-link::before 			{content: url(menu/tree.png);}
+    .nav-link::before 			{content: url(~images/menu/tree.png);}
 	
-    .dropdown-item::before 		{content: url(menu/tree-tree.png);}
+    .dropdown-item::before 		{content: url(~images/menu/tree-tree.png);}
 }
 
-.menu-chart .nav-link::before 	{content: url(menu/chart.png);}
-.menu-chart-ancestry::before 	{content: url(menu/chart-ancestors.png);}
-.menu-chart-compact::before 	{content: url(menu/chart-compact.png);}
-.menu-chart-descendants::before {content: url(menu/chart-descendants.png);}
-.menu-chart-familybook::before 	{content: url(menu/chart-family-book.png);}
-.menu-chart-fanchart::before 	{content: url(menu/chart-fanchart.png);}
-.menu-chart-hourglass::before 	{content: url(menu/chart-hourglass.png);}
-.menu-chart-lifespan::before 	{content: url(menu/chart-lifespan.png);}
-.menu-chart-pedigree::before 	{content: url(menu/chart-pedigree.png);}
-.menu-chart-pedigreemap::before	{content: url(menu/chart-pedigree-map.png);}
-.menu-chart-relationship::before{content: url(menu/chart-relationship.png);}
-.menu-chart-statistics::before 	{content: url(menu/chart-statistics.png);}
-.menu-chart-timeline::before	{content: url(menu/chart-timeline.png);}
-.menu-chart-tree::before 		{content: url(menu/chart-tree.png);}
+.menu-chart .nav-link::before 	{content: url(~images/menu/chart.png);}
+.menu-chart-ancestry::before 	{content: url(~images/menu/chart-ancestors.png);}
+.menu-chart-compact::before 	{content: url(~images/menu/chart-compact.png);}
+.menu-chart-descendants::before {content: url(~images/menu/chart-descendants.png);}
+.menu-chart-familybook::before 	{content: url(~images/menu/chart-family-book.png);}
+.menu-chart-fanchart::before 	{content: url(~images/menu/chart-fanchart.png);}
+.menu-chart-hourglass::before 	{content: url(~images/menu/chart-hourglass.png);}
+.menu-chart-lifespan::before 	{content: url(~images/menu/chart-lifespan.png);}
+.menu-chart-pedigree::before 	{content: url(~images/menu/chart-pedigree.png);}
+.menu-chart-pedigreemap::before	{content: url(~images/menu/chart-pedigree-map.png);}
+.menu-chart-relationship::before{content: url(~images/menu/chart-relationship.png);}
+.menu-chart-statistics::before 	{content: url(~images/menu/chart-statistics.png);}
+.menu-chart-timeline::before	{content: url(~images/menu/chart-timeline.png);}
+.menu-chart-tree::before 		{content: url(~images/menu/chart-tree.png);}
 
 
-.menu-list .nav-link::before 	{content: url(menu/list.png);}
-.menu-branches::before 			{content: url(menu/branches.png);}
-.menu-list-fam::before 			{content: url(menu/list-fam.png);}
-.menu-list-indi::before 		{content: url(menu/list-indi.png);}
-.menu-list-loc::before          {content: url(menu/list-plac.png);}
-.menu-list-note::before 		{content: url(menu/list-note.png);}
-.menu-list-obje::before 		{content: url(menu/list-obje.png);}
-.menu-list-plac::before 		{content: url(menu/list-plac.png);}
-.menu-list-repo::before 		{content: url(menu/list-repo.png);}
-.menu-list-sour::before 		{content: url(menu/list-sour.png);}
-.menu-list-subm::before 		{content: url(menu/list-indi.png);}
+.menu-list .nav-link::before 	{content: url(~images/menu/list.png);}
+.menu-branches::before 			{content: url(~images/menu/branches.png);}
+.menu-list-fam::before 			{content: url(~images/menu/list-fam.png);}
+.menu-list-indi::before 		{content: url(~images/menu/list-indi.png);}
+.menu-list-loc::before          {content: url(~images/menu/list-plac.png);}
+.menu-list-note::before 		{content: url(~images/menu/list-note.png);}
+.menu-list-obje::before 		{content: url(~images/menu/list-obje.png);}
+.menu-list-plac::before 		{content: url(~images/menu/list-plac.png);}
+.menu-list-repo::before 		{content: url(~images/menu/list-repo.png);}
+.menu-list-sour::before 		{content: url(~images/menu/list-sour.png);}
+.menu-list-subm::before 		{content: url(~images/menu/list-indi.png);}
 
 
-.menu-calendar .nav-link::before{content: url(menu/calendar.png);}
-.menu-calendar-day::before 		{content: url(menu/calendar-calendar.png);}
-.menu-calendar-month::before 	{content: url(menu/calendar-calendar.png);}
-.menu-calendar-year::before 	{content: url(menu/calendar-calendar.png);}
+.menu-calendar .nav-link::before{content: url(~images/menu/calendar.png);}
+.menu-calendar-day::before 		{content: url(~images/menu/calendar-calendar.png);}
+.menu-calendar-month::before 	{content: url(~images/menu/calendar-calendar.png);}
+.menu-calendar-year::before 	{content: url(~images/menu/calendar-calendar.png);}
 
 .menu-report {
-    .nav-link::before 			{content: url(menu/report.png);}
+    .nav-link::before 			{content: url(~images/menu/report.png);}
 	
-    .dropdown-item::before 		{content: url(menu/report-report.png);}
+    .dropdown-item::before 		{content: url(~images/menu/report-report.png);}
 }
 
 .menu-search {
-    .nav-link::before 			{content: url(menu/search.png);}
+    .nav-link::before 			{content: url(~images/menu/search.png);}
 	
-    .dropdown-item::before 		{content: url(menu/search-search.png);}
+    .dropdown-item::before 		{content: url(~images/menu/search-search.png);}
 }
 
-.menu-faq .nav-link::before 	{content: url(menu/faq.png);}
+.menu-faq .nav-link::before 	{content: url(~images/menu/faq.png);}
 
-.menu-clippings .nav-link::before{content: url(menu/clippings.png);}
-.menu-clippings-add::before 	{content: url(menu/clippings-add.png);}
-.menu-clippings-cart::before 	{content: url(menu/clippings-cart.png);}
-.menu-clippings-download::before{content: url(menu/edit-preferences.png);}
-.menu-clippings-empty::before 	{content: url(menu/edit-delete.png);}
+.menu-clippings .nav-link::before{content: url(~images/menu/clippings.png);}
+.menu-clippings-add::before 	{content: url(~images/menu/clippings-add.png);}
+.menu-clippings-cart::before 	{content: url(~images/menu/clippings-cart.png);}
+.menu-clippings-download::before{content: url(~images/menu/edit-preferences.png);}
+.menu-clippings-empty::before 	{content: url(~images/menu/edit-delete.png);}
 
-.menu-story .nav-link::before 	{content: url(menu/story.png);}
+.menu-story .nav-link::before 	{content: url(~images/menu/story.png);}

@@ -73,7 +73,7 @@ class RoboFile extends \Robo\Tasks
             ->in($build_archive_dir)
             ->name('composer*.*')
             ->name('package*.*')
-            ->name('webpack*.*');
+            ->name('vite*.*');
 
         $collection
             ->progressMessage("Starting packaging of $PROJECT_NAME $commit")

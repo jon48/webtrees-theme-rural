@@ -23,7 +23,7 @@
 
 
 @mixin maj-block-large {
-    background-image: url('block_bg.png');
+    background-image: url('~images/block_bg.png');
     background-repeat: repeat-y;
     padding-left: 46px;
     padding-top: 0;
@@ -43,7 +43,7 @@
 
 .wt-block {
     background-color: transparent;
-    background-image: url('block_small_bg.png');
+    background-image: url('~images/block_small_bg.png');
     background-repeat: repeat-x;
     border-style: none;
 	

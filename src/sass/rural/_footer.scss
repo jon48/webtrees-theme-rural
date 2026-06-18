@@ -34,7 +34,7 @@
 	
     .wt-footer-powered-by {
         a {
-            content: url('powered-by-webtrees.png');
+            content: url('~images/powered-by-webtrees.png');
         }
     }
 	
@@ -46,12 +46,12 @@
         width: 100%;
 
         &-left {
-            background: url('footer_bg_left.png') no-repeat bottom left;
+            background: url('~images/footer_bg_left.png') no-repeat bottom left;
             width: 50%;
         }
 
         &-right {
-            background: url('footer_bg_right.png') no-repeat bottom right;
+            background: url('~images/footer_bg_right.png') no-repeat bottom right;
             width: 50%;
         }
     }		
