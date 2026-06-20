@@ -21,9 +21,9 @@ jobs:
         with:
           php-version: 8.3
           extensions: gd,intl,mbstring,sqlite,zip
-          coverage: disable
+          coverage: none
 
       - run: composer global require squizlabs/php_codesniffer=* --quiet
 
-      - name: PHP
-        run: ~/.composer/vendor/bin/phpcs -s
+      - name: PHPCS
+        run: composer webtrees-theme-rural:phpcs

@@ -21,7 +21,7 @@ jobs:
         with:
           php-version: 8.3
           extensions: gd,intl,mbstring,sqlite,zip
-          coverage: disable
+          coverage: none
 
       - run: composer global config allow-plugins.phpstan/extension-installer true
 
@@ -29,4 +29,5 @@ jobs:
 
       - run: composer install --no-progress --ignore-platform-reqs
 
-      - run: ~/.composer/vendor/bin/phpstan analyze --no-progress --error-format=github
+      - name: PHPStan
+        run: composer webtrees-theme-rural:phpstan
